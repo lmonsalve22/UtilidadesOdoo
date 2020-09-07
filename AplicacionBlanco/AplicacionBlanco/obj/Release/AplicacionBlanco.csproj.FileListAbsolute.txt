@@ -69,3 +69,4 @@ D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\Aplicacio
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csproj.CopyComplete
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.pdb
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csprojAssemblyReference.cache
