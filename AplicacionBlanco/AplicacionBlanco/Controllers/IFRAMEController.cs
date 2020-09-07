@@ -11,6 +11,7 @@ namespace AplicacionBlanco.Controllers
         // GET: IFRAME
         public ActionResult Index()
         {
+            ViewBag.Saludo = "Hola";
             return View();
         }
     }
