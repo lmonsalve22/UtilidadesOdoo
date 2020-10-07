@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+@ViewBag.pass
+@*
+    <a href="http://localhost:57567/Redireccion/Index">Hola</a>
+*@
+@if (@ViewBag.pass == "Hola")
+{
+    string saludo = "Usted a entrado de manera satisfactoria";
+    @saludo;
+}
+
+

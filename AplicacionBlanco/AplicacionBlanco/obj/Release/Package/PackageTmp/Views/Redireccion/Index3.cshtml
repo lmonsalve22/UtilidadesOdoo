@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<iframe id="powerbi" style="height:720px; width: 1300px;"  
+        frameborder="0"></iframe>
+<div id="mensaje">
+
+</div>
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    //alert();
+    //alert(getParameterByName("prod"));
+    if (getParameterByName("prod") == "Hola") {
+        document.getElementById("powerbi").src = "http://dataintelligence.azurewebsites.net/Datacovidgt";
+    }
+    else {
+        imagen = document.getElementById('powerbi');
+        padre = imagen.parentNode;
+        padre.removeChild(imagen);
+        document.write("<h1>Hola</h1>");
+        window.location = "http://52.173.85.103:8069/";
+    }
+    
+</script>
+

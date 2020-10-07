@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = null;
+}
+
+<h2>Index</h2>
+@ViewBag.pass
+
+<script>
+    //alert("Hola");
+    //window.locationf = "~/Redireccio/Index2";
+    //window.locationf = "http://localhost:57567/Redireccion/Index2";
+    //window.location = "http://www.cristalab.com";
+    let prevUrl = document.referrer;
+    //alert(prevUrl);
+    if (prevUrl == "http://52.173.85.103:8069/slides/slide/prueba-tu-conocimiento-5?fullscreen=1") {
+        window.location = "../Index2";
+    }
+    else {
+        window.location = "../Error";
+    }
+    
+</script>
+
+

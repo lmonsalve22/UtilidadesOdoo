@@ -137,6 +137,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
+    <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,6 +290,11 @@
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\RRSS\Index.cshtml" />
     <Content Include="Views\IFRAME\Index.cshtml" />
+    <Content Include="Views\Redireccion\Index.cshtml" />
+    <Content Include="Views\Redireccion\Index2.cshtml" />
+    <Content Include="Views\Redireccion\Error.cshtml" />
+    <Content Include="Views\Redireccion\Index3.cshtml" />
+    <Content Include="Views\Redireccion\Index4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

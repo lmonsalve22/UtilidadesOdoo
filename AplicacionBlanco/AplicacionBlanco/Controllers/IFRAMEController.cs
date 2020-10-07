@@ -9,9 +9,9 @@ namespace AplicacionBlanco.Controllers
     public class IFRAMEController : Controller
     {
         // GET: IFRAME
-        public ActionResult Index()
+        public ActionResult Index(string url)
         {
-            ViewBag.Saludo = "Hola";
+            ViewBag.Saludo = url;
             return View();
         }
     }
