@@ -135,6 +135,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\designController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
@@ -295,10 +296,12 @@
     <Content Include="Views\Redireccion\Error.cshtml" />
     <Content Include="Views\Redireccion\Index3.cshtml" />
     <Content Include="Views\Redireccion\Index4.cshtml" />
+    <Content Include="Views\Shared\_Layout_deprecated.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\design\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
