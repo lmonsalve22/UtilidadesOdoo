@@ -3,5 +3,224 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Cabecera</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+
+    <!-- <style>
+        .btn {
+            width: 12%;
+            height: 100%;
+            padding: 6px 0px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+            background-color: #CCC5C3;
+            color:#ffffff;
+
+        }
+            .btn:hover {
+                background-color: #000000;
+            }
+
+            a:active{
+                background-color: #000000;
+            }
+    </style>-->
+    <style>
+
+
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            color: black !important;
+            background-color: #f00 !important;
+        }
+
+        .nav-link {
+            width: 180px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <hr style="height:25px; background-color:#CCC5C3" />
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3" style="background-color:#ffffff">
+                Índice Socio Material Territorial (ISMT)
+            </div>
+            <div class="col-xl-1" style="background-color:#ffffff">
+
+            </div>
+            <div class="col-xl-8" style="background-color:#ffffff">
+                <!-- <button type="button" class="btn"> <a href="www.google.com"><Inicio></a></button>
+                <button type="button" class="btn">Categorías</button>
+                <button type="button" class="btn">Valor Medio</button>
+                <button type="button" class="btn ">Hogares ABC1</button>
+                <button type="button" class="btn ">Hogares C2</button>
+                <a href="#" class="btn btn-primary btn-lg active" role="button">Enlace principal</a>
+                <a href="#" class="btn" role="button">Enlace </a>
+    </div>
+                <a href="#" class="btn">Hogares E</a>-->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs " role="tablist" style=" margin-left:19%; ">
+
+                    <li class="nav-item">
+                        <a class="nav-link  bg-light  border  ml-2" name="impacto" id="impacto" data-toggle="tab" href="#home" role="tab">
+                            Impactos de Eta
+                        </a>
+
+
+                        <script type="text/javascript">
+                            window.onload = function () { document.getElementByName('impacto').focus(); }
+                        </script>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  bg-light  border ml-2" data-toggle="tab" href="#profile" role="tab">Tormentas Activas</a>
+                        <script type="text/javascript">
+                            window.onload = function () { document.getElementByName('impacto').focus(); }
+                        </script>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  bg-light  border ml-2" data-toggle="tab" href="#messages" role="tab">Escenario 1 - Iota</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  bg-light  border ml-2" data-toggle="tab" href="#settings" role="tab">
+                            Escenario 2 - Iota
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  bg-light  border ml-2" data-toggle="tab" href="#Trayectorias" role="tab">Trayectorias</a>
+                    </li>
+
+                </ul>
+               
+            </div>
+                <br />
+
+                <!-- Tab panes -->
+                <div class="tab-content" style=" height:800px; margin-left19%;">
+                    <div class="tab-pane active" id="home" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4" style="background-color:#aaa">
+                                <h1>Columna 1</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                            <div class="col-lg-4" style="background-color:#bbb">
+                                <h1>Columna 1</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                            <div class="col-lg-4" style="background-color:#ccc">
+                                <h1>Columna 1</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="profile" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-4" style="background-color:#aaa">
+                                <h1>Columna 2</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                            <div class="col-md-4" style="background-color:#bbb">
+                                <h1>Columna 2</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                            <div class="col-md-4" style="background-color:#ccc">
+                                <h1>Columna 2</h1>
+                                <p>Esto es una prueba de bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="messages" role="tabpanel">
+                        <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 99%; height: 780px; " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=7a9dbf0dfdaf44cb8062b3c99e56dd17&extent=-98.5840,6.5757,-66.9434,22.8355"
+                                frameborder="0"></iframe>
+                    </div>
+
+                    <div class="tab-pane" id="settings" role="tabpanel">
+                        <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;" src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=c18471c50597435f9d8d56ce1406677e&extent=-98.5840,6.5757,-66.9434,22.8355"
+                                frameborder="0"></iframe>
+                    </div>
+
+                    <div class="tab-pane" id="Trayectorias" role="tabpanel">
+                        <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;  " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=8968a78812d644858916532e46c7dec3&extent=-98.9355,6.4229,-67.2949,22.6936"
+                                frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    <hr style="height:5px;  background-color:#000000" />
+
+
+    <hr />
+
+
+
+
+    <hr>
+
+ 
+
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-4" style="background-color:#aaa">
+            <h1>Columna 1</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-sm-4" style="background-color:#bbb">
+            <h1>Columna 2</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-sm-4" style="background-color:#ccc">
+            <h1>Columna 3</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-4" style="background-color:#aaa">
+            <h1>Columna 1</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-4" style="background-color:#bbb">
+            <h1>Columna 2</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+        <div class="col-4" style="background-color:#ccc">
+            <h1>Columna 3</h1>
+            <p>Esto es una prueba de bootstrap.</p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+</body>
+
+
+</html>
+
 
