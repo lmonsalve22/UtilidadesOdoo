@@ -1,24 +1,252 @@
-﻿body {
+﻿/*body {
     padding-top: 50px;
     padding-bottom: 20px;
-}
+}*/
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-.dl-horizontal dt {
+/*.dl-horizontal dt {
     white-space: normal;
-}
+}*/
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
+}*/
+
+
+/* -------------CSS MENU1----------------------------------------*/
+@charset
+
+="UTF-8";
+/*CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url(//fonts.googleapis.com/css?family=Josefin+Slab:100);
+
+Quitar los espacios y estilos para las cajas que colocan por defectos navegadores
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: borde-box;
+    -moz-box-sizing: borde-box;
+    box-sizing: border-box;
 }
+
+
+/* Cambiar el color del fondo */
+
+body {
+    /*	background: rgba(102,102,102,1);*/
+    background: rgba(0,0,0,0.1);
+    /*background: #000*/
+}
+
+
+
+/* Definir ancho del menú */
+header nav {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 7.5px;
+    position: fixed;
+    top: 0
+}
+
+/* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com) 
+
+header nav {
+	background: #aebcbf; 
+	background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%); 
+	background: -webkit-linear-gradient(top, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%); 
+	background: linear-gradient(to bottom, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 );
+}
+*/
+
+/* Ancho del menu y del cuerpo de la página */
+
+.contenedor {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.contenedor2 {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 25px
+}
+
+/* Quitar las viñetas y márgenes de la lista (las que están en el contendedor con el id=menú) */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    /* Colocar el menu horizontal (flotación left - uno despues de otro) */
+    header nav ul li {
+        float: left;
+    }
+
+        /* Modificar el formatos de los textos de los titulos de los menus-links (etiqueta "a") */
+        header nav ul li a {
+            color: rgba(255,255,255,1);
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+            margin-top :25px;
+            font-size: 11px;
+            background:#CCC5C3;
+            border-radius: 40px;
+            width: 105px;
+            height: 100%;
+        }
+
+/* Modificar el formatos del texto del titulo */
+
+#overlay {
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    display: block;
+    /*	padding: 12px 26px;*/
+    font-family: "Oswald";
+    font-size: 18px;
+}
+
+/* Aplicar color de fondo degradado al titulo */
+#overlay {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
+    background: #febbbb; /* Old browsers */
+    background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #febbbb 0%,#fe9090 45%,#ff5c5c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #febbbb 0%,#fe9090 45%,#ff5c5c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=0 ); /* IE6-9 */
+    ;
+}
+
+/* Agregar un efecto para que cambie el color del texto del menu cuando se paser con el mouse */
+header nav ul li a:focus {
+    background: #000;
+}
+
+header nav ul li a:hover {
+    color: rgba(255,255,255,1);
+    background: rgba(153,153,153,1);
+    animation: 0.75s ms 1;
+}
+
+/* Ejecutar la animación indicada en el paso anterior */
+
+@keyframes ms {
+    0% {
+        opacity: 0;
+        transform: scale(1.6);
+    }
+}
+
+
+/* Cambiar el estilo de las barras separadoras que van entre cada menú (|) */
+
+.barra {
+    color: rgba(153,153,153,1);
+    padding: 25px 0 0 0;
+    font-size: 25px;
+}
+
+
+/* Formato de texto h1 */
+
+h1 {
+    position: absolute;
+    text-align: center;
+    width: 98%;
+    left: 1%;
+    top: 15%;
+    height: 10%;
+    padding: 25px 0 0 0;
+    color: #000;
+    font-size: 60px;
+    /*font-family: Josefin Slab, sans serif;*/
+    font-family: "Oswald";
+    text-shadow: 3px 3px 0 #fff, -1.5px -1.5px 0 #fff, 1.5px -1.5px 0 #fff, -1.5px 1.5px 0 #fff, 1.5px 1.5px 0 #fff;
+    -webkit-text-stroke: 1px rgba(153,22,54,0.7);
+    /*      background-color: rgba(153,22,54,0.5); */
+    opacity: 1;
+}
+
+
+/* Formato de parrafo */
+
+p {
+    position: relative;
+    text-align: justify;
+    width: 75%;
+    left: 13%;
+    color: #000;
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Oswald";
+    /*      background-color: rgba(153,22,54,0.5); */
+    opacity: 1;
+}
+
+/* ABRIR Y CERRAR MENU */
+
+#activar {
+    display: none;
+}
+
+    #activar ~ .contenedor {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+        #activar ~ .contenedor .menu {
+            max-height: 0;
+            overflow: hidden;
+        }
+
+.label {
+    position: absolute;
+    padding: 5px 20px;
+    font-size: 14px;
+    color: rgba(249,200,216,1);
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    font-family: Oswald;
+    cursor: pointer;
+    z-index:100;
+}
+
+#activar ~ .contenedor .label:before {
+    content: "ABRIR MENU";
+}
+
+#activar:checked ~ .contenedor,
+#activar:checked ~ .contenedor .menu {
+    max-height: 100%;
+}
+
+    #activar:checked ~ .contenedor .menu {
+        padding: 21px 0px 100% 8px;
+    }
+
+    #activar:checked ~ .contenedor .label:before {
+        content: "CERRAR MENU";
+    }
+
