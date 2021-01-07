@@ -17,6 +17,10 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
+        public ActionResult Menu2()
+        {
+            return View();
+        }
 
     }
 }

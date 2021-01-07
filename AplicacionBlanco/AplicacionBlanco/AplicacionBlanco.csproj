@@ -152,11 +152,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estilos.css" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\home.png" />
     <Content Include="Content\img\info.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
     <Content Include="favicon.ico" />
@@ -306,6 +308,7 @@
     <Content Include="Views\Shared\_Layout_deprecated.cshtml" />
     <Content Include="Views\design\Index.cshtml" />
     <Content Include="Views\design\Menu1.cshtml" />
+    <Content Include="Views\design\Menu2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
