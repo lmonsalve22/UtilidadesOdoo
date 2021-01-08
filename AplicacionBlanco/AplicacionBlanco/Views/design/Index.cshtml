@@ -14,7 +14,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-    @Styles.Render("~/Content/css")
+
+    <link href="~/Content/estilos.css" rel="stylesheet" />
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -22,42 +23,30 @@
     <script type="text/javascript">
         window.onload = function () { document.getElementByName('impacto').focus(); }
     </script>
-    <script>
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-    </script>
+
 </head>
 
-<body>
+<body >
     <header>
+
 
         <input id="activar" name="activar" type="checkbox">
 
-        <div class="contenedor">
-
+        <div class="contenedor" style="z-index:1000;">
 
             <nav class="menu">
-                <br />
-
-                <ul class="ml-md-3">
+                <ul>
                     <li id="logo"><a style="background-color:transparent;" target="_blank" href="https://dataintelligence.store/collections/dataclimatico"><img src="~/Content/img/logo.png"></a></li>
-                    <!--   <li class="navbar-brand " style="font-size:15px; color:white;" href="#">índice Socio Matrial Territorial (ISMT)</li>-->
-                    <!--	<li id="logo"> <a href="index.html" target="_self"><img src="img/logo.png"></a> </li> -->
-                    <!-- <li class="barra pb-md-5"> | </li> -->
-                    <li id="atras" class="ml-md-4 " style="padding-left:100px;"> <a href="javascript:history.back()"><img src="~/Content/img/atras.png" style="width: 20px">Atras</a> </li>
-                    <li id="home" class="ml-md-1 nav-item "> <a class="nav-link" data-toggle="tab" role="tab" href="../index.html" target="_self">Inicio</a> </li>
-                    <li id="impacto" class="ml-md-1 nav-item active"> <a class="nav-link " name="impacto" data-toggle="tab" role="tab" href="#climático">Categorias</a> </li>
-                    <li id="mapa2" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="#DataAgro">Valor Medio</a> </li>
-                    <li id="mapa3" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="mapa3.html" target="_self">Hogares ABC1</a> </li>
-                    <li id="mapa4" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="mapa4.html" target="_self">Hogares C2</a> </li>
-                    <li id="mapa5" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="mapa5.html" target="_self">Hogares C3</a>  </li>
-                    <li id="mapa6" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="mapa6.html" target="_self">Hogares D</a> </li>
-                    <li id="mapa7" class="ml-md-1 nav-item"> <a class="nav-link" data-toggle="tab" role="tab" href="www.google.com" target="_self">Hogares E</a> </li>
-                    
+                    <!--	<li id="logo"> <a href="index.html" target="_self"><img src="img/logo.png"></a> </li>
+                    <li class="barra"> | </li> -->
+                    <li id="atras" class="ml-md-5 " style="padding-left:100px;"> <a href="javascript:history.back()"><img src="~/Content/img/atras.png" style="width: 20px; ">&nbsp&nbspAtras</a> </li>
+                    <li id="titulo" class="ml-md-1 active"><a href="~/design/menu2" target="_self">AÑO 2017</a> </li>
+
+                    <li id="mapa7" class="ml-md-1 "> <a href="#" target="_self">AÑO 2018</a> </li>
+
+                    <li id="mapa7" class="ml-md-1"> <a href="#" target="_self">AÑO 2019</a> </li>
+
+                   
                 </ul>
 
             </nav>
@@ -66,72 +55,54 @@
 
         </div>
 
+
+
+
+
     </header>
 
     <!-- Tab panes -->
     <!--  <div class="tab-content" style=" height:800px;">
-            <div class="tab-pane active" id="inicio" role="tabpanel">
-                <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 99%; height: 780px; " src="https://dashboardfiltrado.azurewebsites.net/AutoDash"></iframe>
-            </div>
+          <div class="tab-pane active" id="inicio" role="tabpanel">
+          </div>
 
-            <div class="tab-pane" id="categorias" role="tabpanel">
+          <div class="tab-pane" id="categorias" role="tabpanel">
 
-                <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+              <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
 
-            </div>
+          </div>
 
-            <div class="tab-pane" id="valor" role="tabpanel">
-                <iframe class="embed-responsive embed-responsive-16by9" style="margin: 0 auto; width: 99%; height: 780px; " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=7a9dbf0dfdaf44cb8062b3c99e56dd17&extent=-98.5840,6.5757,-66.9434,22.8355"
-                        frameborder="0"></iframe>
-            </div>
+          <div class="tab-pane" id="valor" role="tabpanel">
+              <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 99%; height: 780px; " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=7a9dbf0dfdaf44cb8062b3c99e56dd17&extent=-98.5840,6.5757,-66.9434,22.8355"
+                      frameborder="0"></iframe>
+          </div>
 
-            <div class="tab-pane" id="hogaresabc1" role="tabpanel">
-                <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;" src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=c18471c50597435f9d8d56ce1406677e&extent=-98.5840,6.5757,-66.9434,22.8355"
-                        frameborder="0"></iframe>
-            </div>
+          <div class="tab-pane" id="hogaresabc1" role="tabpanel">
+              <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;" src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=c18471c50597435f9d8d56ce1406677e&extent=-98.5840,6.5757,-66.9434,22.8355"
+                      frameborder="0"></iframe>
+          </div>
 
-            <div class="tab-pane" id="hogaresc2" role="tabpanel">
-                <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;  " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=8968a78812d644858916532e46c7dec3&extent=-98.9355,6.4229,-67.2949,22.6936"
-                        frameborder="0"></iframe>
-            </div>
+          <div class="tab-pane" id="hogaresc2" role="tabpanel">
+              <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;  " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=8968a78812d644858916532e46c7dec3&extent=-98.9355,6.4229,-67.2949,22.6936"
+                      frameborder="0"></iframe>
+          </div>
 
-            <div class="tab-pane" id="hogaresc3" role="tabpanel">
-                <H1>HOLA MUNDO3</H1>
-            </div>
-            <div class="tab-pane" id="hogaresD" role="tabpanel">
-                <H1>HOLAMUNDO2</H1>
-            </div>
-            <div class="tab-pane" id="mapa7.html" role="tabpanel">
-                <H1>HOLA MUNDO</H1>
-            </div>
-        </div>
-    -->
-    <!-- Tab panes -->
-    <div class="tab-content" style=" height:800px; margin-left:2%;">
-        <div class="tab-pane active" id="climático" role="tabpanel">
-            <iframe id="test2" scrolling="no" style="margin: 0 auto; width: 99%; height: 780px; " src="https://filtradordashboard.azurewebsites.net//Dashboard/MapaPrueba/"></iframe>
-        </div>
+          <div class="tab-pane" id="hogaresc3" role="tabpanel">
+              <H1>HOLA MUNDO3</H1>
+          </div>
+          <div class="tab-pane" id="hogaresD" role="tabpanel">
+              <H1>HOLAMUNDO2</H1>
+          </div>
+          <div class="tab-pane" id="mapa7.html" role="tabpanel">
+              <H1>HOLA MUNDO</H1>
+          </div>
+      </div>
+        -->
+    <div class="contenedor3">
 
-        <div class="tab-pane" id="DataAgro" role="tabpanel">
-            <iframe id="Contenido" style="margin: 0 auto; width: 99%; height: 780px; " src=" https://app-data-i.users.earthengine.app/view/dataclimahn"></iframe>
-        </div>
-
-        <script>
-            var prodId = getParameterByName('Codcom');
-
-            document.getElementById("test2").src = "https://filtradordashboard.azurewebsites.net//Dashboard/MapaPrueba/" + prodId;
-
-            var code = getParameterByName('Code');
-            if (getParameterByName('Code') === null) {
-                code = 13101;
-            }
-            document.getElementById("Contenido").src = "https://anin.users.earthengine.app/view/muestra3?Codcom=" + code;
-        </script>
-
+        <!--<img id=fondo style="height:100vh; width:100vw; z-index:1;"  src="~/Content/img/Porta_ISMT.jpg">-->
+       
     </div>
-
-
-
     <script>
 
         OcultarURL("@ViewBag.Saludo");
