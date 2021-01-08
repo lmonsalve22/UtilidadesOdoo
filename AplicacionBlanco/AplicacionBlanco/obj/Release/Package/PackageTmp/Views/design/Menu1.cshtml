@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+
+    <link href="~/Content/estilos.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+
+</head>
+
+<body >
+    <header>
+
+
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor" style="z-index:1000;">
+
+            <nav class="menu">
+                <ul>
+                    <li id="logo"> <img src="~/Content/img/logo.png"></li>
+                    <!--	<li id="logo"> <a href="index.html" target="_self"><img src="img/logo.png"></a> </li>
+                    <li class="barra"> | </li> -->
+                    <li id="atras" class="ml-md-5 " style="padding-left:100px;"> <a href="javascript:history.back()"><img src="~/Content/img/atras.png" style="width: 20px; ">&nbsp&nbspAtras</a> </li>
+                    <li id="titulo" class="ml-md-1 active"><a href="http://localhost:57567/design/menu2" target="_self">AÑO 2017</a> </li>
+
+                    <li id="mapa7" class="ml-md-1 "> <a href="#" target="_self">AÑO 2018</a> </li>
+
+                    <li id="mapa7" class="ml-md-1"> <a href="#" target="_self">AÑO 2019</a> </li>
+
+                   
+                </ul>
+
+            </nav>
+
+            <label class="label" for="activar"></label>
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <!-- Tab panes -->
+    <!--  <div class="tab-content" style=" height:800px;">
+          <div class="tab-pane active" id="inicio" role="tabpanel">
+          </div>
+
+          <div class="tab-pane" id="categorias" role="tabpanel">
+
+              <iframe src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+
+          </div>
+
+          <div class="tab-pane" id="valor" role="tabpanel">
+              <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 99%; height: 780px; " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=7a9dbf0dfdaf44cb8062b3c99e56dd17&extent=-98.5840,6.5757,-66.9434,22.8355"
+                      frameborder="0"></iframe>
+          </div>
+
+          <div class="tab-pane" id="hogaresabc1" role="tabpanel">
+              <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;" src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=c18471c50597435f9d8d56ce1406677e&extent=-98.5840,6.5757,-66.9434,22.8355"
+                      frameborder="0"></iframe>
+          </div>
+
+          <div class="tab-pane" id="hogaresc2" role="tabpanel">
+              <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi" style="margin: 0 auto; width: 99%; height: 780px;  " src="https://sud-austral.maps.arcgis.com/apps/View/index.html?appid=8968a78812d644858916532e46c7dec3&extent=-98.9355,6.4229,-67.2949,22.6936"
+                      frameborder="0"></iframe>
+          </div>
+
+          <div class="tab-pane" id="hogaresc3" role="tabpanel">
+              <H1>HOLA MUNDO3</H1>
+          </div>
+          <div class="tab-pane" id="hogaresD" role="tabpanel">
+              <H1>HOLAMUNDO2</H1>
+          </div>
+          <div class="tab-pane" id="mapa7.html" role="tabpanel">
+              <H1>HOLA MUNDO</H1>
+          </div>
+      </div>
+        -->
+    <div class="contenedor3">
+
+        <!--<img id=fondo style="height:100vh; width:100vw; z-index:1;"  src="~/Content/img/Porta_ISMT.jpg">-->
+       
+    </div>
+    <script>
+
+        OcultarURL("@ViewBag.Saludo");
+    </script>
+
+
+</body>
+</html>
+
+
+
+

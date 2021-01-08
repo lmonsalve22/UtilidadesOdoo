@@ -1,4 +1,4 @@
-ï»¿/*body {
+/*body {
     padding-top: 50px;
     padding-bottom: 20px;
 }*/
@@ -44,15 +44,17 @@ Quitar los espacios y estilos para las cajas que colocan por defectos navegadore
 
 /* Cambiar el color del fondo */
 
-body {
+body{
     /*	background: rgba(102,102,102,1);*/
-    background: rgba(0,0,0,0.1);
+   background-image:url('../Content/img/Porta_ISMT.jpg');
+   background-size:100% 100%;
+   background-attachment:fixed;
     /*background: #000*/
 }
 
 
 
-/* Definir ancho del menÃº */
+/* Definir ancho del menú */
 header nav {
     width: 100%;
     height: 50px;
@@ -61,7 +63,7 @@ header nav {
     top: 0
 }
 
-/* Cambiar el color del menÃº a degradado (color de gradiente obtenido de colorzilla.com) 
+/* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com) 
 
 header nav {
 	background: #aebcbf; 
@@ -72,7 +74,7 @@ header nav {
 }
 */
 
-/* Ancho del menu y del cuerpo de la pÃ¡gina */
+/* Ancho del menu y del cuerpo de la página */
 
 .contenedor {
     width: 100%;
@@ -87,14 +89,14 @@ header nav {
     margin-top: 25px
 }
 
-/* Quitar las viÃ±etas y mÃ¡rgenes de la lista (las que estÃ¡n en el contendedor con el id=menÃº) */
+/* Quitar las viñetas y márgenes de la lista (las que están en el contendedor con el id=menú) */
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-    /* Colocar el menu horizontal (flotaciÃ³n left - uno despues de otro) */
+    /* Colocar el menu horizontal (flotación left - uno despues de otro) */
     header nav ul li {
         float: left;
     }
@@ -105,9 +107,9 @@ header nav ul {
             text-decoration: none;
             display: block;
             padding: 5px;
-            margin-top :25px;
+            margin-top: 25px;
             font-size: 11px;
-            background:#CCC5C3;
+            background: #CCC5C3;
             border-radius: 40px;
             width: 105px;
             height: 100%;
@@ -146,7 +148,7 @@ header nav ul li a:hover {
     animation: 0.75s ms 1;
 }
 
-/* Ejecutar la animaciÃ³n indicada en el paso anterior */
+/* Ejecutar la animación indicada en el paso anterior */
 
 @keyframes ms {
     0% {
@@ -156,7 +158,7 @@ header nav ul li a:hover {
 }
 
 
-/* Cambiar el estilo de las barras separadoras que van entre cada menÃº (|) */
+/* Cambiar el estilo de las barras separadoras que van entre cada menú (|) */
 
 .barra {
     color: rgba(153,153,153,1);
@@ -202,7 +204,7 @@ p {
 }
 
 /* ABRIR Y CERRAR MENU */
-
+/* LO QUE ESTA COMENTADO ES LO QUE HACE QUE EL BOTON DE ABRIRB Y CERRAR SEA VISIBLE*/
 #activar {
     display: none;
 }
@@ -214,26 +216,26 @@ p {
         left: 0;
         z-index: 100;
     }
-
+/*
 #activar ~ .contenedor .menu {
     max-height: 0;
     overflow: hidden;
 }
-
+*/
 
 .label {
     position: absolute;
     padding: 5px 20px;
     font-size: 14px;
     color: rgba(249,200,216,1);
-    background: #000;
+    /*background: #000;*/
     border-radius: 0 0 20px 20px;
     text-align: center;
     font-family: Oswald;
     cursor: pointer;
     z-index: 100;
 }
-
+/*
 #activar ~ .contenedor .label:before {
     content: "ABRIR MENU";
 }
@@ -250,4 +252,5 @@ p {
     #activar:checked ~ .contenedor .label:before {
         content: "CERRAR MENU";
     }
+*/
 
