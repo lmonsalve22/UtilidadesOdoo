@@ -13,7 +13,7 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
-        public ActionResult Menu1()
+        public ActionResult Menu3()
         {
             return View();
         }

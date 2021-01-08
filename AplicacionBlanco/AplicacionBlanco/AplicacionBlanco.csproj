@@ -306,8 +306,8 @@
     <Content Include="Views\Redireccion\Index3.cshtml" />
     <Content Include="Views\Redireccion\Index4.cshtml" />
     <Content Include="Views\Shared\_Layout_deprecated.cshtml" />
+    <Content Include="Views\design\Menu3.cshtml" />
     <Content Include="Views\design\Index.cshtml" />
-    <Content Include="Views\design\Menu1.cshtml" />
     <Content Include="Views\design\Menu2.cshtml" />
   </ItemGroup>
   <ItemGroup>
