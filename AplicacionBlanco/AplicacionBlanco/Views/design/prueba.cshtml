@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>prueba</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul  class="ml-md-3" >
+
+                <li class="ml-md-1 nav-item active">
+                    <a class="nav-link"  data-toggle="tab"  href="#home" role="tab">
+                        Impactos de Eta
+                    </a>
+                </li>
+
+                <li class="ml-md-1 nav-item ">
+                    <a class="nav-link  " data-toggle="tab" href="#profile" role="tab">
+                        Trayectoria de Huracanes 2020
+                    </a>
+                </li>
+
+                <li class="ml-md-1 nav-item ">
+                    <a class="nav-link " data-toggle="tab" href="#messages" role="tab">
+                        Fuerza Huracán ETA
+                    </a>
+                </li>
+
+                <li class="ml-md-1 nav-item ">
+                    <a class="nav-link " data-toggle="tab" href="#settings" role="tab">
+                        Fuerza Huracán IOTA
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <br />
+    <br />
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:800px; margin-left19%;">
+        <div class="tab-pane active" id="home" role="tabpanel">
+            <iframe loading="lazy"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+
+        <div class="tab-pane" id="profile" role="tabpanel">
+            <iframe loading="lazy"
+                    class="embed-responsive embed-responsive-16by9" id="powerbi"
+                    style="margin: 0 auto; width: 90%; height: 780px; "
+                    src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/258"></iframe>
+
+        </div>
+
+        <div class="tab-pane" id="messages" role="tabpanel">
+            <iframe loading="lazy"
+                    class="embed-responsive embed-responsive-16by9" id="powerbi"
+                    style="margin: 0 auto; width: 90%; height: 780px; "
+                    src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/259"
+                    frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="settings" role="tabpanel">
+            <iframe loading="lazy"
+                    class=" embed-responsive embed-responsive-16by9 " id="powerbi"
+                    style="margin: 0 auto; width: 90%; height: 780px;"
+                    src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/260"
+                    frameborder="0"></iframe>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

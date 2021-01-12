@@ -156,11 +156,13 @@
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\home.png" />
+    <Content Include="Content\img\ImpactosDelHuracanETAenHonduras.jpg" />
     <Content Include="Content\img\info.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
+    <Content Include="Content\Impacto.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -309,6 +311,10 @@
     <Content Include="Views\design\Menu3.cshtml" />
     <Content Include="Views\design\Index.cshtml" />
     <Content Include="Views\design\Menu2.cshtml" />
+    <Content Include="Views\design\Dataimpacto.cshtml" />
+    <Content Include="Views\design\prueba.cshtml" />
+    <Content Include="Views\design\MenuPrueba.cshtml" />
+    <Content Include="Views\design\prueba3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

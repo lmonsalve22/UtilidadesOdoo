@@ -21,6 +21,21 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
-
+        public ActionResult Dataimpacto()
+        {
+            return View();
+        }
+        public ActionResult prueba()
+        {
+            return View();
+        }
+        public ActionResult MenuPrueba()
+        {
+            return View();
+        }
+        public ActionResult prueba3()
+        {
+            return View();
+        }
     }
 }

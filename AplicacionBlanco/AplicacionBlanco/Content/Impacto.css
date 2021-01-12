@@ -92,7 +92,6 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
     /* Colocar el menu horizontal (flotación left - uno despues de otro) */
@@ -108,13 +107,11 @@ header nav ul {
             display: block;
             padding: 5px;
             margin-top: 25px;
-            font-size: 12px;
-            background: transparent;
+            font-size: 11px;
+            background: #CCC5C3;
             border-radius: 40px;
-            width: 135px;
-            height: 30px;
-
-          
+            width: 150px;
+            height: 35px;
         }
 
 /* Modificar el formatos del texto del titulo */
@@ -129,7 +126,7 @@ header nav ul {
 }
 
 /* Aplicar color de fondo degradado al titulo */
- #overlay {
+#overlay {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
     background: #febbbb; /* Old browsers */
     background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%); /* FF3.6-15 */
@@ -148,7 +145,6 @@ header nav ul li a:hover {
     color: rgba(255,255,255,1);
     background: rgba(153,153,153,1);
     animation: 0.75s ms 1;
-    text-decoration: none;
 }
 
 /* Ejecutar la animación indicada en el paso anterior */
@@ -220,10 +216,10 @@ p {
         z-index: 100;
     }
 
-#activar ~ .contenedor .menu {
-    max-height: 0;
-    overflow: hidden;
-}
+        #activar ~ .contenedor .menu {
+            max-height: 0;
+            overflow: hidden;
+        }
 
 
 .label {
@@ -255,4 +251,3 @@ p {
     #activar:checked ~ .contenedor .label:before {
         content: "CERRAR MENU";
     }
-
