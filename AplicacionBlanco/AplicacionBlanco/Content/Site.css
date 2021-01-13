@@ -23,6 +23,10 @@ textarea {
     max-width: 280px;
 }*/
 
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('img/Font/SourceSansPro-Light.ttf') format('truetype');
+}
 
 /* -------------CSS MENU1----------------------------------------*/
 @charset
@@ -110,16 +114,15 @@ header nav ul {
             margin-top: 25px;
             font-size: 12px;
             background: transparent;
-            border-radius: 40px;
+            border-radius: 100px;
+            border: 2px solid rgba(153,153,153,1);
             width: 135px;
             height: 30px;
-
-          
+            font-family:"SourceSansPro-Light";
         }
-
-/* Modificar el formatos del texto del titulo */
-
-#overlay {
+      
+            /* Modificar el formatos del texto del titulo */
+            #overlay {
     color: rgba(255,255,255,1);
     text-decoration: none;
     display: block;

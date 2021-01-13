@@ -155,6 +155,7 @@
     <Content Include="Content\estilos.css" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
+    <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
     <Content Include="Content\img\ImpactosDelHuracanETAenHonduras.jpg" />
     <Content Include="Content\img\info.png" />
@@ -189,6 +190,18 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\img\Font\SourceSansPro-Black.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-BlackItalic.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-Bold.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-BoldItalic.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-ExtraLight.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-ExtraLightItalic.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-Italic.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-Light.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-LightItalic.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-Regular.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-SemiBold.ttf" />
+    <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

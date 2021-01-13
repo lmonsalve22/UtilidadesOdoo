@@ -22,7 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }*/
-
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('img/Font/SourceSansPro-Light.ttf') format('truetype');
+}
 
 /* -------------CSS MENU1----------------------------------------*/
 @charset
@@ -113,6 +116,7 @@ header nav ul {
             border-radius: 40px;
             width: 105px;
             height: 100%;
+            font-family:"SourceSansPro-Light";
         }
 
 /* Modificar el formatos del texto del titulo */
