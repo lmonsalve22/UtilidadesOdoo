@@ -1,4 +1,4 @@
-/*body {
+ï»¿/*body {
     padding-top: 50px;
     padding-bottom: 20px;
 }*/
@@ -22,10 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }*/
-@font-face {
-    font-family: 'SourceSansPro-Light';
-    src: url('img/Font/SourceSansPro-Light.ttf') format('truetype');
-}
+
 
 /* -------------CSS MENU1----------------------------------------*/
 @charset
@@ -47,26 +44,24 @@ Quitar los espacios y estilos para las cajas que colocan por defectos navegadore
 
 /* Cambiar el color del fondo */
 
-body{
+body {
     /*	background: rgba(102,102,102,1);*/
-   background-image:url('../Content/img/Porta_ISMT.jpg');
-   background-size:100% 100%;
-   background-attachment:fixed;
+    background: rgba(0,0,0,0.1);
     /*background: #000*/
 }
 
 
 
-/* Definir ancho del menú */
+/* Definir ancho del menÃº */
 header nav {
     width: 100%;
     height: 50px;
     margin-bottom: 7.5px;
     position: fixed;
-    top: 0
+    top: 0;
 }
 
-/* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com) 
+/* Cambiar el color del menÃº a degradado (color de gradiente obtenido de colorzilla.com) 
 
 header nav {
 	background: #aebcbf; 
@@ -77,7 +72,7 @@ header nav {
 }
 */
 
-/* Ancho del menu y del cuerpo de la página */
+/* Ancho del menu y del cuerpo de la pÃ¡gina */
 
 .contenedor {
     width: 100%;
@@ -89,17 +84,17 @@ header nav {
     width: 100%;
     max-width: 100%;
     margin: auto;
-    margin-top: 25px
+    margin-top: 25px;
 }
 
-/* Quitar las viñetas y márgenes de la lista (las que están en el contendedor con el id=menú) */
+/* Quitar las viÃ±etas y mÃ¡rgenes de la lista (las que estÃ¡n en el contendedor con el id=menÃº) */
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-    /* Colocar el menu horizontal (flotación left - uno despues de otro) */
+    /* Colocar el menu horizontal (flotaciÃ³n left - uno despues de otro) */
     header nav ul li {
         float: left;
     }
@@ -107,6 +102,7 @@ header nav ul {
         /* Modificar el formatos de los textos de los titulos de los menus-links (etiqueta "a") */
         header nav ul li a {
             color: rgba(255,255,255,1);
+            text-align: center;
             text-decoration: none;
             display: block;
             padding: 5px;
@@ -114,9 +110,8 @@ header nav ul {
             font-size: 11px;
             background: #CCC5C3;
             border-radius: 40px;
-            width: 105px;
-            height: 100%;
-            font-family:"SourceSansPro-Light";
+            width: 150px;
+            height: 35px;
         }
 
 /* Modificar el formatos del texto del titulo */
@@ -152,7 +147,7 @@ header nav ul li a:hover {
     animation: 0.75s ms 1;
 }
 
-/* Ejecutar la animación indicada en el paso anterior */
+/* Ejecutar la animaciÃ³n indicada en el paso anterior */
 
 @keyframes ms {
     0% {
@@ -162,7 +157,7 @@ header nav ul li a:hover {
 }
 
 
-/* Cambiar el estilo de las barras separadoras que van entre cada menú (|) */
+/* Cambiar el estilo de las barras separadoras que van entre cada menÃº (|) */
 
 .barra {
     color: rgba(153,153,153,1);
@@ -208,7 +203,7 @@ p {
 }
 
 /* ABRIR Y CERRAR MENU */
-/* LO QUE ESTA COMENTADO ES LO QUE HACE QUE EL BOTON DE ABRIRB Y CERRAR SEA VISIBLE*/
+
 #activar {
     display: none;
 }
@@ -220,26 +215,26 @@ p {
         left: 0;
         z-index: 100;
     }
-/*
-#activar ~ .contenedor .menu {
-    max-height: 0;
-    overflow: hidden;
-}
-*/
+
+        #activar ~ .contenedor .menu {
+            max-height: 0;
+            overflow: hidden;
+        }
+
 
 .label {
     position: absolute;
     padding: 5px 20px;
     font-size: 14px;
-    color: #ffffff;
-    /*background: #000;*/
+    color: white;
+    background: #000;
     border-radius: 0 0 20px 20px;
     text-align: center;
     font-family: Oswald;
     cursor: pointer;
     z-index: 100;
 }
-/*
+
 #activar ~ .contenedor .label:before {
     content: "ABRIR MENU";
 }
@@ -256,5 +251,3 @@ p {
     #activar:checked ~ .contenedor .label:before {
         content: "CERRAR MENU";
     }
-*/
-

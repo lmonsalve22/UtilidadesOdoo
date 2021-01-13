@@ -136,6 +136,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\designController.cs" />
+    <Compile Include="Controllers\GEEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
@@ -143,6 +144,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseGEE.cs" />
+    <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +163,7 @@
     <Content Include="Content\img\ImpactosDelHuracanETAenHonduras.jpg" />
     <Content Include="Content\img\info.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
@@ -328,10 +332,10 @@
     <Content Include="Views\design\prueba.cshtml" />
     <Content Include="Views\design\MenuPrueba.cshtml" />
     <Content Include="Views\design\prueba3.cshtml" />
+    <Content Include="Views\GEE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

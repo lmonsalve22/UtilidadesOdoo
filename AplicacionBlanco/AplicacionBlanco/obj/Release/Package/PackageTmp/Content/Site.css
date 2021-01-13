@@ -23,6 +23,10 @@ textarea {
     max-width: 280px;
 }*/
 
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('img/Font/SourceSansPro-Light.ttf') format('truetype');
+}
 
 /* -------------CSS MENU1----------------------------------------*/
 @charset
@@ -58,7 +62,7 @@ header nav {
     height: 50px;
     margin-bottom: 7.5px;
     position: fixed;
-    top: 0
+    top: 0;
 }
 
 /* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com) 
@@ -84,7 +88,7 @@ header nav {
     width: 100%;
     max-width: 100%;
     margin: auto;
-    margin-top: 25px
+    margin-top: 25px;
 }
 
 /* Quitar las viñetas y márgenes de la lista (las que están en el contendedor con el id=menú) */
@@ -92,6 +96,7 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
 }
 
     /* Colocar el menu horizontal (flotación left - uno despues de otro) */
@@ -102,20 +107,22 @@ header nav ul {
         /* Modificar el formatos de los textos de los titulos de los menus-links (etiqueta "a") */
         header nav ul li a {
             color: rgba(255,255,255,1);
+            text-align: center;
             text-decoration: none;
             display: block;
             padding: 5px;
-            margin-top :25px;
-            font-size: 11px;
-            background:#CCC5C3;
-            border-radius: 40px;
-            width: 105px;
-            height: 100%;
+            margin-top: 25px;
+            font-size: 12px;
+            background: transparent;
+            border-radius: 100px;
+            border: 2px solid rgba(153,153,153,1);
+            width: 135px;
+            height: 30px;
+            font-family:"SourceSansPro-Light";
         }
-
-/* Modificar el formatos del texto del titulo */
-
-#overlay {
+      
+            /* Modificar el formatos del texto del titulo */
+            #overlay {
     color: rgba(255,255,255,1);
     text-decoration: none;
     display: block;
@@ -125,7 +132,7 @@ header nav ul {
 }
 
 /* Aplicar color de fondo degradado al titulo */
-#overlay {
+ #overlay {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
     background: #febbbb; /* Old browsers */
     background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%); /* FF3.6-15 */
@@ -144,6 +151,7 @@ header nav ul li a:hover {
     color: rgba(255,255,255,1);
     background: rgba(153,153,153,1);
     animation: 0.75s ms 1;
+    text-decoration: none;
 }
 
 /* Ejecutar la animación indicada en el paso anterior */
@@ -225,7 +233,7 @@ p {
     position: absolute;
     padding: 5px 20px;
     font-size: 14px;
-    color: rgba(249,200,216,1);
+    color: white;
     background: #000;
     border-radius: 0 0 20px 20px;
     text-align: center;

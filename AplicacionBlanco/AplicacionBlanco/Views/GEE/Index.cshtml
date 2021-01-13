@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DATAIMPACTO</title>
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+</head>
+<body>
+
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor">
+
+
+            <nav class="menu">
+
+                <!-- Nav tabs -->
+                <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%;  border-color:transparent; display:block !important;">
+
+                    <!--  <li id="atras" class="ml-md-5 " style="padding-left:100px;">
+          <a href="javascript:history.back();"><img src="~/Content/img/atras.png" style="width: 20px">Atras</a>
+      </li>-->
+                    <li class="ml-md-4 ">
+                        <a  data-toggle="tab" href="#inicio" role="tab" onclick="alert('hola');document.getElementById('activar').style.display= 'none';  //alert(document.getElementById('activar').style.display= 'none'); ">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="ml-md-4 ">
+                        <a data-toggle="tab" href="#home" role="tab">
+                            Power BI
+                        </a>
+                    </li>
+
+                    <li class="ml-md-4 ">
+                        <a data-toggle="tab"
+                           href="#gearth" role="tab">Google Earth Engine</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <label class="label" for="activar"></label>
+
+        </div>
+    </header>
+
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-left19%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <!--
+    <img style="height:100vh; width:100vw;" src="~/Content/img/ImpactosDelHuracanETAenHonduras.jpg" />
+    -->
+            <img style="height:100vh; width:100vw;" src="~/Content/img/portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" />
+            <h1 class="ce"  style="margin-left:-30%;margin-top:-0.1%;position:absolute;float:left">@ViewBag.titulo</h1>
+        </div>
+        <div class="tab-pane " id="home" role="tabpanel">
+            <iframe style="margin: 0 auto; width: 99%; height: 650px;" 
+                    src="@ViewBag.GEE"></iframe>
+        </div>
+
+        <div class="tab-pane" id="gearth" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" 
+                    style="margin: 0 auto; width: 90%; height: 650px; "
+                    src="@ViewBag.PB"></iframe>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
