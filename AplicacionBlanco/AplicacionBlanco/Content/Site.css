@@ -263,3 +263,15 @@ p {
         
     }
 
+    /*estilos test2 */
+
+#test2 {
+    border: none;
+    position: absolute;
+    clip: rect(0px, 1500px,710px, 0px);
+    /*1  0px=top(arriba)
+    2 1400px=left(izquierda)
+    3  743px = botton(abajo)
+    4  0px=right(derecha)
+*/
+}
