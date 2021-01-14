@@ -15,8 +15,9 @@ namespace AplicacionBlanco.Models
         public string comentario { get; set; }
         public string nombre { get; set; }
         public string urlImagen { get; set; }
+        public string titulo { get; set; }
 
-        public VistasGEE(int id, string geeURL, string comentario, string nombre, string urlImagen)
+        public VistasGEE(int id, string geeURL, string comentario, string nombre, string urlImagen, string titulo)
         {
             this.id = id;
             this.geeURL = geeURL;
@@ -24,6 +25,7 @@ namespace AplicacionBlanco.Models
             this.comentario = comentario;
             this.nombre = nombre;
             this.urlImagen = urlImagen;
+            this.titulo = titulo;
         }
 
 

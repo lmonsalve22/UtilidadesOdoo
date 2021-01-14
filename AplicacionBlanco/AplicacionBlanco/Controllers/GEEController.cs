@@ -14,9 +14,21 @@ namespace AplicacionBlanco.Controllers
         {
             BaseGEE db = new BaseGEE();
             VistasGEE v = db.vistas.Where(x => x.id == id).First();
+            DivisionAdministrativa div;
+            try
+            {
+                div  = db.divisiones.Where(x => x.id == id3 && x.id2 == id4).First();
+            }
+            catch (Exception)
+            {
+
+                div = new DivisionAdministrativa(1, 1, "Sin división encontrada", "Sin país");
+            }
+            
             ViewBag.PB = v.urlCompletaGEE(id2);
             ViewBag.GEE = v.urlCompletaPB(id3,id4);
-            ViewBag.titulo = v.nombre;
+            ViewBag.titulo = div.nombreAdministrativo + " " + div.pais;
+            ViewBag.imagen = v.urlImagen;
             return View();
         }
     }

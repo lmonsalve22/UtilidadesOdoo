@@ -145,6 +145,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseGEE.cs" />
+    <Compile Include="Models\DivisionAdministrativa.cs" />
     <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
