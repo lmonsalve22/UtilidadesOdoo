@@ -37,28 +37,28 @@
         <a href="javascript:history.back();"><img src="~/Content/img/atras.png" style="width: 20px">Atras</a>
     </li>-->
                     <li class="ml-md-4 ">
-                        <a data-toggle="tab" href="#inicio" role="tab">
+                        <a onclick="document.getElementById('activar').checked = false;"  data-toggle="tab" href="#inicio" role="tab">
                             Inicio
                         </a>
                     </li>
                     <li class="ml-md-4 ">
-                        <a data-toggle="tab" href="#home" role="tab">
+                        <a onclick="document.getElementById('activar').checked = false;"  data-toggle="tab" href="#home" role="tab">
                             Impactos de Eta
                         </a>
                     </li>
 
                     <li class="ml-md-4 ">
-                        <a data-toggle="tab"
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab"
                            href="#profile" role="tab"> Huracanes 2020</a>
                     </li>
 
                     <li class="ml-md-4 ">
-                        <a data-toggle="tab"
+                        <a  onclick="document.getElementById('activar').checked = false;" data-toggle="tab"
                            href="#messages" role="tab">Fuerza Huracán ETA</a>
                     </li>
 
                     <li class="ml-md-4 ">
-                        <a data-toggle="tab" href="#settings" role="tab">
+                        <a onclick="document.getElementById('activar').checked = false;"  data-toggle="tab" href="#settings" role="tab">
                             Fuerza Huracán IOTA
                         </a>
                     </li>
@@ -74,30 +74,30 @@
 
 
     <!-- Tab panes -->
-    <div class="tab-content" style=" height:500px; ">
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
         <div class="tab-pane active" id="inicio" role="tabpanel">
-            <img style="height:100vh; width:100vw;" src="~/Content/img/ImpactosDelHuracanETAenHonduras.jpg" />
+            <img style="height:95vh; width:100vw;" src="~/Content/img/ImpactosDelHuracanETAenHonduras.jpg" />
         </div>
         <div class="tab-pane " id="home" role="tabpanel">
-            <iframe style="margin: 0 auto; width: 99%; height: 650px; margin-top:1%;" src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+            <iframe style="margin: 0 auto; width:100%; height:95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiYjgzMDc4YWQtMGI0ZC00MTFmLWJlZTgtNTFiOTM0MGViM2FlIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
         </div>
 
         <div class="tab-pane" id="profile" role="tabpanel">
             <iframe class="embed-responsive embed-responsive-16by9" id="powerbi"
-                    style="margin: 0 auto; width: 90%; height: 650px; "
+                    style="margin: 0 auto; width:100%; height:95vh; "
                     src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/258"></iframe>
         </div>
 
         <div class="tab-pane" id="messages" role="tabpanel">
             <iframe class="embed-responsive embed-responsive-16by9" id="powerbi"
-                    style="margin: 0 auto; width: 90%; height: 650px; "
+                    style="margin: 0 auto; width:100%; height:95vh; "
                     src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/259"
                     frameborder="0"></iframe>
         </div>
 
         <div class="tab-pane" id="settings" role="tabpanel">
             <iframe class=" embed-responsive embed-responsive-16by9 " id="powerbi"
-                    style="margin: 0 auto; width: 90%; height: 650px;"
+                    style="margin: 0 auto; width:100%; height:95vh;"
                     src="https://ide.dataintelligence-group.com/mapstore/#/context/huracanes/260"
                     frameborder="0"></iframe>
         </div>

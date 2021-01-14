@@ -119,6 +119,7 @@ header nav ul {
             width: 135px;
             height: 30px;
             font-family:"SourceSansPro-Light";
+         
         }
       
             /* Modificar el formatos del texto del titulo */
@@ -209,13 +210,13 @@ p {
     opacity: 1;
 }
 
-/* ABRIR Y CERRAR MENU */
 
+/* ABRIR Y CERRAR MENU */
 #activar {
     display: none;
 }
 
-    #activar ~ .contenedor {
+    #activar ~ .contenedor{
         position: absolute;
         text-align: center;
         top: 0;
@@ -223,10 +224,10 @@ p {
         z-index: 100;
     }
 
-#activar ~ .contenedor .menu {
-    max-height: 0;
-    overflow: hidden;
-}
+        #activar ~ .contenedor .menu {
+            max-height: 0;
+            overflow: hidden;
+        }
 
 
 .label {
@@ -249,13 +250,16 @@ p {
 #activar:checked ~ .contenedor,
 #activar:checked ~ .contenedor .menu {
     max-height: 100%;
+   
 }
 
     #activar:checked ~ .contenedor .menu {
         padding: 21px 0px 100% 8px;
+  
     }
 
     #activar:checked ~ .contenedor .label:before {
         content: "CERRAR MENU";
+        
     }
 
