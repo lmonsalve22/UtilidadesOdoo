@@ -37,5 +37,9 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
+        public ActionResult ISMT()
+        {
+            return View();
+        }
     }
 }
