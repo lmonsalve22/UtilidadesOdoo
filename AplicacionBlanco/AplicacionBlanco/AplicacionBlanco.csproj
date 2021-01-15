@@ -334,6 +334,7 @@
     <Content Include="Views\design\MenuPrueba.cshtml" />
     <Content Include="Views\design\prueba3.cshtml" />
     <Content Include="Views\GEE\Index.cshtml" />
+    <Content Include="Views\design\ISMT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

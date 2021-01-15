@@ -113,13 +113,13 @@ header nav ul {
             padding: 5px;
             margin-top: 25px;
             font-size: 12px;
-            background: transparent;
+            background: rgba(0,0,0,0.45);
+            /*   background: transparent;*/
             border-radius: 100px;
             border: 2px solid rgba(153,153,153,1);
             width: 135px;
             height: 30px;
-            font-family:"SourceSansPro-Light";
-         
+            font-family: "SourceSansPro-Light";
         }
       
             /* Modificar el formatos del texto del titulo */
@@ -263,3 +263,16 @@ p {
         
     }
 
+    /*estilos test2 */
+
+#test2 {
+    border: none;
+    position: absolute;
+    clip: rect(0px, 1500px,650px, 0px);
+    
+    /*1  0px=top(arriba)
+    2 1400px=left(izquierda)
+    3  743px = botton(abajo)
+    4  0px=right(derecha)
+*/
+}
