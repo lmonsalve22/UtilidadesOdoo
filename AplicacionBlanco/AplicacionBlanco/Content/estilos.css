@@ -107,17 +107,21 @@ header nav ul {
         /* Modificar el formatos de los textos de los titulos de los menus-links (etiqueta "a") */
         header nav ul li a {
             color: rgba(255,255,255,1);
+            text-align: center;
             text-decoration: none;
             display: block;
             padding: 5px;
             margin-top: 25px;
-            font-size: 11px;
-            background: #CCC5C3;
-            border-radius: 40px;
-            width: 105px;
-            height: 100%;
-            font-family:"SourceSansPro-Light";
+            font-size: 12px;
+            background: rgba(0,0,0,0.45);
+            /*   background: transparent;*/
+            border-radius: 100px;
+            border: 2px solid rgba(153,153,153,1);
+            width: 135px;
+            height: 30px;
+            font-family: "SourceSansPro-Light";
         }
+
 
 /* Modificar el formatos del texto del titulo */
 

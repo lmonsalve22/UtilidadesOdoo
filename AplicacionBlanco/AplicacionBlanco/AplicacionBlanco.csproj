@@ -138,6 +138,7 @@
     <Compile Include="Controllers\designController.cs" />
     <Compile Include="Controllers\GEEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ICVUController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
@@ -328,13 +329,17 @@
     <Content Include="Views\Shared\_Layout_deprecated.cshtml" />
     <Content Include="Views\design\Menu3.cshtml" />
     <Content Include="Views\design\Index.cshtml" />
-    <Content Include="Views\design\Menu2.cshtml" />
     <Content Include="Views\design\Dataimpacto.cshtml" />
     <Content Include="Views\design\prueba.cshtml" />
     <Content Include="Views\design\MenuPrueba.cshtml" />
     <Content Include="Views\design\prueba3.cshtml" />
     <Content Include="Views\GEE\Index.cshtml" />
     <Content Include="Views\design\ISMT.cshtml" />
+    <Content Include="Views\ICVU\Index.cshtml" />
+    <Content Include="Views\ICVU\A2017.cshtml" />
+    <Content Include="Views\ICVU\A2018.cshtml" />
+    <Content Include="Views\ICVU\A2019.cshtml" />
+    <Content Include="Views\ICVU\A2020.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
