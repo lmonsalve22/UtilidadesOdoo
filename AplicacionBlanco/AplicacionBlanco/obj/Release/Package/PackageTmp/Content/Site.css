@@ -96,7 +96,6 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
     /* Colocar el menu horizontal (flotación left - uno despues de otro) */
@@ -118,12 +117,11 @@ header nav ul {
             border: 2px solid rgba(153,153,153,1);
             width: 135px;
             height: 30px;
-            font-family:"SourceSansPro-Light";
-         
+            font-family: "SourceSansPro-Light";
         }
-      
-            /* Modificar el formatos del texto del titulo */
-            #overlay {
+
+/* Modificar el formatos del texto del titulo */
+#overlay {
     color: rgba(255,255,255,1);
     text-decoration: none;
     display: block;
@@ -133,7 +131,7 @@ header nav ul {
 }
 
 /* Aplicar color de fondo degradado al titulo */
- #overlay {
+#overlay {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
     background: #febbbb; /* Old browsers */
     background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%); /* FF3.6-15 */
@@ -216,7 +214,7 @@ p {
     display: none;
 }
 
-    #activar ~ .contenedor{
+    #activar ~ .contenedor {
         position: absolute;
         text-align: center;
         top: 0;
@@ -250,16 +248,87 @@ p {
 #activar:checked ~ .contenedor,
 #activar:checked ~ .contenedor .menu {
     max-height: 100%;
-   
 }
 
     #activar:checked ~ .contenedor .menu {
         padding: 21px 0px 100% 8px;
-  
     }
 
     #activar:checked ~ .contenedor .label:before {
         content: "CERRAR MENU";
-        
     }
 
+/*estilos test2 */
+
+#test2 {
+    border: none;
+    position: absolute;
+    clip: rect(0px, 1500px,650px, 0px);
+    /*1  0px=top(arriba)
+    2 1400px=left(izquierda)
+    3  743px = botton(abajo)
+    4  0px=right(derecha)
+*/
+}
+
+
+/**/
+/* sidebar*/
+.sidenav {
+    position: fixed;
+    z-index: 100;
+    top: 20%;
+    /*right: 1%;*/
+    left: 9%;
+    border-color: #2196F3;
+    border-width: 1px;
+    border-style: inset;
+    border-radius: 45px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    width: 30%;
+    background: hsla(160, 1%, 77%,0.8); /*hsla(25,75%,60%,0.3);*/
+    /*    
+    */
+    #background: rgb(255, 255, 255);
+    padding: 8px 0;
+    font-family: Verdana;
+    font-size: 6px;
+}
+
+    .sidenav span {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: calc(2em + 1vh);
+        color: #2196F3;
+        display: inline-block;
+    }
+
+        .sidenav span:hover {
+            color: #064579;
+        }
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        .sidebar span {
+            float: left;
+        }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar span {
+        text-align: center;
+        float: none;
+    }
+}
