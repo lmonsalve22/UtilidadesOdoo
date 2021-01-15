@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ISMT</title>
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+</head>
+<body>
+
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor">
+          <nav class="menu">
+                <!-- Nav tabs -->
+              <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%; border-color:transparent; display:block !important;">
+
+                  <li class="ml-md-4 ">
+                      <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                          Inicio
+                      </a>
+                  </li>
+                  <li class="ml-md-2"><a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#promedio" role="tab">ISMT Promedio</a></li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#clases" role="tab">ISMT Clases</a> </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#abc" role="tab">Hogares ABC1</a> </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#hc2" role="tab">Hogares C2</a> </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#hc3" role="tab">Hogares C3</a>  </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#hd" role="tab">Hogares D</a> </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#he" role="tab">Hogares E</a> </li>
+                  <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#over" role="tab">Overlay</a> </li>
+              </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+        </div>
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <img style="height:95vh; width:100vw;" src="~/Content/img/Porta_ISMT.jpg" />
+        </div>
+     
+        <div class="tab-pane" id="promedio" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/100"></iframe>
+        </div>
+
+        <div class="tab-pane" id="clases" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/68"></iframe>
+        </div>
+
+        <div class="tab-pane" id="abc" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/102" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="hc2" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/104" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="hc3" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/106" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="hd" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/108" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="he" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ISMT/110" frameborder="0"></iframe>
+        </div>
+        <div class="tab-pane" id="over" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/overlay/162" frameborder="0"></iframe>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
+

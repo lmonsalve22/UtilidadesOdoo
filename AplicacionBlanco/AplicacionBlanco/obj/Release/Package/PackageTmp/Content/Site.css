@@ -9,8 +9,8 @@
     padding-right: 15px;
 }*/
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 /*.dl-horizontal dt {
     white-space: normal;
@@ -65,13 +65,13 @@ header nav {
     top: 0;
 }
 
-/* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com) 
+/* Cambiar el color del menú a degradado (color de gradiente obtenido de colorzilla.com)
 
 header nav {
-	background: #aebcbf; 
-	background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%); 
-	background: -webkit-linear-gradient(top, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%); 
-	background: linear-gradient(to bottom, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%); 
+	background: #aebcbf;
+	background: -moz-linear-gradient(top, #aebcbf 0%, #6e7774 50%, #0a0e0a 51%, #0a0809 100%);
+	background: -webkit-linear-gradient(top, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%);
+	background: linear-gradient(to bottom, #aebcbf 0%,#6e7774 50%,#0a0e0a 51%,#0a0809 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aebcbf', endColorstr='#0a0809',GradientType=0 );
 }
 */
@@ -112,7 +112,8 @@ header nav ul {
             padding: 5px;
             margin-top: 25px;
             font-size: 12px;
-            background: transparent;
+            background: rgba(0,0,0,0.45);
+            /*   background: transparent;*/
             border-radius: 100px;
             border: 2px solid rgba(153,153,153,1);
             width: 135px;
@@ -258,12 +259,13 @@ p {
         content: "CERRAR MENU";
     }
 
-/*estilos test2 */
+    /*estilos test2 */
 
 #test2 {
     border: none;
     position: absolute;
     clip: rect(0px, 1500px,650px, 0px);
+
     /*1  0px=top(arriba)
     2 1400px=left(izquierda)
     3  743px = botton(abajo)
@@ -289,7 +291,7 @@ p {
     padding-right: 25%;
     width: 30%;
     background: hsla(160, 1%, 77%,0.8); /*hsla(25,75%,60%,0.3);*/
-    /*    
+    /*
     */
     #background: rgb(255, 255, 255);
     padding: 8px 0;

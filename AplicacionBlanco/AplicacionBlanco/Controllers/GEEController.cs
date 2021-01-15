@@ -29,6 +29,7 @@ namespace AplicacionBlanco.Controllers
             ViewBag.GEE = v.urlCompletaPB(id3,id4);
             ViewBag.titulo = div.nombreAdministrativo + " " + div.pais;
             ViewBag.imagen = v.urlImagen;
+            ViewBag.HTMLTitulo = v.nombre;
             return View();
         }
     }
