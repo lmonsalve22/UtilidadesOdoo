@@ -18,11 +18,11 @@
     @Scripts.Render("~/bundles/bootstrap")
 
     <script type="text/javascript">
-        window.onload = function () { document.getElementByName('impacto').focus(); }
+        //window.onload = function () { document.getElementByName('impacto').focus(); }
     </script>
 </head>
 <body>
-    <div class="sidenav" id="test1">
+    <div class="sidenav" id="test1" style="display:none">
         <span href="#">@ViewBag.titulo</span>
     </div>
     <header>
@@ -34,28 +34,33 @@
             <nav class="menu">
 
                 <!-- Nav tabs -->
+
                 <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%;  border-color:transparent; display:block !important;">
 
                     <!--  <li id="atras" class="ml-md-5 " style="padding-left:100px;">
                         <a href="javascript:history.back();"><img src="~/Content/img/atras.png" style="width: 20px">Atras</a>
                     </li>-->
+                    <!--
                     <li class="ml-md-4 ">
                         <a onclick="document.getElementById('activar').checked = false;document.getElementById('test1').style.display= 'inline';"
                            data-toggle="tab" href="#inicio" role="tab">
                             Inicio
                         </a>
                     </li>
+                        -->
                     <li class="ml-md-4 ">
                         <a onclick="document.getElementById('activar').checked = false;document.getElementById('test1').style.display= 'none';"
                            data-toggle="tab" href="#home" role="tab">
-                            Power BI
+                            Base Conceptual
                         </a>
                     </li>
 
                     <li class="ml-md-4 ">
                         <a onclick="document.getElementById('activar').checked = false;document.getElementById('test1').style.display= 'none';"
                            data-toggle="tab"
-                           href="#gearth" role="tab">Google Earth Engine</a>
+                           href="#gearth" role="tab">
+                            Aplicación GEE
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -68,21 +73,15 @@
 
     <!-- Tab panes -->
     <div class="tab-content" style=" height:500px; margin-top:2%;">
-        <div class="tab-pane active" id="inicio" role="tabpanel">
-            <img style="height:95vh; width:100vw;" src="@ViewBag.imagen" />
-            @*
-                <h1 class="ce"  style="margin-left:-30%;margin-top:-0.1%;position:absolute;float:left">@ViewBag.titulo</h1>
-            *@
-        </div>
-        <div class="tab-pane " id="home" role="tabpanel">
+        <div class="tab-pane active" id="home" role="tabpanel">
             <iframe id="test2" style="margin: 0 auto; width: 95%; height: 700px;"
-                    src="@ViewBag.GEE"></iframe>
+                    src="@ViewBag.PB"></iframe>
         </div>
 
         <div class="tab-pane" id="gearth" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" 
+            <iframe class="embed-responsive embed-responsive-16by9"
                     style="margin: 0 auto; width: 100%; height: 95vh; "
-                    src="@ViewBag.PB"></iframe>
+                    src="@ViewBag.GEE"></iframe>
         </div>
 
     </div>

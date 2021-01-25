@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ICVU</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor" style="z-index:1000;">
+            <nav class="menu">
+                <ul>
+                    <li class="ml-md-4 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="ml-md-2"><a href="~/ICVU/A2017" target="_self">AÑO 2017</a></li>
+                    <li class="ml-md-2"> <a href="~/ICVU/A2018" target="_self">AÑO 2018</a> </li>
+                    <li class="ml-md-2"> <a href="~/ICVU/A2019" target="_self">AÑO 2019</a> </li>
+                    <li class="ml-md-2"> <a href="~/ICVU/A2020" target="_self">AÑO 2020</a> </li>
+                </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+
+        </div>
+
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/Porta_ISMT.jpg" />
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

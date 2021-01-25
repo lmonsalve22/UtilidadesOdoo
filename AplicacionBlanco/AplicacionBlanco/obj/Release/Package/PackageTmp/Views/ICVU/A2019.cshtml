@@ -1,0 +1,93 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ICVU 2019</title>
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+</head>
+<body>
+
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor">
+            <nav class="menu">
+                <!-- Nav tabs -->
+                <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%; border-color:transparent; display:block !important;">
+
+                    <li class="ml-md-4 "><a href="javascript:history.back()">Inicio</a> </li>
+                    <li id="atras" class="ml-md-1">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                            <img src="~/Content/img/atras.png" style="width: 20px; ">&nbsp&nbspAtras
+                        </a>
+                    </li>
+                    <li class="ml-md-2"><a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#icvu" role="tab">ICVU</a></li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#condi" role="tab">Condiciones Laborales</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#ambi" role="tab">Ambiente de Negocios</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#SC" role="tab">Socio-Culturales</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#CM" role="tab">Conectividad-Movilidad</a>  </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#MA" role="tab">Salud-Medio Ambiente</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#VE" role="tab">Vivienda-Entorno</a> </li>
+
+                </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+        </div>
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/Porta_ISMT.jpg" />
+        </div>
+
+        <div class="tab-pane" id="icvu" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/228"></iframe>
+        </div>
+
+        <div class="tab-pane" id="condi" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/232"></iframe>
+        </div>
+
+        <div class="tab-pane" id="ambi" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/236" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="SC" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/240" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="CM" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/244" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="MA" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/248" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="VE" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/252" frameborder="0"></iframe>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
+
+
