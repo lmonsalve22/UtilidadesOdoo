@@ -7,5 +7,22 @@
 <br />
 <br />
 Hola
-<h2>@ViewBag.resultado</h2>
+<h2></h2>
+<table class="default">
+    <tr>
+        <th>Nombre</th>
+        <th>URL</th>
+        <th>Condicion</th>
+    </tr>
+    @foreach (var item in ViewBag.resultado)
+    {
+        <tr>
+            <td>@item.URL</td>
 
+            <td>@item.Nombre</td>
+
+            <td>@item.Disponibilidad</td>
+        </tr>
+    }
+
+</table>
