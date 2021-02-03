@@ -25,7 +25,7 @@ namespace AplicacionBlanco.Models
             Solicitudes.Add(new Solicitud("https://rpubs.com/dataintelligence/", "Shiny"));
             Solicitudes.Add(new Solicitud("https://github.com/Sud-Austral/", "Github"));
             Solicitudes.Add(new Solicitud("https://ezexporter.highviewapps.com/exports/export-profile/", "EZ Exporter"));
-            Solicitudes.Add(new Solicitud("https://dataintelligence.store/", "Shopify"));
+            Solicitudes.Add(new Solicitud("https://dataintelligence.store", "Shopify"));
         }
     }
 }
