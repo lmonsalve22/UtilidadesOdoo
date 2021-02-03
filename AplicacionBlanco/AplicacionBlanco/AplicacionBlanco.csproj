@@ -143,6 +143,7 @@
     <Compile Include="Controllers\MonitoreoController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
+    <Compile Include="Controllers\SIEDUController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -345,6 +346,13 @@
     <Content Include="Views\ICVU\A2019.cshtml" />
     <Content Include="Views\ICVU\A2020.cshtml" />
     <Content Include="Views\Monitoreo\Index.cshtml" />
+    <Content Include="Views\SIEDU\Index.cshtml" />
+    <Content Include="Views\SIEDU\Ambiente.cshtml" />
+    <Content Include="Views\SIEDU\SeguridadV.cshtml" />
+    <Content Include="Views\SIEDU\Vivienda.cshtml" />
+    <Content Include="Views\SIEDU\Economia.cshtml" />
+    <Content Include="Views\SIEDU\Transporte.cshtml" />
+    <Content Include="Views\SIEDU\Superficie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

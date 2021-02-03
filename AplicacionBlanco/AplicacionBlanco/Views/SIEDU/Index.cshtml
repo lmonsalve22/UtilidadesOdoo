@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SIEDU</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor" style="z-index:1000;">
+            <nav class="menu">
+                <ul>
+                    <li class="ml-md-4 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="ml-md-2"><a href="~/SIEDU/Ambiente" target="_self">Ambiente</a></li>
+                    <li class="ml-md-2"> <a href="~/SIEDU/SeguridadV" target="_self">Seguridad Vial</a> </li>
+                    <li class="ml-md-2"> <a href="~/SIEDU/Vivienda" target="_self">Vivienda</a> </li>
+                    <li class="ml-md-2"> <a href="~/SIEDU/Enocomia" target="_self">Econom&iacute;a</a> </li>
+                    <li class="ml-md-2"> <a href="~/SIEDU/Transporte" target="_self">Transporte</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#edu" role="tab">Educaci&oacute;n</a> </li>
+                    <li class="ml-md-2"> <a href="~/SIEDU/superficie" target="_self">Superficie</a> </li>
+                </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+
+        </div>
+
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/SIEDU/386"></iframe>
+        </div>
+        <div class="tab-pane" id="edu" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width:100%; height:95vh;" src="https://ide.dataintelligence-group.com/mapstore/#/context/ICVU/306" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
