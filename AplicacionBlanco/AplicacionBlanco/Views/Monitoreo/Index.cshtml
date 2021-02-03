@@ -6,8 +6,7 @@
 <br />
 <br />
 <br />
-Hola
-<h2></h2>
+<h2>Monitoreo de Servicios</h2>
 <table class="default">
     <tr>
         <th>Nombre</th>
@@ -17,11 +16,19 @@ Hola
     @foreach (var item in ViewBag.resultado)
     {
         <tr>
-            <td>@item.URL</td>
-
             <td>@item.Nombre</td>
 
-            <td>@item.Disponibilidad</td>
+            <td>@item.URL</td>
+
+            <td>if (@item.Disponibilidad == "True")
+                {
+                    <img class="img-fluid" style="max-width: 5%; height: auto; margin-left:2%;" src="~/Content/img/circulo_verde.png"/>
+                }
+                else
+                {
+                    <img class="img-fluid" style="max-width: 5%; height: auto; margin-left:2%;" src="~/Content/img/circulo_rojo.png" />
+                }
+            </td>
         </tr>
     }
 
