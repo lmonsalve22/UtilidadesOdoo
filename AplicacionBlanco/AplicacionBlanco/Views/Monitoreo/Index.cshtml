@@ -16,9 +16,9 @@
     @foreach (var item in ViewBag.resultado)
     {
         <tr>
-            <td>@item.Nombre</td>
+            <td>@item.Nombre </td>
 
-            <td>@item.URL</td>
+            <td><a class="twitter-timeline" data-height="600" data-width="550" href=@item.URL>Verificar </a></td>
 
             <td>@if (item.Disponibilidad)
                 {
