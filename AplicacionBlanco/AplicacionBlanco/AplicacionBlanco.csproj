@@ -164,6 +164,8 @@
     <Content Include="Content\estilos.css" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
+    <Content Include="Content\img\circulo_rojo.png" />
+    <Content Include="Content\img\circulo_verde.png" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
     <Content Include="Content\img\ICVU.jpeg" />
