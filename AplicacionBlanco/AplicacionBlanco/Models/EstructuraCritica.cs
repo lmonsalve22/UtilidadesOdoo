@@ -25,7 +25,12 @@ namespace AplicacionBlanco.Models
             Solicitudes.Add(new Solicitud("https://rpubs.com/dataintelligence/", "Shiny"));
             Solicitudes.Add(new Solicitud("https://github.com/Sud-Austral/", "Github"));
             Solicitudes.Add(new Solicitud("https://ezexporter.highviewapps.com/exports/export-profile/", "EZ Exporter"));
-            Solicitudes.Add(new Solicitud("https://dataintelligence.store", "Shopify"));
+            Solicitudes.Add(new Solicitud("https://dataintelligence.store/", "Shopify"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/123456789", "Odoo 404"));
+            Solicitudes.Add(new Solicitud("https://app.powerbi.com/view?r=eyJrIjoiYWQ2NTlkNjAtNjY1Yy00YjRlLTg3YWYtMDU5NmI5OTZkMzg4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9", "PowerBI Dashboard"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/datariesgo-mapa-de-femicidios-2020-chile?prodId=13/0", "Odoo Prueba"));
+            Solicitudes.Add(new Solicitud("https://odooutil.azurewebsites.net/Siedu", "SIEDU"));
+
         }
     }
 }

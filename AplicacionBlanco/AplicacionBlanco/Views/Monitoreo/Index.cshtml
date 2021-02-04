@@ -20,13 +20,13 @@
 
             <td>@item.URL</td>
 
-            <td>if (@item.Disponibilidad == True)
+            <td>@if (item.Disponibilidad)
                 {
-                    <img class="img-fluid" style="max-width: 5%; height: auto; margin-left:2%;" src="~/Content/img/circulo_verde.png"/>
+                    <img class="img-fluid" style="max-width: 10%; height: auto; margin-left:2%;" src="~/Content/img/circulo_verde.png"/>
                 }
                 else
                 {
-                    <img class="img-fluid" style="max-width: 5%; height: auto; margin-left:2%;" src="~/Content/img/circulo_rojo.png" />
+                    <img class="img-fluid" style="max-width: 10%; height: auto; margin-left:2%;" src="~/Content/img/circulo_rojo.png" />
                 }
             </td>
         </tr>
