@@ -150,6 +150,7 @@
     <Compile Include="Models\DivisionAdministrativa.cs" />
     <Compile Include="Models\EstructuraCritica.cs" />
     <Compile Include="Models\Solicitud.cs" />
+    <Compile Include="Models\Solicitud2.cs" />
     <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -347,6 +348,7 @@
     <Content Include="Views\ICVU\A2019.cshtml" />
     <Content Include="Views\ICVU\A2020.cshtml" />
     <Content Include="Views\Monitoreo\Index.cshtml" />
+    <Content Include="Views\Monitoreo\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
