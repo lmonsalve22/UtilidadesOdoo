@@ -137,6 +137,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\designController.cs" />
     <Compile Include="Controllers\GEEController.cs" />
+    <Compile Include="Controllers\GraficoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ICVUController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
@@ -212,7 +213,10 @@
     <Content Include="Content\img\Font\SourceSansPro-Regular.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBold.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
+    <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -345,6 +349,7 @@
     <Content Include="Views\ICVU\A2019.cshtml" />
     <Content Include="Views\ICVU\A2020.cshtml" />
     <Content Include="Views\Monitoreo\Index.cshtml" />
+    <Content Include="Views\Grafico\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
