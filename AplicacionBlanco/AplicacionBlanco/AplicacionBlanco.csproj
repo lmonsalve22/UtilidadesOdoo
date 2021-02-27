@@ -350,6 +350,7 @@
     <Content Include="Views\ICVU\A2020.cshtml" />
     <Content Include="Views\Monitoreo\Index.cshtml" />
     <Content Include="Views\Grafico\Index.cshtml" />
+    <Content Include="Views\Grafico\PopUP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

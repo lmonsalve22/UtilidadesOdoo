@@ -13,5 +13,10 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
+
+        public ActionResult PopUP()
+        {
+            return View();
+        }
     }
 }
