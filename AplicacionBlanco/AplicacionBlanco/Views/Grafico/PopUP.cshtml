@@ -12,6 +12,57 @@
     <script src="https://kit.fontawesome.com/2f08016506.js" crossorigin="anonymous"></script>
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <title>PopUp</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawAxisTickColors);
+
+        function drawAxisTickColors() {
+            var data = google.visualization.arrayToDataTable([
+                ['City', '2010 Population', '2000 Population'],
+                ['New York City, NY', 8175000, 8008000],
+                ['Los Angeles, CA', 3792000, 3694000],
+                ['Chicago, IL', 2695000, 2896000],
+                ['Houston, TX', 2099000, 1953000],
+                ['Philadelphia, PA', 1526000, 1517000]
+            ]);
+
+            var options = {
+                title: 'Population of Largest U.S. Cities',
+                chartArea: { width: '50%' },
+                hAxis: {
+                    title: 'Total Population',
+                    minValue: 0,
+                    textStyle: {
+                        bold: true,
+                        fontSize: 12,
+                        color: '#4d4d4d'
+                    },
+                    titleTextStyle: {
+                        bold: true,
+                        fontSize: 18,
+                        color: '#4d4d4d'
+                    }
+                },
+                vAxis: {
+                    title: 'City',
+                    textStyle: {
+                        fontSize: 14,
+                        bold: true,
+                        color: '#848484'
+                    },
+                    titleTextStyle: {
+                        fontSize: 14,
+                        bold: true,
+                        color: '#848484'
+                    }
+                }
+            };
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 
 <body>
@@ -23,27 +74,237 @@
         </header>
 
         <section class="contenedor-main row">
-            <main class="col-md-7">
+            <main class="col-md-7" id="chart_div">
                 <h2>
                     Graficos
                 </h2>
-                <p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-
-                    It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                </p>
-                </p>
+               
             </main>
-            <aside class="col-md-4">
-                <h2>Ficha</h2>
+            
+            <aside class="col-md-4 align-self-start">
+                <h6 style="margin:8px;">Descargas</h6>
+                <section style="background:#fff;">
+                    <div class="row">
+                        <div class="row " style="padding:10px;">
+                            <div class="col-md-2 ">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#myModal"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                               
+                                            </div>
+                                            <div class="modal-body">
+                                                <section class="pricing py-5 mb-md-5">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <!-- Free Tier -->
+                                                            <div class="col-lg-4">
+                                                                <div class="card mb-5 mb-lg-0">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                                                                        <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+                                                                        <hr>
+                                                                        <ul class="fa-ul">
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                                                                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
+                                                                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
+                                                                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
+                                                                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                                                                        </ul>
+                                                                        <a href="https://dataintelligence.store/products/avance-del-covid-19-cl" target="_blank" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Plus Tier -->
+                                                            <div class="col-lg-4">
+                                                                <div class="card mb-5 mb-lg-0">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                                                                        <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
+                                                                        <hr>
+                                                                        <ul class="fa-ul">
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+                                                                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                                                                        </ul>
+                                                                        <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Pro Tier -->
+                                                            <div class="col-lg-4">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                                                                        <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+                                                                        <hr>
+                                                                        <ul class="fa-ul">
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+                                                                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+                                                                        </ul>
+                                                                        <a href="#" class="btn btn-block btn-primary text-uppercase">Button</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#myModal2"><a href="#"><img src="~/Content/iconos_PopUp/png.png" /></a></button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal2" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="columns">
+                                                    <ul class="price">
+                                                        <li class="header">Basic</li>
+                                                        <li class="grey">$ 9.99 / year</li>
+                                                        <li>10GB Storage</li>
+                                                        <li>10 Emails</li>
+                                                        <li>10 Domains</li>
+                                                        <li>1GB Bandwidth</li>
+                                                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="columns">
+                                                    <ul class="price">
+                                                        <li class="header" style="background-color:#4CAF50">Pro</li>
+                                                        <li class="grey">$ 24.99 / year</li>
+                                                        <li>25GB Storage</li>
+                                                        <li>25 Emails</li>
+                                                        <li>25 Domains</li>
+                                                        <li>2GB Bandwidth</li>
+                                                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="columns">
+                                                    <ul class="price">
+                                                        <li class="header">Premium</li>
+                                                        <li class="grey">$ 49.99 / year</li>
+                                                        <li>50GB Storage</li>
+                                                        <li>50 Emails</li>
+                                                        <li>50 Domains</li>
+                                                        <li>5GB Bandwidth</li>
+                                                        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <a href="#"><img src="~/Content/iconos_PopUp/ppt.png" /></a>
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>
+                                                    Función exclusiva de la Cuenta Corporativa
+                                                    Esta función se reserva a los usuarios con cuentas profesionales.
+                                                    Si desea recibir más información sobre este tipo de cuenta, póngase en contacto con nosotros. Solicitar información.
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <a href="#"><img src="~/Content/iconos_PopUp/xls.png" /></a>
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section style="background:#FFF; margin-top:20px;">
+                    <h6>Fuentes</h6>
+                    <div class="row">
+
+                        <div class="row  justify-content-around" style="padding:10px;">
+                            <div class="col-md-11 ">
+                                <p>
+                                    Ver información de las fuentes
+                                    Ver información del editor
+                                    Fecha de publicación
+                                    Diciembre 2020
+
+                                    Región
+                                    España
+
+                                    Periodo de estudio
+                                    enero - noviembre de 2020
+
+                                    Grupo de edad
+                                    14 años o más
+
+                                    Abrir esta estadística en...
+                                    Inglés
+                                </p>
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </section>
+
             </aside>
         </section>
         <section class="row widgets">
@@ -156,7 +417,7 @@
             <!--end of col-->
         </div>
         <!--Precio-->
-        <section class="pricing py-5">
+        <section class="pricing py-5 mb-md-5">
             <div class="container">
                 <div class="row">
                     <!-- Free Tier -->

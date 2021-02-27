@@ -163,6 +163,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\estilos.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\iconos_PopUp\pdf_download.png" />
+    <Content Include="Content\iconos_PopUp\png.png" />
+    <Content Include="Content\iconos_PopUp\ppt.png" />
+    <Content Include="Content\iconos_PopUp\xls.png" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\Font\OFL.txt" />
