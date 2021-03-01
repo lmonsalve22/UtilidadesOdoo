@@ -162,6 +162,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\estilos.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\iconos_PopUp\pdf_download.png" />
+    <Content Include="Content\iconos_PopUp\png.png" />
+    <Content Include="Content\iconos_PopUp\ppt.png" />
+    <Content Include="Content\iconos_PopUp\xls.png" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\Font\OFL.txt" />
@@ -175,6 +180,7 @@
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
+    <Content Include="Content\EstilosPopUp.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -230,6 +236,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\OcultarBoton.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -356,6 +363,7 @@
     <Content Include="Views\Grafico\Prueba.cshtml" />
     <Content Include="Views\Grafico\Grafico.cshtml" />
     <Content Include="Views\Grafico\Grafico2.cshtml" />
+    <Content Include="Views\Grafico\PopUPClent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

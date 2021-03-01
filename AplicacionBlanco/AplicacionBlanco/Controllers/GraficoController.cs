@@ -40,6 +40,9 @@ namespace AplicacionBlanco.Controllers
         public ActionResult Grafico2(string id)
         {
             ViewBag.URL = id;
+        }
+        public ActionResult PopUPClent()
+        {
             return View();
         }
     }
