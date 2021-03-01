@@ -19,7 +19,14 @@ namespace AplicacionBlanco
                 //url: "{controller}/{action}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, id2 = UrlParameter.Optional, id3 = UrlParameter.Optional, id4 = UrlParameter.Optional }
             );
-            
+
+            routes.MapRoute(
+                name: "UnParametro",
+                url: "{controller}/{action}/{id}",
+                //url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

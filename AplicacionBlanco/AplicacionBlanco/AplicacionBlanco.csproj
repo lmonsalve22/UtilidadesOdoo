@@ -234,6 +234,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\Propios\Util.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -350,6 +351,11 @@
     <Content Include="Views\ICVU\A2020.cshtml" />
     <Content Include="Views\Monitoreo\Index.cshtml" />
     <Content Include="Views\Grafico\Index.cshtml" />
+    <Content Include="Views\Grafico\Luis1.cshtml" />
+    <Content Include="Views\Grafico\Luis2.cshtml" />
+    <Content Include="Views\Grafico\Prueba.cshtml" />
+    <Content Include="Views\Grafico\Grafico.cshtml" />
+    <Content Include="Views\Grafico\Grafico2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,5 +13,34 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
+
+        public ActionResult Prueba(string id, string id2)
+        {
+            ViewBag.URL = id;
+            ViewBag.grafico = id2;
+            return View();
+        }
+
+        public ActionResult Luis1()
+        {
+            return View();
+        }
+
+        public ActionResult Luis2()
+        {
+            return View();
+        }
+
+        public ActionResult Grafico(string id)
+        {
+            ViewBag.URL = id;
+            return View();
+        }
+
+        public ActionResult Grafico2(string id)
+        {
+            ViewBag.URL = id;
+            return View();
+        }
     }
 }
