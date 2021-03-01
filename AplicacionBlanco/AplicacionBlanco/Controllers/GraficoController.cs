@@ -40,9 +40,13 @@ namespace AplicacionBlanco.Controllers
         public ActionResult Grafico2(string id)
         {
             ViewBag.URL = id;
+
+            return View ();
         }
-        public ActionResult PopUPClent()
+        public ActionResult PopUPClent(string id = "test.csv", string id2 = "grafico")
         {
+            ViewBag.URL = id;
+            ViewBag.grafico = id2;
             return View();
         }
     }
