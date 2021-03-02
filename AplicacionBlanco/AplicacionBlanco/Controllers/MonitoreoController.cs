@@ -13,7 +13,7 @@ namespace AplicacionBlanco.Controllers
         public ActionResult Index(string id = "https://www.bancoestado.cl/imagenes/_personas/home/default.asp")
         {
             EstructuraCritica db = new EstructuraCritica();
-            ViewBag.resultado = db.Solicitudes[0].Disponibilidad;
+            ViewBag.resultado = db.Solicitudes;
             return View();
         }
     }

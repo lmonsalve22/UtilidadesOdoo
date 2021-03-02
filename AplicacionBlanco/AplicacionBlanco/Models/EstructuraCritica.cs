@@ -13,6 +13,12 @@ namespace AplicacionBlanco.Models
         {
             Solicitudes = new List<Solicitud>();
             Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
+            Solicitudes.Add(new Solicitud("https://www.dataintelligence-group.com/", "Odoo"));
         }
     }
 }
