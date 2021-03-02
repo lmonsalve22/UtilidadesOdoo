@@ -56,5 +56,19 @@ namespace AplicacionBlanco.Controllers
 
             return View();
         }
+
+        public ActionResult Grafico4(string id)
+        {
+            ViewBag.URL = id;
+
+            return View();
+        }
+
+        public ActionResult Grafico5(string id)
+        {
+            ViewBag.URL = id;
+
+            return View();
+        }
     }
 }
