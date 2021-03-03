@@ -141,6 +141,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ICVUController.cs" />
     <Compile Include="Controllers\IFRAMEController.cs" />
+    <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Controllers\MonitoreoController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
@@ -151,6 +152,8 @@
     <Compile Include="Models\BaseGEE.cs" />
     <Compile Include="Models\DivisionAdministrativa.cs" />
     <Compile Include="Models\EstructuraCritica.cs" />
+    <Compile Include="Models\Grafico.cs" />
+    <Compile Include="Models\Graficos.cs" />
     <Compile Include="Models\Solicitud.cs" />
     <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -375,6 +378,8 @@
     <Content Include="Views\Grafico\Grafico3.cshtml" />
     <Content Include="Views\Grafico\Grafico4.cshtml" />
     <Content Include="Views\Grafico\Grafico5.cshtml" />
+    <Content Include="Views\Grafico\Grafico6.cshtml" />
+    <Content Include="Views\Info\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

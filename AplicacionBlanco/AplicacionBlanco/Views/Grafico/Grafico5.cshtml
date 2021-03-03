@@ -85,7 +85,69 @@
 
                     window.addEventListener("resize", function () {
                     // tu código aquí
+                    url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/" + "@ViewBag.URL";
+                        //alert(url);
+                        //url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Nuevo%20documento%20de%20texto.csv";
+                        //alert(url);
+                        $.get(url, function (data) {
 
+                            var lines = data.split("\n");
+                            var a = lines[0].split(",");
+
+                            var datos = [a];
+                            for (var i = 1; i < lines.length; i++) {
+                                try {
+                                    var listAux = [];
+                                    var fila = lines[i].split(",");
+                                    listAux.push(fila[0]);
+                                    for (var j = 1; j < fila.length; j++) {
+
+                                        listAux.push(Number.parseFloat(fila[j]));
+                                    }
+                                    //alert(listAux);
+                                    if (a.length == listAux.length) {
+                                        datos.push(listAux);
+                                    }
+
+                                } catch (error) {
+                                    //console.error(error);
+                                    // expected output: ReferenceError: nonExistentFunction is not defined
+                                    // Note - error messages will vary depending on browser
+                                }
+
+                            }
+
+                            //var datos = [a];
+                            
+                            // Load the Visualization API and the corechart package.
+                            google.charts.load('current', { 'packages': ['scatter'] });
+
+                            // Set a callback to run when the Google Visualization API is loaded.
+                            google.charts.setOnLoadCallback(drawChart);
+
+                            function drawChart() {
+                                var data = google.visualization.arrayToDataTable(datos);
+
+                                var options = {
+                                    //title: 'Age vs. Weight comparison',
+                                    //subtitle: 'based on hours studied',
+                                    chart: {
+                                        title: 'Students\' Final Grades',
+                                        subtitle: 'based on hours studied'
+                                    },
+                                    //hAxis: { title: 'Age', minValue: 0, maxValue: 15 },
+                                    //vAxis: { title: 'Weight', minValue: 0, maxValue: 15 },
+                                    legend: 'none'
+                                };
+
+                                //var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+                                var chart = new google.charts.Scatter(document.getElementById('chart_div'));
+                                //chart.draw(data, options);
+                                chart.draw(data, google.charts.Scatter.convertOptions(options));
+                            }
+                      
+
+                    });
 
 
                     });
