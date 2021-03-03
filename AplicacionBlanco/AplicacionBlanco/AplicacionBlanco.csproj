@@ -379,9 +379,9 @@
     <Content Include="Views\Grafico\Grafico4.cshtml" />
     <Content Include="Views\Grafico\Grafico5.cshtml" />
     <Content Include="Views\Grafico\Grafico6.cshtml" />
-    <Content Include="Views\Info\Index.cshtml" />
     <Content Include="Views\design\Elecciones.cshtml" />
     <Content Include="Views\design\Elecciones2.cshtml" />
+    <Content Include="Views\Info\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
