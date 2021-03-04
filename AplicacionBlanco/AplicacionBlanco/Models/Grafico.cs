@@ -19,9 +19,10 @@ namespace AplicacionBlanco.Models
         public string TAGS { get; set; }
         public string MACROTEMA { get; set; }
         public string URL { get; set; }
-        
+        public string IDIOMA { get; set; }
 
-        public Grafico(int iD, string nOMBRE, string tITULO, string sUBTITULO, string dESCRIPCION, string fECHA_PUBLICACION, string rEGION, string pERIODO_ESTUDIO, string gRUPO_EDAD, string tAGS, string mACROTEMA, string uRL)
+
+        public Grafico(int iD, string nOMBRE, string tITULO, string sUBTITULO, string dESCRIPCION, string fECHA_PUBLICACION, string rEGION, string pERIODO_ESTUDIO, string gRUPO_EDAD, string tAGS, string mACROTEMA, string uRL, string Español)
         {
             ID = iD;
             NOMBRE = nOMBRE;
@@ -35,6 +36,7 @@ namespace AplicacionBlanco.Models
             TAGS = tAGS;
             MACROTEMA = mACROTEMA;
             URL = uRL;
+            IDIOMA = Español;
         }
 
         public string URLCOmpleta()
