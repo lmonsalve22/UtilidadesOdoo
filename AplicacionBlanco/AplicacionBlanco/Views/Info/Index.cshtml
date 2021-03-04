@@ -4,18 +4,20 @@
 }
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!--Meta Tags-->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable = no, initial-scale=1.0 , maximun-scale=1.0, minimum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @Scripts.Render("~/bundles/jquery")
+    <!--Bootstrap y css-->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2f08016506.js" crossorigin="anonymous"></script>
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     <title>PopUp</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!--test megamenu-->
-
     <script>
         $(document).ready(function () {
             $(".megamenu").on("click", function (e) {
@@ -75,11 +77,12 @@
             chart.draw(data, options);
         }
     </script>
+
+
+
 </head>
 
 <body>
-
-
     <!-- megamenu-->
     <div class="container-fluid">
         <div class="row">
@@ -221,25 +224,26 @@
             </div>
         </header>
 
-        
         <section class="contenedor-main row">
             <main class="col-md-7">
                 <!--Insertar grafico-->
                 <iframe id="inlineFrameExample"
                         style="width:90%;height:90%"
                         scrolling="no"
-                        src="~/Grafico/grafico?id=@ViewBag.Resultado.URL">
-                </iframe>                        
-                
-                <a style="color:blue" href="~/Grafico/PopUPClent?id2=Grafico&id=@ViewBag.URL">
-                   Lineal
-                </a>
-                <a style="color:blue" href="~/Grafico/PopUPClent?id2=Grafico2&id=@ViewBag.URL">
-                    Torta
-                </a>
-                <a style="color:blue" href="~/Grafico/PopUPClent?id2=Grafico3&id=@ViewBag.URL">
-                    Barra
-                </a>
+                        src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL">
+                </iframe>
+                <div class="row ">
+                    <a style="color:blue; margin-left:10px;" href="~/Grafico/PopUPClent?id2=Grafico&id=@ViewBag.Resultado.URL">
+                        Lineal
+                    </a>
+                    <a style="color:blue; margin-left:10px;" href="~/Grafico/PopUPClent?id2=Grafico2&id=@ViewBag.Resultado.URL">
+                        Torta
+                    </a>
+                    <a style="color:blue; margin-left:10px;" href="~/Grafico/PopUPClent?id2=Grafico3&id=@ViewBag.Resultado.URL">
+                        Barra
+                    </a>
+
+                </div>  
             </main>
 
             <aside class="col-md-4 align-self-start">
@@ -435,6 +439,7 @@
                         </div>
                     </div>
                 </section>
+                <!--Seccion Iconos descargas-->
                 <section style="background:#FFF; margin-top:20px;">
                     <h3 style="padding-left:3%; padding-top:5%;">Fuente</h3>
 
@@ -444,27 +449,27 @@
 
                         <p>
                             <strong>Fecha de publicación</strong><br>
-                            Diciembre 2020
+                            @ViewBag.Resultado.FECHA_PUBLICACION
                         </p>
 
                         <p>
                             <strong>Región</strong><br>
-                            España
+                            @ViewBag.Resultado.REGION
                         </p>
 
                         <p>
                             <strong>Periodo de estudio</strong><br>
-                            enero - noviembre de 2020
+                            @ViewBag.Resultado.PERIODO_ESTUDIO
                         </p>
 
                         <p>
                             <strong>Grupo de edad</strong><br>
-                            14 años o más
+                            @ViewBag.Resultado.GRUPO_EDAD
                         </p>
 
                         <p>
                             <strong>Abrir esta estadística en...</strong><br>
-                            Inglés
+                            @ViewBag.Resultado.IDIOMA
                         </p>
                     </div>
 
@@ -475,42 +480,18 @@
         <section class="row widgets">
             <div class="col-md-12 pt-md-3">
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including
-                    versions of Lorem Ipsum.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a type specimen book. It has survived
-                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                    including versions of Lorem Ipsum.
+                    @ViewBag.Resultado.DESCRIPCION
+
                 </p>
                 <span id="leerMas" style="display:none;">
                     <p>
-                        <strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</strong> <br />
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.
+                        <strong> @ViewBag.Resultado.DESCRIPCION</strong> <br />
+
                     </p>
 
                     <p>
                         <strong> Lorem Ipsum is simply dummy text.</strong> <br />
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.
+
                     </p>
                 </span>
 
@@ -528,60 +509,69 @@
         <!--Secccion editoriales-->
         <section class="row editorial justify-content-between">
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
+                <h6 style="color:#000;">MERCADO EDITORIAL</h6>
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
+                    <div class="row">
+                        <div class="col-md-2 mb-md-4">
+                            <img src="~/Content/img/Diseño sin título - copia.png" />
+                        </div>
+
+                        <div class="col-md-9 ml-md-3">
+                            <p>
+                                @ViewBag.Resultado.TITULO
+                            </p>
+                            content
+
+                        </div>
+
+                    </div>
+                </a>
             </div>
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
+                <h6 style="color:#000;">MERCADO EDITORIAL</h6>
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id1=1" style="color:#000;">
+                    <div class="row">
+                        <div class="col-md-2 mb-md-4">
+                            <img src="~/Content/img/Diseño sin título - copia.png" />
+                        </div>
+                        <div class="col-md-9 ml-md-3">
+                            <p>
+                                @ViewBag.Resultado.TITULO
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
         <section class="row widgets justify-content-between">
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
+                <h6 style="color:#000;">MERCADO EDITORIAL</h6>
+                <div class="row">
+                    <div class="col-md-2 mb-md-4">
+                        <img src="~/Content/img/Diseño sin título - copia.png" />
+                    </div>
+                    <div class="col-md-9 ml-md-3">
+                        <p>
+                            @ViewBag.Resultado.TITULO
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <p>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book.
-                </p>
+                <h6 style="color:#000;">MERCADO EDITORIAL</h6>
+                <div class="row">
+                    <div class="col-md-2 mb-md-4">
+                        <img src="~/Content/img/Diseño sin título - copia.png" />
+                    </div>
+                    <div class="col-md-9 ml-md-3">
+                        <p>
+                            @ViewBag.Resultado.TITULO
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
-        <!--search bar-->
-        <div class="row justify-content-center mb-5" style="background:#fff;">
-            <div class="col-12 col-md-10 col-lg-8">
-                <h4 style="color:#424242;">Descubra Data Intelligence</h4>
-                <form class="card card-sm">
-                    <div class="card-body row no-gutters align-items-center">
-                        <div class="col-auto">
-                            <i class="fas fa-search h4 text-body"></i>
-                        </div>
-                        <!--end of col-->
-                        <div class="col">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Encuentre informes y topicos">
-                        </div>
-                        <!--end of col-->
-                        <div class="col-auto">
-                            <button class="btn btn-lg btn-success" type="submit">Search</button>
-                        </div>
-                        <!--end of col-->
-                    </div>
-                </form>
-            </div>
-            <!--end of col-->
-        </div>
-        <!--Precio-->
+
         <section class="pricing py-5 mb-md-5">
             <div class="container">
                 <div class="row">
@@ -651,7 +641,148 @@
                 </div>
             </div>
         </section>
+        <!--
+        nav vertical hector
+            <div class="row">
+        <div class="col-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Opción 1</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Opción 2</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Opción 3</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Opción 4</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <h2>Opción 1</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nobis omnis unde eos sequi, reiciendis neque nesciunt illum dicta recusandae distinctio beatae, provident nostrum est qui praesentium consequuntur? Non, quis.
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <h2>Opción 2</h2>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non officia amet voluptatum rerum dolorem alias dicta mollitia quaerat. At, illum hic tempora ratione ipsum nobis pariatur quibusdam quidem ipsam dolor.
 
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <h2>Opción 3</h2>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum minima ab provident necessitatibus, nobis unde iure fuga ea dolorem! Dignissimos recusandae consectetur nesciunt, laboriosam beatae aperiam facere molestias est nisi?
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <h2>Opción 4</h2>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa nesciunt quos repudiandae maiores fugit, dolore adipisci totam aperiam vero atque ex ad et accusantium repellendus, aliquid expedita excepturi, iure commodi?
+
+                </div>
+            </div>
+        </div>
+    </div>
+        -->
+        <!--nav verticar-->
+        <section style="border: 2px double rgba(128, 128, 128, 0.20);">
+
+            <h4 class="text-center mb-md-4"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>
+            <div class="row" style="margin-bottom:20px;">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Periódicos</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Suplementos</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Revistas</a>
+                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Empresas</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h6 style="color:#000;margin-top:10px;">Las estadísticas más importantes</h6>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">1 Periódicos</div>
+                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">2 Suplementos</div>
+                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">3 Revistas</div>
+                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="border: 2px double rgba(128, 128, 128, 0.20);">
+            <!--buscador search bar-->
+            <div class="row justify-content-center mb-5 mt-md-5 text-center" style="background:#fff;">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <h4 style="color:#424242;margin-bottom:30px;">Descubra Data Intelligence</h4>
+                    <form class="card card-sm">
+                        <div class="card-body row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <i class="fas fa-search h4 text-body"></i>
+                            </div>
+                            <!--end of col-->
+                            <div class="col">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Encuentre informes y topicos">
+                            </div>
+                            <!--end of col-->
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit">Search</button>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                    </form>
+                </div>
+                <!--end of col-->
+            </div>
+            <!--Precio-->
+        </section>
+        <!--Seccion con scrollbar-->
+        <section style="margin-bottom:100px; background:#e8e0e0;">
+            <br />
+            <br />
+            <h4 class="text-center mb-md-5"><strong>Otros contenidos:</strong> También le podría interesar</h4>
+            <strong><p>Estadisticas</p></strong>
+            <div class="row">
+
+                <div class="col-md-5">
+
+                    <ul class="list-group mb-md-5">
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+
+
+                        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-2 mb-md-4">
+                            <img src="~/Content/img/Diseño sin título - copia.png" />
+                        </div>
+                        <div class="col-md-9 ml-md-3">
+                            <p>
+                                @ViewBag.Resultado.TITULO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Seccion de call to action-->
+        <section class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 text-right m-text-center">
+                        <h5>¿Desea conocer más sobre nuestras soluciones profesionales?</h5>
+                        <p id="last">Le enviaremos encantados información detallada sobre nuestra Cuenta Corporativa.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 m-text-center">
+                        <a class="btn btn-white">Solicitar Informacion</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <footer class="row">
         <div class="col">
@@ -662,7 +793,8 @@
     <script src="~/Scripts/OcultarBoton.js"></script>
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/popper.min.js"></script>
-    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
