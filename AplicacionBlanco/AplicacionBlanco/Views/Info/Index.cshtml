@@ -18,7 +18,6 @@
     <title>PopUp</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!--test megamenu-->
-
     <script>
         $(document).ready(function () {
             $(".megamenu").on("click", function (e) {
@@ -78,6 +77,9 @@
             chart.draw(data, options);
         }
     </script>
+
+
+
 </head>
 
 <body>
@@ -222,7 +224,6 @@
             </div>
         </header>
 
-
         <section class="contenedor-main row">
             <main class="col-md-7">
                 <!--Insertar grafico-->
@@ -242,8 +243,7 @@
                         Barra
                     </a>
 
-                </div>
-
+                </div>  
             </main>
 
             <aside class="col-md-4 align-self-start">
@@ -510,32 +510,37 @@
         <section class="row editorial justify-content-between">
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
                 <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-                <div class="row">
-                    <div class="col-md-2 mb-md-4">
-                        <img src="~/Content/img/Diseño sin título - copia.png" />
-                    </div>
-                    <div class="col-md-9 ml-md-3">
-                        <p>
-                            @ViewBag.Resultado.TITULO
-                        </p>
-                        <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">content</a>
-                    </div>
-                </div>
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
+                    <div class="row">
+                        <div class="col-md-2 mb-md-4">
+                            <img src="~/Content/img/Diseño sin título - copia.png" />
+                        </div>
 
+                        <div class="col-md-9 ml-md-3">
+                            <p>
+                                @ViewBag.Resultado.TITULO
+                            </p>
+                            content
+
+                        </div>
+
+                    </div>
+                </a>
             </div>
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
                 <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-
-                <div class="row">
-                    <div class="col-md-2 mb-md-4">
-                        <img src="~/Content/img/Diseño sin título - copia.png" />
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id1=1" style="color:#000;">
+                    <div class="row">
+                        <div class="col-md-2 mb-md-4">
+                            <img src="~/Content/img/Diseño sin título - copia.png" />
+                        </div>
+                        <div class="col-md-9 ml-md-3">
+                            <p>
+                                @ViewBag.Resultado.TITULO
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-9 ml-md-3">
-                        <p>
-                            @ViewBag.Resultado.TITULO
-                        </p>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
         <section class="row widgets justify-content-between">
