@@ -17,6 +17,7 @@ namespace AplicacionBlanco.Controllers
         // GET: Info
         public ActionResult Index(int id = 1, string id2 = "grafico")
         {
+            ViewBag.grafico = id2;
             Graficos db = new Graficos();
             ViewBag.Resultado = db.BuscarGrafico(id);
             return View();

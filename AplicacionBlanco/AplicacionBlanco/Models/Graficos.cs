@@ -13,7 +13,7 @@ namespace AplicacionBlanco.Models
         public Graficos()
         {
             GRAFICOS = new List<Grafico>();
-            //int iD, string nOMBRE, string tITULO, string sUBTITULO, string dESCRIPCION, string fECHA_PUBLICACION, string rEGION, string pERIODO_ESTUDIO, string gRUPO_EDAD, string tAGS, string mACROTEMA, string uRL
+            //int iD, string nOMBRE, string tITULO, string sUBTITULO, string dESCRIPCION, string fECHA_PUBLICACION, string rEGION, string pERIODO_ESTUDIO, string gRUPO_EDAD, string tAGS, string mACROTEMA, string uRL, string Español
             GRAFICOS.Add(new Grafico(iD:1, 
                                     nOMBRE:"Grafico_Test_1", 
                                     tITULO:"Gráfico Test 1", 
@@ -25,15 +25,16 @@ namespace AplicacionBlanco.Models
                                     gRUPO_EDAD:"Sin grupo de edad", 
                                     tAGS:"test prueba", 
                                     mACROTEMA:"Prueba", 
-                                    uRL:"test1.csv"));
-            GRAFICOS.Add(new Grafico(2, "Grafico_Test_2", "Gráfico Test 2", "", "Este gráfico es de ejemplo para usos varios.",
-                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test2.csv"));
+                                    uRL:"test.csv",
+                                    Español:"Espanol"));
+            GRAFICOS.Add(new Grafico(2, "Grafico_Test_2", "Gráfico Test 2", "", "Este gráfico es de ejemplo para usos varios.", 
+                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test2.csv","español"));
             GRAFICOS.Add(new Grafico(3, "Grafico_Test_3", "Gráfico Test 3", "", "Este gráfico es de ejemplo para usos varios.",
-                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test3.csv"));
+                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test3.csv", "español"));
             GRAFICOS.Add(new Grafico(4, "Grafico_Test_2", "Gráfico Test 2", "", "Este gráfico es de ejemplo para usos varios.",
-                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test4.csv"));
+                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test4.csv", "español"));
             GRAFICOS.Add(new Grafico(5, "Grafico_Test_2", "Gráfico Test 2", "", "Este gráfico es de ejemplo para usos varios.",
-                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test5.csv"));
+                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test5.csv", "español"));
 
 
         }
