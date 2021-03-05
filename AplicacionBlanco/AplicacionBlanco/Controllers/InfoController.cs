@@ -22,5 +22,11 @@ namespace AplicacionBlanco.Controllers
             ViewBag.Resultado = db.BuscarGrafico(id);
             return View();
         }
+
+        public ActionResult prueba2()
+        {
+          
+            return View();
+        }
     }
 }
