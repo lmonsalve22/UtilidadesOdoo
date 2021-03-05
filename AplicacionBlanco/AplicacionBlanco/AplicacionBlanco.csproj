@@ -173,6 +173,7 @@
     <Content Include="Content\iconos_PopUp\xls.png" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
+    <Content Include="Content\img\cabecera_encuesta_honduras.jpg" />
     <Content Include="Content\img\Diseño sin título - copia.png" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
@@ -386,6 +387,7 @@
     <Content Include="Views\Grafico\Hector.cshtml" />
     <Content Include="Scripts\mapas\jsapi.js" />
     <Content Include="Views\Grafico\Hector2.cshtml" />
+    <Content Include="Views\design\EleccionesHN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
