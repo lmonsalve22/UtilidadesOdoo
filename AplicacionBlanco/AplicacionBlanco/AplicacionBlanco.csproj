@@ -186,6 +186,7 @@
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
+    <Content Include="Content\StyleBuscador.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -247,6 +248,7 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\Propios\Util.js" />
+    <Content Include="Scripts\ScriptBuscador.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />

@@ -12,11 +12,13 @@
     <!--Bootstrap y css-->
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+ 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2f08016506.js" crossorigin="anonymous"></script>
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
-    <title>PopUp</title>
+    <link href="~/Content/StyleBuscador.css" rel="stylesheet" />
+    <title>Estadística</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!--test megamenu-->
     <script>
@@ -27,89 +29,6 @@
         });
 
     </script>
-
-    <script>
-
-        google.charts.load('current', { packages: ['corechart', 'bar'] });
-        google.charts.setOnLoadCallback(drawAxisTickColors);
-
-        function drawAxisTickColors() {
-            var data = google.visualization.arrayToDataTable([
-                ['City', '2010 Population', '2000 Population'],
-                ['New York City, NY', 8175000, 8008000],
-                ['Los Angeles, CA', 3792000, 3694000],
-                ['Chicago, IL', 2695000, 2896000],
-                ['Houston, TX', 2099000, 1953000],
-                ['Philadelphia, PA', 1526000, 1517000]
-            ]);
-
-            var options = {
-                title: 'Population of Largest U.S. Cities',
-                chartArea: { width: '50%' },
-                hAxis: {
-                    title: 'Total Population',
-                    minValue: 0,
-                    textStyle: {
-                        bold: true,
-                        fontSize: 12,
-                        color: '#4d4d4d'
-                    },
-                    titleTextStyle: {
-                        bold: true,
-                        fontSize: 18,
-                        color: '#4d4d4d'
-                    }
-                },
-                vAxis: {
-                    title: 'City',
-                    textStyle: {
-                        fontSize: 14,
-                        bold: true,
-                        color: '#848484'
-                    },
-                    titleTextStyle: {
-                        fontSize: 14,
-                        bold: true,
-                        color: '#848484'
-                    }
-                }
-            };
-            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
-    </script>
-    <script>
-        var chart = new CanvasJS.Chart("chartContainer",
-            {
-                title: {
-                    text: "Exporting chart using jsPDF & toDataurl"
-                },
-                data: [
-                    {
-                        type: "spline",
-                        dataPoints: [
-                            { x: 10, y: 4 },
-                            { x: 20, y: 7 },
-                            { x: 30, y: 2 },
-                            { x: 40, y: 3 },
-                            { x: 50, y: 5 }
-                        ]
-                    }
-                ]
-            });
-        chart.render();
-
-        var canvas = $("#chartContainer .canvasjs-chart-canvas").get(0);
-        var dataURL = canvas.toDataURL();
-        //console.log(dataURL);
-
-        $("#exportButton").click(function () {
-            var pdf = new jsPDF();
-            pdf.addImage(dataURL, 'JPEG', 0, 0);
-            pdf.save("download.pdf");
-        });
-    </script>
-
 
 </head>
 
@@ -260,11 +179,12 @@
                 <!--Insertar grafico-->
 
                 <iframe id="inlineFrameExample"
-                        style="width:90%;height:90%"
+                        style="width:100%;height:100%"
                         scrolling="no"
                         src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL">
                 </iframe>
 
+                <!--
                 <div class="row ">
                     <a style="color:blue; margin-left:10px;" href="~/Grafico/PopUPClent?id2=Grafico&id=@ViewBag.Resultado.URL">
                         Lineal
@@ -276,19 +196,19 @@
                         Barra
                     </a>
                 </div>
-
+                 -->
             </main>
 
             <aside class="col-md-4 align-self-start">
-                <div class=" contenedor sticky-top">
+                <div class="sticky-top">
                     <h6 style="margin:8px;">Descargas</h6>
-                    <section  style="background:#fff;">
+                    <section style="background:#fff;">
                         <div class="row ">
                             <div class="row" style="padding:10px;">
                                 <div class="col-md-2 ">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal " id="myModal" role="dialog">
                                         <div class="modal-dialog modal-lg">
 
                                             <!-- Modal content-->
@@ -568,7 +488,7 @@
                 </a>
             </div>
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id1=1" style="color:#000;">
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico5" style="color:#000;">
                     <h6 style="color:#000;">MERCADO EDITORIAL</h6>
 
                     <div class="row">
@@ -586,7 +506,7 @@
         </section>
         <section class="row widgets justify-content-between">
             <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico3" style="color:#000;">
+                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico6" style="color:#000;">
                     <h6 style="color:#000;">MERCADO EDITORIAL</h6>
                     <div class="row">
                         <div class="col-md-2 mb-md-4">
@@ -714,6 +634,8 @@
 
         <section style="border: 2px double rgba(128, 128, 128, 0.20);">
             <!--buscador search bar-->
+            <style>
+            </style>
             <div class="row justify-content-center mb-5 mt-md-5 text-center" style="background:#fff;">
                 <div class="col-12 col-md-10 col-lg-8">
                     <h4 style="color:#424242;margin-bottom:30px;">Descubra Data Intelligence</h4>
@@ -724,11 +646,12 @@
                             </div>
                             <!--end of col-->
                             <div class="col">
-                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Encuentre informes y topicos">
+                                <input class="form-control form-control-lg form-control-borderless" id="myInput" type="text" name="myCountry" placeholder="Encuentre estadísticas, y estudios">
+
                             </div>
                             <!--end of col-->
                             <div class="col-auto">
-                                <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                <button class="btn btn-lg btn-success mb-md-4" type="submit">Search</button>
                             </div>
                             <!--end of col-->
                         </div>
@@ -736,7 +659,7 @@
                 </div>
                 <!--end of col-->
             </div>
-            <!--Precio-->
+
         </section>
         <!--Seccion con scrollbar-->
         <section style="margin-bottom:100px; background:#e8e0e0;">
@@ -829,11 +752,15 @@
         </div>
 
     </footer>
+    <!--script de buscador-->
+    <script src="~/Scripts/ScriptBuscador.js"></script>
+    <!--Script de ocultar texto-->
     <script src="~/Scripts/OcultarBoton.js"></script>
+    <!--Jquery, popper y Bootstrap-->
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-
+    <!--**********************************************-->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
