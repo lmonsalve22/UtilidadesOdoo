@@ -35,6 +35,8 @@ namespace AplicacionBlanco.Models
                                      "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test4.csv", "español"));
             GRAFICOS.Add(new Grafico(5, "Grafico_Test_2", "Gráfico Test 2", "", "Este gráfico es de ejemplo para usos varios.",
                                      "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "test5.csv", "español"));
+            GRAFICOS.Add(new Grafico(6, "Gráfico de geografía", "Mapa geográfico", "", "Este gráfico es de ejemplo para usos varios.",
+                                     "3 de Marzo", "Sin región", "Sin Período", "Sin grupo de edad", "test prueba", "Prueba", "mapadechile_engeochart_2021.csv", "español"));
 
 
         }

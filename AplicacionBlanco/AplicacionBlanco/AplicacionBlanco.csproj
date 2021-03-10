@@ -386,6 +386,7 @@
     <Content Include="Views\Grafico\Hector.cshtml" />
     <Content Include="Scripts\mapas\jsapi.js" />
     <Content Include="Views\Grafico\Hector2.cshtml" />
+    <Content Include="Views\Info\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

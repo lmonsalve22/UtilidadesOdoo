@@ -9,9 +9,26 @@
 <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     @Scripts.Render("~/bundles/jquery")
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Geo_CL_provinces_.csv"; //Geo1V_HN_provinces_.csv
+        /*function getData(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var pais = getData('p');
+        // alert(pais);*/
+
+        // URL dinámica
+        // url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Geo_" + pais + "_provinces_.csv"; //Geo1V_HN_provinces_.csv
+
+        url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/" + "@ViewBag.URL";
+
+        //alert(url)
         // alert(url);
 
         var url_cod = url.split("/");
@@ -21,7 +38,8 @@
         //var valorURL = "Geo1V_HN_provinces_.csv"
         var nuevo = valorURL.split("_");
 
-        var pais = nuevo[1];
+        //var pais = nuevo[1];
+        // var pais = "CR";
         var tipo = nuevo[2];
 
         // alert(tipo)
@@ -37,8 +55,25 @@
             for (var i = 0; i < lines.length; i++) {
                 try {
 
+                    var verifica = 0;
                     var valores = lines[i].split(",");
-                    var listAux = [{ f: valores[0], v: valores[1] }, Number.parseFloat(valores[2])];
+
+                    var registro1 = valores[0]
+                    var registro2 = valores[1]
+                    var registro3 = valores[2]
+
+                    // alert(pais)
+
+                    if (registro1 != null && registro2 != undefined && registro3 != undefined) {
+                        verifica = 1
+                    } else {
+                        console.log("Se ha detectado un registro incompleto.")
+                    }
+
+                    if (valores != "" && verifica == 1) {
+                        var listAux = [{ f: valores[0], v: valores[1] }, Number.parseFloat(valores[2])];
+                    }
+
 
                     datos.push(listAux);
 
@@ -50,6 +85,9 @@
 
             }
 
+            // var pais = registro2.substring(-1, 3);
+            
+
             google.charts.load('current', {
                 'packages': ['geochart'],
                 // Note: you will need to get a mapsApiKey for your project.
@@ -60,17 +98,25 @@
             google.charts.setOnLoadCallback(drawRegionsMap);
 
             function drawRegionsMap() {
+                // alert(registro2)
+                var pais = "";
+                //pais = registro2.split("-"); 
+                pais = registro2.split("-");
+
+                var dato = pais[0];
+                var ISO = dato.replace(' ', '')
+                // alert(ISO);
+
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Country');
-                data.addColumn('number', 'Popularity');
+                data.addColumn('number', 'Valor');
+
 
                 data.addRows(datos)
-
                 var options = {
                     'title': 'Map',
-                    'width': 850, 'height': 400, 'region': pais, 'resolution': 'provinces'
+                    'width': 550, 'height': 400, 'region': ISO, 'resolution': 'provinces'
                 };
-
                 var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
                 chart.draw(data, options);
@@ -79,7 +125,7 @@
 
         });
 
-    </script>
+</script>
 </head>
 <body>
     <div id="regions_div" style="width: 900px; height: 500px;"></div>
