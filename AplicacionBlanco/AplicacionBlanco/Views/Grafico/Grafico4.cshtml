@@ -63,7 +63,7 @@
                                 var data = google.visualization.arrayToDataTable(datos);
 
                                 var options = {
-                                    title: 'Age vs. Weight comparison',
+                                    title: 'Data Intelligence',
                                     //hAxis: { title: 'Age', minValue: 0, maxValue: 15 },
                                     //vAxis: { title: 'Weight', minValue: 0, maxValue: 15 },
                                     legend: 'none'
@@ -123,7 +123,7 @@
                                 var data = google.visualization.arrayToDataTable(datos);
 
                                 var options = {
-                                    title: 'Age vs. Weight comparison',
+                                    title: 'Data Intelligence',
                                     //hAxis: { title: 'Age', minValue: 0, maxValue: 15 },
                                     //vAxis: { title: 'Weight', minValue: 0, maxValue: 15 },
                                     legend: 'none'
@@ -135,7 +135,7 @@
                             }
                       
 
-                    });
+                        });
 
 
                     });
@@ -145,10 +145,11 @@
 
 <body>
     <style>
-        #barchart_values {
+        #chart_div {
             width: 100vw !important;
             /* min-height: 450px;*/
             height: 100vh;
+            margin-left: -14px !important;
         }
 
         .row {
@@ -158,7 +159,7 @@
     </style>
     <div class="row">
         <div class="col">
-            <div id="chart_div" style=""></div>
+            <div id="chart_div"></div>
         </div>
     </div>
 

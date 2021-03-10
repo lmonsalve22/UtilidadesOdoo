@@ -47,6 +47,11 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
+        public ActionResult EleccionesHN()
+        {
+            return View();
+        }
+
         public ActionResult Elecciones2()
         {
             return View();

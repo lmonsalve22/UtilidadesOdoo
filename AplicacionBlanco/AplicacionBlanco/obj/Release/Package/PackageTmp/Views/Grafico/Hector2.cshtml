@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript">
+
+        url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Geo_CL_provinces_.csv"; //Geo1V_HN_provinces_.csv
+        // alert(url);
+
+        var url_cod = url.split("/");
+        //alert(url_cod[7]);
+        var valorURL = url_cod[7]
+
+        //var valorURL = "Geo1V_HN_provinces_.csv"
+        var nuevo = valorURL.split("_");
+
+        var pais = nuevo[1];
+        var tipo = nuevo[2];
+
+        // alert(tipo)
+
+        $.get(url, function (data) {
+
+            var lines = data.split("\n");
+            // var a = lines[0].split(",");
+
+            var datos = [];
+            // alert(datos);
+
+            for (var i = 0; i < lines.length; i++) {
+                try {
+
+                    var valores = lines[i].split(",");
+                    var listAux = [{ f: valores[0], v: valores[1] }, Number.parseFloat(valores[2])];
+
+                    datos.push(listAux);
+
+                } catch (error) {
+                    //console.error(error);
+                    // expected output: ReferenceError: nonExistentFunction is not defined
+                    // Note - error messages will vary depending on browser
+                }
+
+            }
+
+            google.charts.load('current', {
+                'packages': ['geochart'],
+                // Note: you will need to get a mapsApiKey for your project.
+                // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+                'mapsApiKey': 'AIzaSyAQj-OIz0qwamGox5PZmLNtCC85Vi0lhBE'
+            });
+
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Country');
+                data.addColumn('number', 'Popularity');
+
+                data.addRows(datos)
+
+                var options = {
+                    'title': 'Map',
+                    'width': 850, 'height': 400, 'region': pais, 'resolution': 'provinces'
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+                chart.draw(data, options);
+            }
+            //google.load('visualization', '1', { 'packages': ['geochart'], 'mapsApiKey': 'AIzaSyAQj-OIz0qwamGox5PZmLNtCC85Vi0lhBE'});
+
+        });
+
+    </script>
+</head>
+<body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+</body>
+</html>

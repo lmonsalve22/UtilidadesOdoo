@@ -1,7 +1,6 @@
 ﻿body {
-    background: #f0f3f5;
-    color: #424242;
     overflow-x:hidden;
+    font-size:1rem;
 }
 
 header{
@@ -16,8 +15,9 @@ header{
 }
 
 main {
+    font-size:1rem;
     background: #fff;
-    color: #424242;
+    color: #000;
     padding: 40px 0;
     box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
     margin-bottom: 20px;
@@ -169,7 +169,7 @@ section.pricing {
     }
 }
 
-/*Menu principal navbar*/
+/*Menu principal navbar
 body {
     margin: 0;
     padding: 0;
@@ -177,7 +177,7 @@ body {
     background-image: url('../images/texture.png');
 }
 
-
+*/
 *,
 :after,
 :before {
@@ -353,4 +353,55 @@ h4.row.mega-title {
     right: 0;
     padding: 15px;
 }
+/*Seccion call to action*/
+.call-to-action {
+    background: #0086d2;
+    padding: 40px 0;
+    margin-bottom:50px;
+}
+
+h5 {
+    color: #fff;
+    font-family: Arial;
+    font-size: 25px;
+}
+#last {
+    color: #fff;
+    font-family: Arial;
+}
+
+.btn {
+    border-radius: 5px;
+    margin: 21px 0 0 0;
+    font-weight: 700;
+}
+
+    .btn.btn-white {
+        background: #fff;
+        color: #666;
+        border-bottom: 4px solid #ddd;
+    }
+
+@media (max-width: 768px) {
+    .m-text-center {
+        text-align: center;
+    }
+
+    .call-to-action h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .m-text-center {
+        text-align: center;
+    }
+
+    .call-to-action h1 {
+        font-size: 25px;
+    }
+}
+
+
+
 

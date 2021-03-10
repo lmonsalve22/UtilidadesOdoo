@@ -173,6 +173,7 @@
     <Content Include="Content\iconos_PopUp\xls.png" />
     <Content Include="Content\img\atras.png" />
     <Content Include="Content\img\ayuda.png" />
+    <Content Include="Content\img\cabecera_encuesta_honduras.jpg" />
     <Content Include="Content\img\Diseño sin título - copia.png" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
@@ -181,11 +182,13 @@
     <Content Include="Content\img\info.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" />
+    <Content Include="Content\img\portadaPowerBi_DataELECCIONES_MasterEleccionesChileParticipacionResultadosYCandidatos_1990_2021_CHILE.jpg" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
+    <Content Include="Content\StyleBuscador.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -247,6 +250,7 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\Propios\Util.js" />
+    <Content Include="Scripts\ScriptBuscador.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -387,6 +391,7 @@
     <Content Include="Scripts\mapas\jsapi.js" />
     <Content Include="Views\Grafico\Hector2.cshtml" />
     <Content Include="Views\Info\Index2.cshtml" />
+     <Content Include="Views\design\EleccionesHN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
