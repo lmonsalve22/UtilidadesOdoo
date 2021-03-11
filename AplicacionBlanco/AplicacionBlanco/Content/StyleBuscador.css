@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font: 16px Arial;
-}
 
 /*the container must be positioned relative:*/
 .autocomplete {
@@ -58,7 +55,7 @@ input {
 
 /*when navigating through the items using the arrow keys:*/
 .autocomplete-active {
-    background-color: DodgerBlue !important;
+    background-color: DodgerBlue!important;
     color: #ffffff;
 }
 /* ========================================================================*/
