@@ -76,6 +76,17 @@ namespace AplicacionBlanco.Controllers
 
             return View();
         }
+        public ActionResult Hector(string id = "Geo1.csv")
+        {
+            ViewBag.URL = id;
+            return View();
+        }
+
+        public ActionResult Hector2(string id = "Geo1.csv")
+        {
+            ViewBag.URL = id;
+            return View();
+        }
 
     }
 }

@@ -160,6 +160,19 @@
 
         });
 
+
+        var container = document.getElementById('chart_wrap');
+        var chart = new google.visualization.LineChart(container);
+        var btnSave = document.getElementById('save-pdf');
+
+
+        btnSave.addEventListener('click', function () {
+            var doc = new jsPDF();
+            doc.addImage(chart.getImageURI(), 20, 30);
+            doc.text("Hola", 10, 5);
+            doc.save('chart.pdf');
+        }, false);
+
     </script>
 </head>
 
@@ -180,15 +193,16 @@
             height: 100vh;
         }
     </style>
+    <input id="save-pdf" type="button" value="Guardar PDF" />
     <div id="chart_wrap">
         <div id="curve_chart" style=""></div>
     </div>
 
 
-    
 
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 </body>
 </html>
