@@ -16,6 +16,16 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163367570-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163367570-1');
+    </script>
+
+    
     <script type="text/javascript">
         window.onload = function () { document.getElementByName('impacto').focus(); }
     </script>
@@ -47,9 +57,9 @@
     </header>
 
     <!-- Tab panes -->
-    <div class="tab-content" style=" height:500px; margin-top:2%;">
-        <div class="tab-pane active" id="inicio" role="tabpanel">
-            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/cabecera_encuesta_honduras.jpg" />
+    <div class="tab-content" style=" height:250px; margin-top:2%;">
+        <div  class="tab-pane active" id="inicio" role="tabpanel">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/resultados_Master_hondurasMasGrande.png" />
         </div>
         @*
         <div class="tab-pane" id="alcaldes" role="tabpanel">
