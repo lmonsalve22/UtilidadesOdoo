@@ -88,5 +88,12 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
+        public ActionResult mapa(string id = "Geo_CL_provinces_.csv")
+        {
+            ViewBag.URL = id;
+            return View();
+        }
+
+
     }
 }
