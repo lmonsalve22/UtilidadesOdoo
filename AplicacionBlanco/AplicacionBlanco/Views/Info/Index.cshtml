@@ -30,19 +30,6 @@
 
     </script>
 
-    <script>
-        $(function () {
-            $(window).on("scroll", function () {
-                if ($(window).scrollTop() > 50) {
-                    $(".header").addClass("active");
-                } else {
-                    //remove the background property so it comes transparent again (defined in your css)
-                    $(".header").removeClass("active");
-                }
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -199,9 +186,9 @@
                 <div class="sticky-top" style="z-index:1;">
                     <h6 style="margin:8px;">Descargas</h6>
                     <section style="background:#fff;">
-                        <div class="row ">
-                            <div class="row" style="padding:10px;">
-                                <div class="col-md-2">
+                        <div class="contenedor ">
+                            <div class="row  d-sm-flex mx-sm-auto" style="padding:10px;">
+                                <div class=" col-md-2 col-sm-6 ">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
@@ -292,7 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-sm-6 ml-md-2">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/png.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
@@ -351,7 +338,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-md-2">
+                                <div class=" col-md-2 col-sm-6 ml-md-2">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                                         <a href="#"><img src="~/Content/iconos_PopUp/ppt.png" /></a>
                                     </button>
@@ -380,7 +367,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-sm-6 ml-md-2">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
                                         <a href="#"><img src="~/Content/iconos_PopUp/xls.png" /></a>
                                     </button>
@@ -454,16 +441,6 @@
             </div>
         </section>
 
-        <!--
-    <section class="row" style="color:#424242;">
-        <div class="col-md-12">
-            <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
-            <h4>
-                Uso de los medios de comunicación en España
-            </h4>
-        </div>
-    </section>
-        -->
         <!--carrucel-->
         <section class="pt-5 pb-5">
             <div class="container">
@@ -606,78 +583,6 @@
             </div>
         </section>
 
-        <!--Secccion editoriales
-        <div class="row widgets editorial justify-content-between ">
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                            content
-
-                        </div>
-
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 pt-md-3" style="background:#ffffff;  box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico5" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <section class="row widgets justify-content-between">
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico6" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico4" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-            -->
         <!--Modal 2-->
         <div class="container sticky-top" style="background:#007bff; background: linear-gradient(to right, #0062E6, #33AEFF); ">
             <div class="row">
@@ -686,7 +591,7 @@
                         Acceso inmediato e ilimitado a todas las estadísticas por 49 € / mes
                     </h5>
                 </div>
-                <div class="col-md-3 col-sm-3  text-right mb-md-4">
+                <div class="col-md-3 col-sm-12  text-right mb-md-4">
                     <a href="#" target="_blank" class="btn btn-white">Precios y Acceso</a>
                 </div>
             </div>
@@ -856,6 +761,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
+
                         <strong><p>Estadisticas</p></strong>
                         <h4 class="mb-3"><strong>Otros contenidos:</strong> También le podría interesar </h4>
                     </div>
@@ -876,6 +782,7 @@
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
+                                                <img class="mr-md-2 mb-md-2" style="width:32px;" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" />
                                                 <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
 
                                                     <div class="card-body">
@@ -992,9 +899,6 @@
                 </div>
             </div>
         </section>
-        
-
-
 
 
         <!--Seccion de call to action-->
@@ -1005,7 +909,7 @@
                         <h5>¿Desea conocer más sobre nuestras soluciones profesionales?</h5>
                         <p id="last">Le enviaremos encantados información detallada sobre nuestra Cuenta Corporativa.</p>
                     </div>
-                    <div class="col-md-4 col-sm-4 m-text-center">
+                    <div class="col-md-4 col-sm-12 text-center">
                         <a href="https://dataintelligence.store/pages/contacto-1" target="_blank" class="btn btn-white">Solicitar Informacion</a>
                     </div>
                 </div>
