@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Eleccione Honduras</title>
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor">
+            <nav class="menu">
+                <!-- Nav tabs -->
+                <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%; border-color:transparent; display:block !important;">
+
+                    <li class="ml-md-4 ">
+                        <a style="width:170px !important;" onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="ml-md-3"><a style="width:170px !important;" onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#alcaldes" role="tab">Resultados Presidenciales</a></li>
+                    <li class="ml-md-3"> <a style="width:170px !important;" onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#diputados" role="tab">Resultados Diputados</a> </li>
+                    <!--  <li class="ml-md-3"> <a style="width:170px !important;" onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#constituyentes" role="tab">Elecci&oacute;n Constituyentes</a> </li>-->
+                </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+        </div>
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/cabecera_encuesta_honduras.jpg" />
+        </div>
+        @*
+        <div class="tab-pane" id="alcaldes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="test2" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+        *@
+        <div class="tab-pane" id="alcaldes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiMTRlZDMwMzctMDFkNC00N2YwLThhOTUtODA3NDZiYzhkOTkyIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+
+        <div class="tab-pane" id="diputados" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiOWJiMmU1ZWItZTA4ZC00MjE3LTg1YjctZGVhMmYwMmRkYmJiIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+
+        @*  <div class="tab-pane" id="constituyentes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzI1ZWY2NDctNjFlMC00Nzc2LWI2NzAtOTkxZjE3NTI2MGU1IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
+        </div>*@
+
+
+    </div>
+</body>
+</html>
+
+
