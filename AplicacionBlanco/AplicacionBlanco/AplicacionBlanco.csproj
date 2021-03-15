@@ -226,11 +226,14 @@
     <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\OdooUtil - FTP2.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP2.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy3.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
