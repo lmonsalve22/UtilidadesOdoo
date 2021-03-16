@@ -213,3 +213,4 @@ C:\Users\vivia\OneDrive\Documents\GitHub\Gustavo\UtilidadesOdoo\AplicacionBlanco
 C:\Users\vivia\OneDrive\Documents\GitHub\Gustavo\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csproj.CopyComplete
 C:\Users\vivia\OneDrive\Documents\GitHub\Gustavo\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.dll
 C:\Users\vivia\OneDrive\Documents\GitHub\Gustavo\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.pdb
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csprojAssemblyReference.cache

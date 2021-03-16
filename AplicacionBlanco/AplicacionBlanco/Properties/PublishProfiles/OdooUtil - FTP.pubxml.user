@@ -7,5 +7,11 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA2EQjLHZQ+k+RPUR/KY7eVgAAAAACAAAAAAAQZgAAAAEAACAAAAB1agF7WvCKGiiMJ4CyyH+sU5H0dSeA3Gs9hkebawdkkgAAAAAOgAAAAAIAACAAAADZw/oyaIR4rzDTCLuwsDD+a8VkWNx5fdocBYHVt5CnoYAAAABlVASmBAruqaKkZletQ4bQaxsWobWKDgvbHehuuhLPNCZhQ5kOL1Za+mSDu7y7G02hDfgl+LWK4G0phvEVBu9G5qcaLfo6V9ZVg1yXY1q6Z7dhnrIqUUzAmbooi5h/fRMcztHooDhwozQgmCudTtx3e7nK6QF39Qq9R8GnqlbbhkAAAAB0fg2mL2j8q7lJtHKNq6ibBv38UbTtqb59OioLH6YXiZO9Kje6QCvFxeQeRTO0yIO6gX2zFD56O18b26SpVb3R</EncryptedPassword>
+    <_PublishTargetUrl>ftp://waws-prod-dm1-139.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="favicon.ico">
+      <publishTime>03/15/2021 21:07:57</publishTime>
+    </File>
+  </ItemGroup>
 </Project>
