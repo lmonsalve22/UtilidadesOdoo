@@ -483,8 +483,8 @@ h5 {
          
     }
 }
-
-@media (max-width:575.98px) {
+/*
+@media (max-width:576px) {
     .marca-de-agua {
         background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
         background-repeat: no-repeat;
@@ -494,3 +494,4 @@ h5 {
 
     }
 }
+    */
