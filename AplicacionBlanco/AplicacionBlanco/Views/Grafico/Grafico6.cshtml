@@ -11,13 +11,14 @@
 <html>
 <head>
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    
-                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                    <script type="text/javascript">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
                         url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/" + "@ViewBag.URL";
                         //alert(url);
@@ -52,13 +53,13 @@
                             }
 
                             //var datos = [a];
-                            
+
                             // Load the Visualization API and the corechart package.
                             google.charts.load("current", { packages: ['corechart'] });
                             google.charts.setOnLoadCallback(drawChart);
                             function drawChart() {
                                 var data = google.visualization.arrayToDataTable(datos);
-                               
+
                                 var view = new google.visualization.DataView(data);
                                 view.setColumns([0, 1,
                                     {
@@ -69,16 +70,16 @@
                                     }
                                     , a.length - 1
                                 ]);
-                                
+
                                 var options = {
-                                    title: "Estadísticas de Incendios Forestales - Chile",                                    
+                                    title: "Estadísticas de Incendios Forestales - Chile",
                                     bar: { groupWidth: "95%" },
                                     legend: { position: "none" },
                                 };
                                 var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
                                 chart.draw(view, options);
                             }
-                      
+
 
                     });
 
@@ -117,7 +118,7 @@
                             }
 
                             //var datos = [a];
-                            
+
                             // Load the Visualization API and the corechart package.
                             google.charts.load('current', { 'packages': ['scatter'] });
 
@@ -144,13 +145,13 @@
                                 //chart.draw(data, options);
                                 chart.draw(data, google.charts.Scatter.convertOptions(options));
                             }
-                      
+
 
                         });
                     });
 
-                    </script>
-                </head>
+    </script>
+</head>
 
 <body>
     <style>
@@ -165,14 +166,28 @@
             margin: 0 !important;
         }
 
+        .marca-de-agua {
+            background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-position: 120px 250px;
+        }
+
+        .agua {
+            opacity: 0.7;
+        }
+
+
     </style>
-    <div class="row">
-        <div class="col">
-            <div id="chart_div"></div>
-        </div>
+
+    <div id="chart_wrap" class="row marca-de-agua ">
+        <div class="col agua " id="chart_div"></div>
     </div>
 
-    
+
+ 
+
 </body>
         </html>
     

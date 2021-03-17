@@ -60,6 +60,8 @@
 <html>
 <head>
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+
+    <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
@@ -72,7 +74,7 @@
         //url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/Nuevo%20documento%20de%20texto.csv";
         //alert(url);
         $.get(url, function (data) {
-            
+
             var lines = data.split("\n");
             var a = lines[0].split(",");
 
@@ -83,20 +85,20 @@
                     var fila = lines[i].split(",");
                     listAux.push(fila[0]);
                     for (var j = 1; j < fila.length; j++) {
-                        
+
                         listAux.push(Number.parseFloat(fila[j]));
                     }
                     //alert(listAux);
                     if (a.length == listAux.length) {
                         datos.push(listAux);
                     }
-                    
+
                 } catch (error) {
                     //console.error(error);
                     // expected output: ReferenceError: nonExistentFunction is not defined
                     // Note - error messages will vary depending on browser
                 }
-                
+
             }
             google.charts.load('current', { 'packages': ['corechart'] });
             google.charts.setOnLoadCallback(drawChart);
@@ -104,9 +106,10 @@
                 var data = google.visualization.arrayToDataTable(datos);
 
                 var options = {
-                    title: 'Company Performance',
+                    title: 'Geomática Agrícola',
                     curveType: 'function',
                     legend: { position: 'bottom' }
+
                 };
 
                 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -127,7 +130,7 @@
                         var fila = lines[i].split(",");
                         listAux.push(fila[0]);
                         for (var j = 1; j < fila.length; j++) {
-                            
+
                             listAux.push(Number.parseFloat(fila[j]));
                         }
                         //alert(listAux);
@@ -147,7 +150,7 @@
                     var data = google.visualization.arrayToDataTable(datos);
 
                     var options = {
-                        title: 'Company Performance',
+                        title: 'Geomática Agrícola',
                         curveType: 'function',
                         legend: { position: 'bottom' }
                     };
@@ -192,17 +195,23 @@
             width: 100%;
             height: 100vh;
         }
+        /*Estilos de marca de agua charts*/
+        .marca-de-agua {
+            background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-position: 120px 250px;
+        }
+
+        .agua {
+            opacity: 0.7;
+        }
     </style>
-    <input id="save-pdf" type="button" value="Guardar PDF" />
-    <div id="chart_wrap">
-        <div id="curve_chart" style=""></div>
+
+    <div id="chart_wrap" class="row marca-de-agua ">
+        <div class="col agua " id="curve_chart"></div>
     </div>
 
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 </body>
 </html>

@@ -468,5 +468,29 @@ h5 {
     filter: blur(5px);
 }
 
-/*****************************************************************************/
+/************************maraca agua query *****************************************************/
 
+@page {
+    margin: 0; 
+}
+@media print {
+    #chart_wrap {
+        display: block !important;
+    }
+    /*desabilita las opcion de print de pdf*/
+    * {
+        -webkit-print-color-adjust: exact !important;
+         
+    }
+}
+
+@media (max-width:575.98px) {
+    .marca-de-agua {
+        background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+        background-position: 0px 60px !important;
+
+    }
+}

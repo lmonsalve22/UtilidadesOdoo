@@ -10,14 +10,16 @@
 
 <html>
 <head>
+
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <link href="~/Content/EstilosPopUp.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    
-                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                    <script type="text/javascript">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
                         url = "https://raw.githubusercontent.com/Sud-Austral/MPG/main/Prueba/" + "@ViewBag.URL";
                         //alert(url);
@@ -29,7 +31,7 @@
                             var a = lines[0].split(",");
 
                             //var datos = [a];
-                            
+
                             // Load the Visualization API and the corechart package.
                             google.charts.load('current', {'packages': ['corechart']});
 
@@ -42,10 +44,10 @@
                               function drawChart() {
 
 
-                              
+
                                 // Create the data table.
                                 var data = new google.visualization.DataTable();
-                                  
+
                                   data.addColumn('string', a[0]);
                                   data.addColumn('number', a[1]);
                                   var datos = [];
@@ -68,7 +70,7 @@
                             // Set chart options
                                   //width = document.documentElement.ClientWidth;
                                   //height = document.documentElement.ClientHeight;
-                                  
+
                                   var options = {
                                       'title': 'Feminicidios de Mujeres y Niñas (2016-2019) - El Salvador' //,
                                        //'width':400,
@@ -94,7 +96,7 @@
                             var a = lines[0].split(",");
 
                             //var datos = [a];
-                            
+
                             // Load the Visualization API and the corechart package.
                             google.charts.load('current', {'packages': ['corechart']});
 
@@ -107,10 +109,10 @@
                               function drawChart() {
 
 
-                              
+
                                 // Create the data table.
                                 var data = new google.visualization.DataTable();
-                                  
+
                                   data.addColumn('string', a[0]);
                                   data.addColumn('number', a[1]);
                                   var datos = [];
@@ -133,7 +135,7 @@
                             // Set chart options
                                   //width = document.documentElement.ClientWidth;
                                   //height = document.documentElement.ClientHeight;
-                                  
+
                                   var options = { 'title': 'How Much Pizza I Ate Last Night' //,
                                        //'width':400,
                                       //'height': height
@@ -150,8 +152,8 @@
 
                     });
 
-                    </script>
-                </head>
+    </script>
+</head>
 
 <body>
     <style>
@@ -166,14 +168,25 @@
             margin: 0 !important;
         }
 
+        .marca-de-agua {
+            background-image: url('../../Content/iconos_PopUp/bloggif_6050eb8030715.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-position: 120px 250px;
+        }
+
+        .agua {
+            opacity: 0.7;
+        }
     </style>
-    <div class="row">
-        <div class="col">
-            <div id="chart_div" style=""></div>
-        </div>
+
+    <div id="chart_wrap" class="row marca-de-agua ">
+        <div class="col agua " id="chart_div"></div>
     </div>
 
-    
+
+
 </body>
         </html>
     
