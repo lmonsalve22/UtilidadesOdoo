@@ -502,5 +502,8 @@ C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\Aplica
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csproj.CopyComplete
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.dll
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.pdb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csprojAssemblyReference.cache
