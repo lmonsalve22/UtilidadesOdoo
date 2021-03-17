@@ -47,10 +47,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -150,11 +158,61 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseGEE.cs" />
+    <Compile Include="Models\CATEGORIA.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DETALLE.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DivisionAdministrativa.cs" />
     <Compile Include="Models\EstructuraCritica.cs" />
-    <Compile Include="Models\Grafico.cs" />
+    <Compile Include="Models\FUENTE.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grafico.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Graficos.cs" />
+    <Compile Include="Models\Graficost.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Graficost.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Graficost.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Graficost.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Graficost.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INDUSTRIA.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PARAMETRO.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRODUCTO.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESPONSABLE.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SECTOR.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Solicitud.cs" />
+    <Compile Include="Models\TEMPORALIDAD.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TERRITORIO.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPO_GRAFICO.cs">
+      <DependentUpon>Graficost.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -196,6 +254,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Graficost.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Graficost.Context.cs</LastGenOutput>
+      <DependentUpon>Graficost.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Graficost.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Graficost.edmx</DependentUpon>
+      <LastGenOutput>Graficost.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -231,6 +299,13 @@
     <Content Include="Content\img\Font\SourceSansPro-Regular.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBold.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
+    <EntityDeploy Include="Models\Graficost.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Graficost.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Graficost.edmx.diagram">
+      <DependentUpon>Graficost.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
@@ -407,6 +482,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
