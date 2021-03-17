@@ -25,7 +25,7 @@
 
     <!-- pdf descargar-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   
+
     <!--megamenu-->
     <script>
         $(document).ready(function () {
@@ -189,21 +189,11 @@
             </div>
         </div>
 
-<<<<<<< Updated upstream
-        <section class="contenedor-main row">
-            <main class="col-md-7 ml-md-3">
-                <!--Insertar grafico-->
 
-                <iframe id="inlineFrameExample"
-                        style="width:100%;height:100%"
-                        scrolling="no"
-                        src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL&id=3=@ViewBag.file">
-                    <!--src="~/Grafico/Hector2?id=@ViewBag.grafico">-->
-=======
         <!--descargar pdf iframe-->
-        <button style="cursor: -webkit-grab; cursor: grab;" >Descargar PDF</button>
+        <button style="cursor: -webkit-grab; cursor: grab;">Descargar PDF</button>
         <script type="text/javascript">
-            $("button").click(function () {  
+            $("button").click(function () {
                 var myIframe = document.getElementById("inlineFrameExample").contentWindow;
                 myIframe.focus();
                 myIframe.print();
@@ -214,16 +204,9 @@
             <main class="col-md-7 ml-md-3">
                 <!--Iframe de grafico-->
                 <iframe loading="lazy" id="inlineFrameExample"
-                        style="width:100%;height:100%;" 
+                        style="width:100%;height:100%;"
                         scrolling="no"
                         src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL&id=3=@ViewBag.file">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                 </iframe>
             </main>
 
@@ -232,18 +215,9 @@
                 <div class="sticky-top" style="z-index:1;">
                     <h6 style="margin:8px;">Descargas</h6>
                     <section style="background:#fff;">
-<<<<<<< Updated upstream
-                        <div class="row ">
-                            <div class="row" style="padding:10px;">
-                                <div class="col-md-2">
-=======
                         <div class="contenedor ">
                             <div class="row  d-sm-flex mx-sm-auto" style="padding:10px;">
                                 <div class=" col-6 col-md-2 text-center ">
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
@@ -334,15 +308,7 @@
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                                <div class="col-md-2">
-=======
                                 <div class="col-6  col-md-2  ml-md-2 text-center">
->>>>>>> Stashed changes
-=======
-                                <div class="col-6  col-md-2  ml-md-2 text-center">
->>>>>>> Stashed changes
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/png.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
@@ -399,17 +365,8 @@
 
                                         </div>
                                     </div>
-
                                 </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                                <div class="col-md-2">
-=======
                                 <div class="col-6 col-md-2  ml-md-2 text-center">
->>>>>>> Stashed changes
-=======
-                                <div class="col-6 col-md-2  ml-md-2 text-center">
->>>>>>> Stashed changes
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                                         <a href="#"><img src="~/Content/iconos_PopUp/ppt.png" /></a>
                                     </button>
@@ -438,15 +395,7 @@
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                                <div class="col-md-2">
-=======
                                 <div class="col-6 col-md-2 ml-md-2 text-center">
->>>>>>> Stashed changes
-=======
-                                <div class="col-6 col-md-2 ml-md-2 text-center">
->>>>>>> Stashed changes
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
                                         <a href="#"><img src="~/Content/iconos_PopUp/xls.png" /></a>
                                     </button>
@@ -521,15 +470,15 @@
         </section>
 
         <!--
-    <section class="row" style="color:#424242;">
-        <div class="col-md-12">
-            <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
-            <h4>
-                Uso de los medios de comunicación en España
-            </h4>
-        </div>
-    </section>
-        -->
+        <section class="row" style="color:#424242;">
+            <div class="col-md-12">
+                <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
+                <h4>
+                    Uso de los medios de comunicación en España
+                </h4>
+            </div>
+        </section>
+            -->
         <!--carrucel-->
         <section class="pt-5 pb-5">
             <div class="container">
@@ -569,23 +518,27 @@
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
-                                                <div class="card-body">
+                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico3" style="color:#000;">
+                                                    <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
+                                                    <div class="card-body">
 
-                                                    <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                    <p class="card-text">@ViewBag.Resultado.TITULO</p>
+                                                        <h4 class="card-title">MERCADO EDITORIA</h4>
+                                                        <p class="card-text">@ViewBag.Resultado.TITULO</p>
 
-                                                </div>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico4" style="color:#000;">
+                                                    <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Special title treatment</h4>
+                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                                                </div>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
 
@@ -596,7 +549,7 @@
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico6" style="color:#000;">
+                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico5" style="color:#000;">
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
@@ -608,7 +561,7 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico3" style="color:#000;">
+                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico6" style="color:#000;">
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
@@ -639,13 +592,15 @@
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/GUID-9B1278E7-97DA-4416-B452-1366E3088A49-display.png">
-                                                <div class="card-body">
+                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id=6&id2=mapa?file=Geo_SV_provinces_.csv" style="color:#000;">
+                                                    <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/GUID-9B1278E7-97DA-4416-B452-1366E3088A49-display.png">
+                                                    <div class="card-body">
 
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <h4 class="card-title">Special title treatment</h4>
+                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-                                                </div>
+                                                    </div>
+                                                </a>
 
                                             </div>
                                         </div>
@@ -1068,7 +1023,7 @@
                 </div>
             </div>
         </section>
-        
+
 
 
 
