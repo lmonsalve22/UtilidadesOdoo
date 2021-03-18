@@ -9,6 +9,7 @@ namespace AplicacionBlanco.Controllers
 {
     public class InfoController : Controller
     {
+        private graficosEntities dbGrafico = new graficosEntities();
         public InfoController()
         {
             
@@ -17,10 +18,15 @@ namespace AplicacionBlanco.Controllers
         // GET: Info
         public ActionResult Index(int id = 1, string id2 = "grafico", string id3 = "Geo_CL_provinces_.csv")
         {
+
             ViewBag.grafico = id2;
             ViewBag.file = id3;
             Graficos db = new Graficos();
             ViewBag.Resultado = db.BuscarGrafico(id);
+
+
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.Elemento = graf;
             return View();
         }
 

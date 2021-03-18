@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionBlanco.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace AplicacionBlanco.Controllers
 {
     public class GraficoController : Controller
     {
+        private graficosEntities dbGrafico = new graficosEntities();
+
         // GET: Grafico
         public ActionResult Index()
         {
@@ -31,9 +34,10 @@ namespace AplicacionBlanco.Controllers
             return View();
         }
 
-        public ActionResult Grafico(string id)
+        public ActionResult Grafico(int id)
         {
-            ViewBag.URL = id;
+            GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
+            ViewBag.URL = graf.GetURL();
             return View();
         }
 
