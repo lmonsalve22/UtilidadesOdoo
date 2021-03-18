@@ -469,17 +469,12 @@
         <section class="row widgets" style="background:#fff;">
             <div class="col-md-12 pt-md-3">
                 <p>
-                    @ViewBag.Resultado.DESCRIPCION
+                    @ViewBag.ELEMENTO.descripcion
 
                 </p>
                 <span id="leerMas" style="display:none;">
                     <p>
-                        <strong> @ViewBag.Resultado.DESCRIPCION</strong> <br />
-
-                    </p>
-
-                    <p>
-                        <strong> Lorem Ipsum is simply dummy text.</strong> <br />
+                        <strong> @ViewBag.ELEMENTO.descripcion_larga</strong> <br />
 
                     </p>
                 </span>
@@ -495,7 +490,8 @@
                 <div class="row">
                     <div class="col-6">
                         <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
-                        <h4 class="mb-3">Uso de los medios de comunicación en España </h4>
+                        <h4 class="mb-3">  @*Uso de los medios de comunicación en España *@  @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en 
+                        @ViewBag.ELEMENTO.TERRITORIO.nombre</h4>
                     </div>
                     <div class="col-6 text-right">
                         <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -724,9 +720,9 @@
             <div class="row" style="margin-bottom:20px;">
                 <div class="col-4">
                     <div class="list-group" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="color:#000;">Periódicos</a>
-                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" style="color:#000;">Suplementos</a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" style="color:#000;">Revistas</a>
+                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="color:#000;">Palta</a>
+                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" style="color:#000;">Tomate</a>
+                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" style="color:#000;">Papa</a>
                         <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
                     </div>
                 </div>
@@ -780,6 +776,8 @@
                 <div class="col-md-7" style="width:600px; height:350px; overflow-x: hidden!important; overflow-y: scroll; margin-bottom:50px; background:#fff;">
 
                     <ul class="list-group mb-md-7">
+
+
                         <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>Dapibus ac facilisis in</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
@@ -793,7 +791,12 @@
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple light list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple dark list group item</li>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@i</li>
+                        }
+
+                        
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
