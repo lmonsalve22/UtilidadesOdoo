@@ -213,7 +213,9 @@
                         @{ 
                             string rutaGrafico = "/Grafico/" + ViewBag.Elemento.TIPO_GRAFICO.nombre + "?id=" + ViewBag.Elemento.id; //+ "&id=3=" + ViewBag.file;
                         }
-                        src="@rutaGrafico"></iframe>
+                        src="@rutaGrafico">
+
+                </iframe>
                         
             </main>
 
@@ -429,31 +431,25 @@
 
                             <p>
                                 <strong>Región</strong><br>
-                                @*
-                                    @ViewBag.Resultado.REGION
-                                *@
+                             
                                 @ViewBag.ELEMENTO.TERRITORIO.nombre
                             </p>
 
                             <p>
                                 <strong>Periodo de estudio</strong><br>
-                                @*
-        @ViewBag.Resultado.PERIODO_ESTUDIO
-                                *@
+                             
                                 @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_inicio y @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_termino
                             </p>
 
                             <p>
                                 <strong>Grupo de edad</strong><br>
-                                @*
-        @ViewBag.Resultado.GRUPO_EDAD
-                                *@
+                 
                                 @ViewBag.ELEMENTO.rango_edad
                             </p>
 
                             <p>
                                 <strong>Abrir esta estadística en...</strong><br>
-                                @ViewBag.Resultado.IDIOMA
+                                @ViewBag.ELEMENTO.idioma
                             </p>
                         </div>
 
@@ -506,16 +502,18 @@
 
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
+
                                     <div class="row">
+
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
+                                                <a href="~/info/index?id=2" style="color:#000;">
                                                     <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
                                                     <div class="card-body">
 
                                                         <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                        <p class="card-text"> @ViewBag.Resultado.TITULO</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -524,12 +522,12 @@
 
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico3" style="color:#000;">
+                                                <a href="~/info/index?id=4" style="color:#000;">
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
                                                     <div class="card-body">
 
                                                         <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                        <p class="card-text">@ViewBag.Resultado.TITULO</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -537,11 +535,11 @@
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico4" style="color:#000;">
+                                                <a href="~/info/index?id=5" style="color:#000;">
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -559,7 +557,7 @@
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -571,7 +569,7 @@
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -584,7 +582,7 @@
                                                     <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
                                                     <div class="card-body">
                                                         <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -603,7 +601,7 @@
                                                     <div class="card-body">
 
                                                         <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <p class="card-text"> @ViewBag.ELEMENTO.titulo</p>
 
                                                     </div>
                                                 </a>
@@ -720,18 +718,22 @@
             <div class="row" style="margin-bottom:20px;">
                 <div class="col-4">
                     <div class="list-group" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="color:#000;">Palta</a>
-                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" style="color:#000;">Tomate</a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" style="color:#000;">Papa</a>
+                        @foreach (var item in ViewBag.listaAsociado)
+                        {
+                            <a class="list-group-item list-group-item-action" id="list-@item.nombre-list" data-toggle="list" href="#list-@item.nombre" role="tab" aria-controls="@item.nombre" style="color:#000;">@item.nombre</a>
+                        }
                         <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
                     </div>
+
                 </div>
                 <div class="col-md-8">
                     <h6 style="color:#000;margin-top:10px;">Las estadísticas más importantes</h6>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">1 Periódicos</div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">2 Suplementos</div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">3 Revistas</div>
+                        @foreach (var item in ViewBag.listaAsociado)
+                        {
+                            <div class="tab-pane fade" id="list-@item.nombre" role="tabpanel" aria-labelledby="list-@item.nombre-list">@item.descripcion</div>
+                        }
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Las estadísticas más importantes</div>
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>
                     </div>
                 </div>
@@ -828,7 +830,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <strong><p>Estadisticas</p></strong>
+                        <strong>Estadisticas</strong>
                         <h4 class="mb-3"><strong>Otros contenidos:</strong> También le podría interesar </h4>
                     </div>
                     <div class="col-6 text-right">
@@ -839,20 +841,18 @@
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
+
                     <div class="col-12">
                         <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
-
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <div class="row">
 
+                                    <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
                                                 <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
-
                                                     <div class="card-body">
-
-                                                        <h4 class="card-title">MERCADO EDITORIA</h4>
+                                                        <h4 class="card-title"></h4>
                                                         <p class="card-text"> @ViewBag.Resultado.TITULO</p>
 
                                                     </div>
@@ -964,10 +964,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
 
         <!--Seccion de call to action-->
         <section class="call-to-action">

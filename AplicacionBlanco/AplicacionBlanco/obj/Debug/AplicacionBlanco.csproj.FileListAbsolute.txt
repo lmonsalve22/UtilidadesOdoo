@@ -433,3 +433,7 @@ C:\Users\hecto\Documents\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco
 =======
 >>>>>>> Stashed changes
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csprojAssemblyReference.cache
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.dll
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.dll
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.xml
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.xml
