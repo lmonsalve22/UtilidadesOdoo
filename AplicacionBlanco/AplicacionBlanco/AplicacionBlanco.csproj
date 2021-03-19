@@ -182,6 +182,8 @@
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
+    <Content Include="Content\img\resultados_Master_honduras.png" />
+    <Content Include="Content\img\resultados_Master_hondurasMasGrande.png" />
     <Content Include="Content\img\santiago.jpg" />
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
