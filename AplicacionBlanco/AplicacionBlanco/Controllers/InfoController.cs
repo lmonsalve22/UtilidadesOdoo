@@ -22,13 +22,15 @@ namespace AplicacionBlanco.Controllers
             ViewBag.grafico = id2;
             ViewBag.file = id3;
             Graficos db = new Graficos();
-            ViewBag.Resultado = db.BuscarGrafico(id);
+            ViewBag.Resultado = db.BuscarGrafico(1);
 
 
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.Elemento = graf;
             return View();
         }
+
+        
 
         //public ActionResult Index2(int id = 1, string id2 = "grafico")
         public ActionResult Index2(int id = 1, string id2 = "mapadechile_engeochart_2021.csv")
