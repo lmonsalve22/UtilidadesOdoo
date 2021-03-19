@@ -462,12 +462,6 @@ h5 {
         background: #555;
     }
 
-/************************** carrucel**************************************************/
-
-.img-fluid:hover {
-    filter: blur(5px);
-}
-
 /************************maraca agua query *****************************************************/
 
 @page {
@@ -496,7 +490,7 @@ h5 {
 }
     */
 
-/*test caruosel*/
+/* *****************************************caruosel**********************************************************/
 @media (min-width: 768px) {
 
     /* show 3 items */
@@ -598,3 +592,7 @@ h5 {
     #profile-grid .img-rounded {
         border-radius: 4px 4px 0 0;
     }
+
+.img-fluid:hover {
+    filter: blur(5px);
+}
