@@ -21,7 +21,10 @@
     <title>Estadística</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-
+    <!--test carrucel-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- pdf descargar-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,20 +38,6 @@
         });
 
     </script>
-
-    <script>
-        $(function () {
-            $(window).on("scroll", function () {
-                if ($(window).scrollTop() > 50) {
-                    $(".header").addClass("active");
-                } else {
-                    //remove the background property so it comes transparent again (defined in your css)
-                    $(".header").removeClass("active");
-                }
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -182,6 +171,7 @@
         </nav>
     </header>
 
+    
     <div class="container">
         <div class="row">
             <div class="col">
@@ -191,7 +181,6 @@
                 <h3>@ViewBag.Elemento.titulo</h3>
             </div>
         </div>
-
 
         <!--descargar pdf iframe-->
         <button style="cursor: -webkit-grab; cursor: grab;">Descargar PDF</button>
@@ -825,7 +814,7 @@
 
         </section>
 
-        <!--slider-->
+        <!--slider
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="row">
@@ -845,30 +834,19 @@
                     <div class="col-12">
                         <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
+                                
                                 <div class="carousel-item active">
-
+                                    
                                     <div class="row">
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title"></h4>
-                                                        <p class="card-text"> @ViewBag.Resultado.TITULO</p>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-
                                         <div class="col-md-4 mb-3">
                                             <div class="card">
 
                                                 <div class="card-body">
-
-                                                    <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                    <p class="card-text">@ViewBag.Resultado.TITULO</p>
+                                                    <h4 class="card-title">Special title treatment</h4>
+                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-3">
@@ -879,6 +857,18 @@
                                                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
                                                 </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Special title treatment</h4>
+                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -964,7 +954,60 @@
                 </div>
             </div>
         </section>
+        -->
+        <section>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExample" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExample" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                        <div class="carousel-item col-md-3  active">
+                            <div class="panel panel-default">
+                                <div class="card">
+                                    <a href="~/info/index?id=2" style="color:#000;">
+                                        <img class="img-fluid " alt="100%x280" src="#">
+                                        <div class="card-body">
+                                            <h4 class="card-title">@ViewBag.ELEMENTO.titulo</h4>
+                                            <p class="card-text"> @ViewBag.ELEMENTO.descripcion</p>
 
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @foreach (var item in ViewBag.listaAsociado)
+                         {
+                            <div class="carousel-item col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="card">
+                                        <a href="~/info/index?id=2" style="color:#000;">
+                                            <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
+                                            <div class="card-body">
+                                                <h4 class="card-title">@ViewBag.ELEMENTO.titulo</h4>
+                                                <p class="card-text"> @ViewBag.ELEMENTO.descripcion</p>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                         }
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+        </section>
         <!--Seccion de call to action-->
         <section class="call-to-action">
             <div class="container">
@@ -979,6 +1022,9 @@
                 </div>
             </div>
         </section>
+
+
+
     </div>
 
     <footer class="row">
