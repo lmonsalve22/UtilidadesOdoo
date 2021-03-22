@@ -608,7 +608,7 @@
         <section style="border: 2px double rgba(128, 128, 128, 0.20);">
             <h4 class="text-center mb-md-5 mt-md-5"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>
             <div class="row" style="margin-bottom:20px;">
-                <div class="col-4">
+                <div class="col-10 col-md-3">
                     <div class="list-group" id="list-tab" role="tablist">
                         @foreach (var item in ViewBag.listaAsociado)
                         {
@@ -618,7 +618,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 ">
                     <h6 style="color:#000;margin-top:10px;">Las estadísticas más importantes</h6>
                     <div class="tab-content" id="nav-tabContent">
                         @foreach (var item in ViewBag.listaAsociado)
@@ -671,9 +671,12 @@
 
                     <ul class="list-group mb-md-7">
 
-
-                        <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>Dapibus ac facilisis in</li>
+                        @foreach(var item in ViewBag.listaOtrosContenidos) {
+                        <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@item.nombre</li>
+                        }
+                        @*
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
+                        
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
@@ -696,7 +699,7 @@
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
                         <li class="mb-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
-
+                         *@
                     </ul>
                 </div>
                 <div class="col-md-5">

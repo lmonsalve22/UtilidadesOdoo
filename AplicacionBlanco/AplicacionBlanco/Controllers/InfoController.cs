@@ -29,6 +29,8 @@ namespace AplicacionBlanco.Controllers
             ViewBag.Elemento = graf;
             var listaAsociado = dbGrafico.PRODUCTO.Where(x => x.SECTOR_id == graf.CATEGORIA.PRODUCTO.SECTOR_id).ToList();
             ViewBag.listaAsociado = listaAsociado;
+            var listaOtrosContenidos = dbGrafico.CATEGORIA.Where(x => x.PRODUCTO_id == graf.CATEGORIA.PRODUCTO_id).ToList(); 
+            ViewBag.listaOtrosContenidos=listaOtrosContenidos ;
             return View();
         }
 
