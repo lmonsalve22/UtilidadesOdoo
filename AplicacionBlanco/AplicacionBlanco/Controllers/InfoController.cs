@@ -27,6 +27,31 @@ namespace AplicacionBlanco.Controllers
 
             GRAFICO graf = dbGrafico.GRAFICO.Where(x => x.id == id).First();
             ViewBag.Elemento = graf;
+            var listaAsociado = dbGrafico.PRODUCTO.Where(x => x.SECTOR_id == graf.CATEGORIA.PRODUCTO.SECTOR_id).ToList();
+            ViewBag.listaAsociado = listaAsociado;
+            /* var listaOtrosContenidos = dbGrafico.CATEGORIA.Where(x => x.PRODUCTO_id == graf.CATEGORIA.PRODUCTO_id).ToList(); */
+            //List<int> idproductos = new List<int>();
+            var rand = new Random();
+            List<CATEGORIA> listaCategorias = new List<CATEGORIA>();
+
+            foreach (var item in dbGrafico.INDUSTRIA)
+            {
+               var listcatAuxiliar = dbGrafico.CATEGORIA.Where(x => x.PRODUCTO.SECTOR.INDUSTRIA_id == item.id).ToList();
+                try
+                {
+                    CATEGORIA catAuxiliar = listcatAuxiliar[rand.Next(listcatAuxiliar.Count)];
+                    listaCategorias.Add(catAuxiliar);
+                }
+                catch (Exception)
+                {
+
+                    
+                }
+                
+            }
+            var listaOtrosContenidos = listaCategorias;  
+
+            ViewBag.listaOtrosContenidos=listaOtrosContenidos ;
             return View();
         }
 

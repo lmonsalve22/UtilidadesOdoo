@@ -1,22 +1,31 @@
-﻿body {
-    overflow-x:hidden;
-    font-size:1rem;
+﻿
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('../Fonts/source-sans-pro/SourceSansPro-Bold.otf') format('opentype');
 }
 
-header{
-    padding:20px;
-    margin-bottom:20px;
-    margin-top:20px;
-    color:#424242;
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    font-size: 1rem;
+    background-color: #FDFDFE;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 20px;
+    color: #424242;
+    border-bottom: 3px solid #0B85E5;
+    background-color: #0F2741;
 }
 .contenedor-main{
     margin-bottom:20px;
-
 }
 
 main {
     font-size:1rem;
-    background: #fff;
+    background-color: #fff;
     color: #000;
     padding: 40px 0;
     box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
@@ -34,6 +43,10 @@ aside {
     color: #424242;
     margin-bottom: 40px;
     box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.20);
+    box-sizing: border-box;
+    width: 100%;
+    margin-left:1px;
+  
 }
 
 footer{
@@ -50,6 +63,7 @@ footer{
 
 /*seccion de precios*/
 section.pricing {
+    margin:0!important;
     background: #007bff;
     background: linear-gradient(to right, #0062E6, #33AEFF);
 }
@@ -353,6 +367,7 @@ h4.row.mega-title {
     right: 0;
     padding: 15px;
 }
+
 /*Seccion call to action*/
 .call-to-action {
     background: #0086d2;
@@ -424,4 +439,34 @@ h5 {
         background: #555;
     }
 
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+/************************** carrucel**************************************************/
+
+.img-fluid:hover {
+    filter: blur(5px);
+}
+
+/*****************************************************************************/
 
