@@ -429,4 +429,11 @@ C:\Users\hecto\Documents\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco
 C:\Users\hecto\Documents\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csproj.CopyComplete
 C:\Users\hecto\Documents\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.dll
 C:\Users\hecto\Documents\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.pdb
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csprojAssemblyReference.cache
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.dll
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.dll
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.xml
+C:\Users\clent\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.xml
