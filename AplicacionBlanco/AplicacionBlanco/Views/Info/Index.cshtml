@@ -216,7 +216,7 @@
                         <div class="contenedor ">
                             <div class="row  d-sm-flex mx-sm-auto" style="padding:10px;">
                                 <div class=" col-6 col-md-2 text-center ">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><img src="~/Content/iconos_PopUp/pdf_download.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
                                         <div class="modal-dialog modal-lg">
@@ -307,7 +307,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6  col-md-2  ml-md-2 text-center">
-                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/png.png" /></a></button>
+                                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><img src="~/Content/iconos_PopUp/png.png" /></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
                                         <div class="modal-dialog modal-lg">
@@ -366,7 +366,7 @@
                                 </div>
                                 <div class="col-6 col-md-2  ml-md-2 text-center">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
-                                        <a href="#"><img src="~/Content/iconos_PopUp/ppt.png" /></a>
+                                        <img src="~/Content/iconos_PopUp/ppt.png" />
                                     </button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -395,7 +395,7 @@
                                 </div>
                                 <div class="col-6 col-md-2 ml-md-2 text-center">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
-                                        <a href="#"><img src="~/Content/iconos_PopUp/xls.png" /></a>
+                                       <img src="~/Content/iconos_PopUp/xls.png" />
                                     </button>
 
                                 </div>
@@ -458,10 +458,10 @@
 
                 </p>
                 <span id="leerMas" style="display:none;">
-                    <p>
+                   
                         <strong> @ViewBag.ELEMENTO.descripcion_larga</strong> <br />
 
-                    </p>
+             
                 </span>
 
                 <button type="button" class="btn btn-primary" id="boton" style="margin-bottom:20px;"> Más Información</button>
@@ -474,7 +474,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
+                        <strong>MÁS ESTADÍSTICAS SOBRE EL TEMA</strong>
                         <h4 class="mb-3">
                             @*Uso de los medios de comunicación en España *@  @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en
                             @ViewBag.ELEMENTO.TERRITORIO.nombre
@@ -667,7 +667,7 @@
             <br />
             <br />
             <h4 class="text-center mb-md-4"><strong>Otros contenidos:</strong> También le podría interesar</h4>
-            <strong><p style="margin-left: 80px;">Estadisticas</p></strong>
+            <strong style="margin-left: 80px;">Estadisticas</strong>
             <div class="row container ml-md-5">
 
                 <div class="col-md-7" style="width:600px; height:350px; overflow-x: hidden!important; overflow-y: scroll; margin-bottom:50px; background:#fff;">
@@ -681,27 +681,11 @@
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
                         
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple warning list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple info list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple light list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple dark list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple light list group item</li>
+                        
                         @for (int i = 0; i < 10; i++)
                         {
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@i</li>
                         }
-
-                        
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
-                        <li class="mb-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
                          *@
                     </ul>
                 </div>
