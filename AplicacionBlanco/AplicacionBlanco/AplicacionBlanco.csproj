@@ -156,6 +156,7 @@
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
     <Compile Include="Controllers\SIEDUController.cs" />
+    <Compile Include="Controllers\TURNERController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,11 +250,13 @@
     <Content Include="Content\img\Diseño sin título - copia.png" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
+    <Content Include="Content\img\Icono_dataIntelligence_Rojo.svg" />
     <Content Include="Content\img\ICVU.jpeg" />
     <Content Include="Content\img\ImpactosDelHuracanETAenHonduras.jpg" />
     <Content Include="Content\img\info.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\portadaPowerBi_DataCLIMA_PlataformaDeAnalisisYMonitoreoDelClima_BELICE.jpg" />
+    <Content Include="Content\img\portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\resultados_Master_honduras.png" />
     <Content Include="Content\img\resultados_Master_hondurasMasGrande.png" />
@@ -504,6 +507,7 @@
     <Content Include="Views\GRAFICOes\Index.cshtml" />
     <Content Include="Views\design\EleccionesHN.cshtml" />
     <Content Include="Views\Redes\EleccionesRedesHN.cshtml" />
+    <Content Include="Views\TURNER\EleccionesCHL.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

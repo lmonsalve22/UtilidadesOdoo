@@ -8,8 +8,6 @@
 }
 @*
     <!DOCTYPE html>
-
-
         <html>
         <head>
             <!--Load the AJAX API-->
@@ -66,7 +64,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   
     <script type="text/javascript">
         
 
@@ -164,11 +162,13 @@
 
         });
 
-
         var container = document.getElementById('chart_wrap');
         var chart = new google.visualization.LineChart(container);
         var btnSave = document.getElementById('save-pdf');
 
+        google.visualization.events.addListener(chart, 'ready', function () {
+            btnSave.disabled=false;
+        });
 
         btnSave.addEventListener('click', function () {
             var doc = new jsPDF();
@@ -177,6 +177,20 @@
             doc.save('chart.pdf');
         }, false);
 
+        chart.draw(data,{
+            chartArea: {
+                bottom: 24,
+                left: 36,
+                right: 12,
+                top: 48,
+                width: '100%',
+                height: '100%'
+            },
+            height: 600,
+            title: 'Test de descarga',
+            width: 600
+        });
+    
     </script>
 </head>
 
@@ -213,6 +227,7 @@
     <div id="chart_wrap" class="row marca-de-agua ">
         <div class="col agua " id="curve_chart"></div>
     </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </body>
 </html>

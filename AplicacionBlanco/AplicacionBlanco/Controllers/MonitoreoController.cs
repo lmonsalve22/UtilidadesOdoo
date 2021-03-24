@@ -21,6 +21,7 @@ namespace AplicacionBlanco.Controllers
 
         public ActionResult Index2()
         {
+            /*
             string url = "https://github.com/Sud-Austral/Monitoreo/raw/main/DisponibilidadActualizado.csv";
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
@@ -37,8 +38,8 @@ namespace AplicacionBlanco.Controllers
                 //this.ordenes.Add(new Orden(values[],values[],values[],values[],values[]));
                 //string values_r = values[1].Replace("\"", "");
             }
-
-            ViewBag.resultado = salida;
+            */
+            //ViewBag.resultado = salida;
             return View();
         }
 

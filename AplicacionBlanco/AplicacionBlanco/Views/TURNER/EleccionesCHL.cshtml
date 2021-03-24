@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elecciones Chile - DataIntelligence</title>
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Content/img/Icono_dataIntelligence_Rojo.svg">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.onload = function () { document.getElementByName('impacto').focus(); }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <input id="activar" name="activar" type="checkbox">
+
+        <div class="contenedor">
+            <nav class="menu">
+                <!-- Nav tabs -->
+                <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%; border-color:transparent; display:block !important;">
+
+                    <li class="ml-md-4 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#inicio" role="tab">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="ml-md-2"><a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#alcaldes" role="tab">Elecci&oacute;n Alcaldes</a></li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#concejales" role="tab">Elecci&oacute;n Concejales</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#constituyentes" role="tab">Elecci&oacute;n Constituyentes</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#puebloi" role="tab">Pueblos Ind&iacute;genas</a> </li>
+                    <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#gobernadores" role="tab">Elecci&oacute;n Gobernadores</a> </li>
+                   </ul>
+            </nav>
+            <label class="label" for="activar"></label>
+        </div>
+    </header>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px; margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel">
+            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg" />
+        </div>
+        @*
+        <div class="tab-pane" id="alcaldes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="test2" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+        *@
+        <div class="tab-pane" id="alcaldes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+
+        <div class="tab-pane" id="concejales" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiZTVmMzFjMzUtNzc2ZC00MmFjLTgzZGYtMzJmMjA2OTUwNjdjIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+        </div>
+
+        <div class="tab-pane" id="constituyentes" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzI1ZWY2NDctNjFlMC00Nzc2LWI2NzAtOTkxZjE3NTI2MGU1IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="puebloi" role="tabpanel">
+            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection69d8522aa17783d88e04" frameborder="0"></iframe>
+        </div>
+
+        <div class="tab-pane" id="gobernadores" role="tabpanel">
+            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzkzMTM5MTItOGQyNi00NjZmLTljNjEtNjIzZGRiNjQ1MjIzIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
+
+
