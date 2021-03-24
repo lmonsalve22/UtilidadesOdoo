@@ -20,7 +20,16 @@
     <link href="~/Content/StyleBuscador.css" rel="stylesheet" />
     <title>Estadística</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!--test megamenu-->
+
+    <!--test carrucel-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- pdf descargar-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--megamenu-->
     <script>
         $(document).ready(function () {
             $(".megamenu").on("click", function (e) {
@@ -29,20 +38,6 @@
         });
 
     </script>
-
-    <script>
-        $(function () {
-            $(window).on("scroll", function () {
-                if ($(window).scrollTop() > 50) {
-                    $(".header").addClass("active");
-                } else {
-                    //remove the background property so it comes transparent again (defined in your css)
-                    $(".header").removeClass("active");
-                }
-            });
-        });
-    </script>
-
 </head>
 
 <body>
@@ -175,24 +170,42 @@
             </div>
         </nav>
     </header>
-    <div class="container">
 
+    
+    <div class="container">
         <div class="row">
             <div class="col">
-                <h3>@ViewBag.Resultado.TITULO</h3>
+                @*
+                    <h3>@ViewBag.Resultado.TITULO</h3>
+                *@
+                <h3>@ViewBag.Elemento.titulo</h3>
             </div>
         </div>
 
+        <!--descargar pdf iframe-->
+        <button style="cursor: -webkit-grab; cursor: grab;">Descargar PDF</button>
+        <script type="text/javascript">
+            $("button").click(function () {
+                var myIframe = document.getElementById("inlineFrameExample").contentWindow;
+                myIframe.focus();
+                myIframe.print();
+                return false;
+            });
+        </script>
         <section class="contenedor-main row">
             <main class="col-md-7 ml-md-3">
-                <!--Insertar grafico-->
-
+                <!--Iframe de grafico-->
                 <iframe id="inlineFrameExample"
-                        style="width:100%;height:100%"
+                        style="width:100%;height:100%;"
                         scrolling="no"
-                        src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL&id=3=@ViewBag.file">
-                    <!--src="~/Grafico/Hector2?id=@ViewBag.grafico">-->
+                        @*src="~/Grafico/@ViewBag.grafico?id=@ViewBag.Resultado.URL&id=3=@ViewBag.file"></iframe>*@
+                        @{ 
+                            string rutaGrafico = "/Grafico/" + ViewBag.Elemento.TIPO_GRAFICO.nombre + "?id=" + ViewBag.Elemento.id; //+ "&id=3=" + ViewBag.file;
+                        }
+                        src="@rutaGrafico">
+
                 </iframe>
+                        
             </main>
 
             <aside class="col-md-4 align-self-start">
@@ -200,9 +213,9 @@
                 <div class="sticky-top" style="z-index:1;">
                     <h6 style="margin:8px;">Descargas</h6>
                     <section style="background:#fff;">
-                        <div class="row ">
-                            <div class="row" style="padding:10px;">
-                                <div class="col-md-2">
+                        <div class="contenedor ">
+                            <div class="row  d-sm-flex mx-sm-auto" style="padding:10px;">
+                                <div class=" col-6 col-md-2 text-center ">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/pdf_download.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal " id="myModal" role="dialog">
@@ -293,7 +306,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-6  col-md-2  ml-md-2 text-center">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#myModal2" data-backdrop="false"><a href="#"><img src="~/Content/iconos_PopUp/png.png" /></a></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="myModal2" role="dialog">
@@ -350,9 +363,8 @@
 
                                         </div>
                                     </div>
-
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-6 col-md-2  ml-md-2 text-center">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="false">
                                         <a href="#"><img src="~/Content/iconos_PopUp/ppt.png" /></a>
                                     </button>
@@ -381,7 +393,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-6 col-md-2 ml-md-2 text-center">
                                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
                                         <a href="#"><img src="~/Content/iconos_PopUp/xls.png" /></a>
                                     </button>
@@ -400,27 +412,33 @@
 
                             <p>
                                 <strong>Fecha de publicación</strong><br>
-                                @ViewBag.Resultado.FECHA_PUBLICACION
+                                @*
+                                    @ViewBag.Resultado.FECHA_PUBLICACION
+                                *@
+                                @ViewBag.ELEMENTO.fecha_publicacion
                             </p>
 
                             <p>
                                 <strong>Región</strong><br>
-                                @ViewBag.Resultado.REGION
+                             
+                                @ViewBag.ELEMENTO.TERRITORIO.nombre
                             </p>
 
                             <p>
                                 <strong>Periodo de estudio</strong><br>
-                                @ViewBag.Resultado.PERIODO_ESTUDIO
+                             
+                                @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_inicio y @ViewBag.ELEMENTO.TEMPORALIDAD.fecha_termino
                             </p>
 
                             <p>
                                 <strong>Grupo de edad</strong><br>
-                                @ViewBag.Resultado.GRUPO_EDAD
+                 
+                                @ViewBag.ELEMENTO.rango_edad
                             </p>
 
                             <p>
                                 <strong>Abrir esta estadística en...</strong><br>
-                                @ViewBag.Resultado.IDIOMA
+                                @ViewBag.ELEMENTO.idioma
                             </p>
                         </div>
 
@@ -436,17 +454,12 @@
         <section class="row widgets" style="background:#fff;">
             <div class="col-md-12 pt-md-3">
                 <p>
-                    @ViewBag.Resultado.DESCRIPCION
+                    @ViewBag.ELEMENTO.descripcion
 
                 </p>
                 <span id="leerMas" style="display:none;">
                     <p>
-                        <strong> @ViewBag.Resultado.DESCRIPCION</strong> <br />
-
-                    </p>
-
-                    <p>
-                        <strong> Lorem Ipsum is simply dummy text.</strong> <br />
+                        <strong> @ViewBag.ELEMENTO.descripcion_larga</strong> <br />
 
                     </p>
                 </span>
@@ -455,230 +468,71 @@
             </div>
         </section>
 
-        <!--
-    <section class="row" style="color:#424242;">
-        <div class="col-md-12">
-            <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
-            <h4>
-                Uso de los medios de comunicación en España
-            </h4>
-        </div>
-    </section>
-        -->
+       
         <!--carrucel-->
         <section class="pt-5 pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
                         <strong><p>MÁS ESTADÍSTICAS SOBRE EL TEMA</p></strong>
-                        <h4 class="mb-3">Uso de los medios de comunicación en España </h4>
+                        <h4 class="mb-3">
+                            @*Uso de los medios de comunicación en España *@  @ViewBag.ELEMENTO.CATEGORIA.PRODUCTO.SECTOR.nombre en
+                            @ViewBag.ELEMENTO.TERRITORIO.nombre
+                        </h4>
                     </div>
                     <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExample" role="button" data-slide="prev">
                             <i class="fa fa-arrow-left"></i>
                         </a>
-                        <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <a class="btn btn-primary mb-3 " href="#carouselExample" role="button" data-slide="next">
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="col-12">
-                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div class="container-fluid">
+                        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                <div class="carousel-item col-md-3  active">
+                                    <div class="panel panel-default">
+                                        <div class="card">
+                                            <a href="~/info/index?id=2" style="color:#000;">
 
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
+                                                <div class="card-body">
+                                                    <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/bloggif_6050eb8030715.png" />
+                                                    <img class="img-fluid " alt="100%x280" src="~/Content/img/Diseño sin título - copia.png" />
+                                                    <h4 class="card-title">@ViewBag.ELEMENTO.titulo</h4>
+                                                    <p class="card-text"> @ViewBag.ELEMENTO.descripcion</p>
 
-                                        <div class="col-md-4 mb-3">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @foreach (var item in ViewBag.listaAsociado)
+                                {
+                                    <div class="carousel-item col-md-3">
+                                        <div class="panel panel-default">
                                             <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
+                                                <a href="~/info/index?id=2" style="color:#000;">
                                                     <img class="img-fluid " alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
                                                     <div class="card-body">
-
-                                                        <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                        <p class="card-text"> @ViewBag.Resultado.TITULO</p>
+                                                        <h4 class="card-title text-center">@item.nombre</h4>
+                                                        <p class="card-text text-center"> @item.descripcion</p>
 
                                                     </div>
                                                 </a>
                                             </div>
                                         </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                    <p class="card-text">@ViewBag.Resultado.TITULO</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
+                                }
 
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/gracircular (1).png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/62-622010_stocktrak-global-portfolio-simulations-bolsa-de-valores-png.png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/GUID-9B1278E7-97DA-4416-B452-1366E3088A49-display.png">
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/barras.png">
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280" src="~/Content/iconos_PopUp/442d0e69-6716-420c-a8a9-75f580a5a5d7.png">
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--Secccion editoriales
-        <div class="row widgets editorial justify-content-between ">
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                            content
-
-                        </div>
-
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 pt-md-3" style="background:#ffffff;  box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico5" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <section class="row widgets justify-content-between">
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico6" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-6 pt-md-3" style="background:#ffffff; box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.1);">
-                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico4" style="color:#000;">
-                    <h6 style="color:#000;">MERCADO EDITORIAL</h6>
-                    <div class="row">
-                        <div class="col-md-2 mb-md-4">
-                            <img src="~/Content/img/Diseño sin título - copia.png" />
-                        </div>
-                        <div class="col-md-9 ml-md-3">
-                            <p>
-                                @ViewBag.Resultado.TITULO
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-            -->
         <!--Modal 2-->
         <div class="container sticky-top" style="background:#007bff; background: linear-gradient(to right, #0062E6, #33AEFF); ">
             <div class="row">
@@ -754,21 +608,28 @@
         <section style="border: 2px double rgba(128, 128, 128, 0.20);">
             <h4 class="text-center mb-md-5 mt-md-5"><strong>Estadísticas sobre </strong>"El consumo de prensa en España"</h4>
             <div class="row" style="margin-bottom:20px;">
-                <div class="col-4">
+                <div class="col-10 col-md-3">
                     <div class="list-group" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home" style="color:#000;">Periódicos</a>
-                        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile" style="color:#000;">Suplementos</a>
-                        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages" style="color:#000;">Revistas</a>
-                        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
+                        @foreach (var item in ViewBag.listaAsociado)
+                        {
+                            <a class="list-group-item list-group-item-action" id="list-@item.nombre-list" data-toggle="list" href="#list-@item.nombre" role="tab" aria-controls="@item.nombre" style="color:#000;">@item.nombre</a>
+                        }
+                        @*
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings" style="color:#000;">Empresas</a>
+                        *@
                     </div>
+
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 ">
                     <h6 style="color:#000;margin-top:10px;">Las estadísticas más importantes</h6>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">1 Periódicos</div>
-                        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">2 Suplementos</div>
-                        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">3 Revistas</div>
-                        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>
+                        @foreach (var item in ViewBag.listaAsociado)
+                        {
+                            <div class="tab-pane fade" id="list-@item.nombre" role="tabpanel" aria-labelledby="list-@item.nombre-list">@item.descripcion</div>
+                        }
+                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Las estadísticas más importantes</div>
+                        @*
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">4 Empresas</div>*@
                     </div>
                 </div>
             </div>
@@ -812,8 +673,13 @@
                 <div class="col-md-7" style="width:600px; height:350px; overflow-x: hidden!important; overflow-y: scroll; margin-bottom:50px; background:#fff;">
 
                     <ul class="list-group mb-md-7">
-                        <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>Dapibus ac facilisis in</li>
+
+                        @foreach(var item in ViewBag.listaOtrosContenidos) {
+                        <li class="mt-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@item.nombre</li>
+                        }
+                        @*
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
+                        
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
@@ -825,13 +691,18 @@
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple light list group item</li>
-                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple dark list group item</li>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                        <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>@i</li>
+                        }
+
+                        
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple primary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple secondary list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple success list group item</li>
                         <li><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
                         <li class="mb-md-3"><span><img class="mr-md-2 mb-md-2" src="~/Content/iconos_PopUp/barra-grafica.png" alt="Alternate Text" /></span>A simple danger list group item</li>
-
+                         *@
                     </ul>
                 </div>
                 <div class="col-md-5">
@@ -851,152 +722,6 @@
             </div>
 
         </section>
-
-        <!--slider-->
-        <section class="pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <strong><p>Estadisticas</p></strong>
-                        <h4 class="mb-3"><strong>Otros contenidos:</strong> También le podría interesar </h4>
-                    </div>
-                    <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-                            <i class="fa fa-arrow-left"></i>
-                        </a>
-                        <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators3" role="button" data-slide="next">
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <a href="~/info/index?id=@ViewBag.Resultado.ID&id2=grafico2" style="color:#000;">
-
-                                                    <div class="card-body">
-
-                                                        <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                        <p class="card-text"> @ViewBag.Resultado.TITULO</p>
-
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">MERCADO EDITORIA</h4>
-                                                    <p class="card-text">@ViewBag.Resultado.TITULO</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-
-                                                <div class="card-body">
-
-                                                    <h4 class="card-title">Special title treatment</h4>
-                                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-
-
-
 
         <!--Seccion de call to action-->
         <section class="call-to-action">
