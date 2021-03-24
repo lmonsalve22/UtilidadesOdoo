@@ -42,6 +42,7 @@ namespace AplicacionBlanco.Models
         public string caracteristica_especial { get; set; }
         public string auxiliar_1 { get; set; }
         public int RESPONSABLE_id { get; set; }
+        public int UNIDAD_MEDIDA_id { get; set; }
     
         public virtual CATEGORIA CATEGORIA { get; set; }
         public virtual DETALLE DETALLE { get; set; }
@@ -51,14 +52,14 @@ namespace AplicacionBlanco.Models
         public virtual TEMPORALIDAD TEMPORALIDAD { get; set; }
         public virtual TERRITORIO TERRITORIO { get; set; }
         public virtual TIPO_GRAFICO TIPO_GRAFICO { get; set; }
-
+        public virtual UNIDAD_MEDIDA UNIDAD_MEDIDA1 { get; set; }
 
         public string GetURL()
         {
-            string industria_id = CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA_id.ToString("D3");
-            string sector_id = CATEGORIA.PRODUCTO.SECTOR_id.ToString("D3");
-            string producto_id = CATEGORIA.PRODUCTO_id.ToString("D4");
-            string categoria_id = CATEGORIA_id.ToString("D5");
+            string industria_id = CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA_id.ToString("D2");
+            string sector_id = CATEGORIA.PRODUCTO.SECTOR_id.ToString("D2");
+            string producto_id = CATEGORIA.PRODUCTO_id.ToString("D2");
+            string categoria_id = CATEGORIA_id.ToString("D3");
             //https://raw.githubusercontent.com/Sud-Austral/MPG/main/Datos/001Agricultura/001001Agricultura/0010010001Palta/001001000100001Primera_Palta/paltas3.csv
 
             string industria_nombre = CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA.nombre;
@@ -67,11 +68,18 @@ namespace AplicacionBlanco.Models
             string categoria_nombre = CATEGORIA.nombre;
 
             string salida = industria_id + industria_nombre + "/" +
-                            industria_id + sector_id + sector_nombre + "/" +
-                            industria_id + sector_id + producto_id + producto_nombre + "/" +
-                            industria_id + sector_id + producto_id + categoria_id + categoria_nombre + "/" +
+                            sector_id + sector_nombre + "/" +
+                            producto_id + producto_nombre + "/" +
+                            categoria_id + categoria_nombre + "/" +
                             url;
-            return salida;
+            string accentedStr = salida;
+            byte[] tempBytes;
+            tempBytes = System.Text.Encoding.GetEncoding("ISO-8859-8").GetBytes(accentedStr);
+            string asciiStr = System.Text.Encoding.UTF8.GetString(tempBytes);
+            salida = asciiStr.ToLower();
+            return salida.Replace(" ","_");
         }
     }
+
+    
 }

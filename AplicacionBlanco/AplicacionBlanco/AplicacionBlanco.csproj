@@ -215,6 +215,9 @@
     <Compile Include="Models\TIPO_GRAFICO.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UNIDAD_MEDIDA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VistasGEE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
