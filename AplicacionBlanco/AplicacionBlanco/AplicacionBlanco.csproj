@@ -152,6 +152,7 @@
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Controllers\MonitoreoController.cs" />
+    <Compile Include="Controllers\RedesController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
     <Compile Include="Controllers\SIEDUController.cs" />
@@ -234,6 +235,8 @@
     <Content Include="Content\iconos_PopUp\bloggif_6050eb8030715.png" />
     <Content Include="Content\iconos_PopUp\Diseño sin título.png" />
     <Content Include="Content\iconos_PopUp\negro-rojo-y-blanco - copia.png" />
+    <Content Include="Content\fonts\icomoon.svg" />
+    <Content Include="Content\Font\OFL.txt" />
     <Content Include="Content\iconos_PopUp\pdf_download.png" />
     <Content Include="Content\iconos_PopUp\png.png" />
     <Content Include="Content\iconos_PopUp\ppt.png" />
@@ -258,6 +261,8 @@
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
+    <Content Include="Content\fonts.css" />
+    <Content Include="Content\StyleBuscador.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -306,6 +311,21 @@
     <Content Include="Content\img\Font\SourceSansPro-Regular.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBold.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-Black.ttf" />
+    <Content Include="Content\Font\SourceSansPro-BlackItalic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-Bold.ttf" />
+    <Content Include="Content\Font\SourceSansPro-BoldItalic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-ExtraLight.ttf" />
+    <Content Include="Content\Font\SourceSansPro-ExtraLightItalic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-Italic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-Light.ttf" />
+    <Content Include="Content\Font\SourceSansPro-LightItalic.ttf" />
+    <Content Include="Content\Font\SourceSansPro-Regular.ttf" />
+    <Content Include="Content\Font\SourceSansPro-SemiBold.ttf" />
+    <Content Include="Content\Font\SourceSansPro-SemiBoldItalic.ttf" />
+    <Content Include="Content\fonts\icomoon.eot" />
+    <Content Include="Content\fonts\icomoon.ttf" />
+    <Content Include="Content\fonts\icomoon.woff" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -482,6 +502,8 @@
     <Content Include="Views\GRAFICOes\Details.cshtml" />
     <Content Include="Views\GRAFICOes\Edit.cshtml" />
     <Content Include="Views\GRAFICOes\Index.cshtml" />
+    <Content Include="Views\design\EleccionesHN.cshtml" />
+    <Content Include="Views\Redes\EleccionesRedesHN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

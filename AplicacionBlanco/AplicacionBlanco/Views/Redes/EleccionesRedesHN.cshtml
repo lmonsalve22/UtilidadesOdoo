@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Elecciones Honduras</title>
+    <link href="~/Content/fonts.css" rel="stylesheet" />
     <link href="~/Content/Impacto.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -25,7 +26,7 @@
         gtag('config', 'UA-163367570-1');
     </script>
 
-    
+
     <script type="text/javascript">
         window.onload = function () { document.getElementByName('impacto').focus(); }
     </script>
@@ -33,8 +34,18 @@
 </head>
 
 <body>
-
     <header>
+        <div class="social-bar">
+            <a href="https://www.facebook.com/dataintelligencecl" class="icon icon-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/data.intelligence/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
+            <a href="https://twitter.com/data_int" class="icon icon-twitter" target="_blank"></a>
+            <a href="https://dataintelligence.store" class="icon icon-shopify" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/data-intelligence-5916b41a5/" class="icon icon-linkedin" target="_blank"></a>
+            <a href="https://www.youtube.com/channel/UCXo5Vhu65cOl3OcwWF9wLUA" class="icon icon-youtube" target="_blank"></a>
+            <a href="@ViewBag.tiktok" class="icon icon-tiktok" target="_blank"></a>
+            <a href="https://www.pinterest.cl/dataintelligencechile/" class="icon icon-pinterest" target="_blank"></a>
+
+        </div>
         <input id="activar" name="activar" type="checkbox">
 
         <div class="contenedor">
@@ -57,9 +68,10 @@
     </header>
 
     <!-- Tab panes -->
-    <div class="tab-content" style=" height:500px; margin-top:2%;">
+
+
+    <div class="tab-content" style=" height:250px; margin-top:2%;">
         <div class="tab-pane active" id="inicio" role="tabpanel">
-            
             <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/resultados_Master_hondurasMasGrande.png" />
         </div>
         @*
@@ -82,6 +94,6 @@
 
     </div>
 </body>
-</html>
+    </html>
 
 
