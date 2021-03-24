@@ -143,6 +143,7 @@
     <Compile Include="Controllers\IFRAMEController.cs" />
     <Compile Include="Controllers\InfoController.cs" />
     <Compile Include="Controllers\MonitoreoController.cs" />
+    <Compile Include="Controllers\RedesController.cs" />
     <Compile Include="Controllers\RedireccionController.cs" />
     <Compile Include="Controllers\RRSSController.cs" />
     <Compile Include="Controllers\SIEDUController.cs" />
@@ -175,6 +176,7 @@
     <Content Include="Content\img\ayuda.png" />
     <Content Include="Content\img\cabecera_encuesta_honduras.jpg" />
     <Content Include="Content\img\Diseño sin título - copia.png" />
+    <Content Include="Content\img\Font\icomoon.svg" />
     <Content Include="Content\img\Font\OFL.txt" />
     <Content Include="Content\img\home.png" />
     <Content Include="Content\img\ICVU.jpeg" />
@@ -189,6 +191,7 @@
     <Content Include="Content\img\santiago.png" />
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\StyleBuscador.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -228,6 +231,9 @@
     <Content Include="Content\img\Font\SourceSansPro-Regular.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBold.ttf" />
     <Content Include="Content\img\Font\SourceSansPro-SemiBoldItalic.ttf" />
+    <Content Include="Content\img\Font\icomoon.eot" />
+    <Content Include="Content\img\Font\icomoon.ttf" />
+    <Content Include="Content\img\Font\icomoon.woff" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
@@ -393,6 +399,7 @@
     <Content Include="Views\Grafico\Hector2.cshtml" />
     <Content Include="Views\Info\Index2.cshtml" />
     <Content Include="Views\design\EleccionesHN.cshtml" />
+    <Content Include="Views\Redes\EleccionesRedesHN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
