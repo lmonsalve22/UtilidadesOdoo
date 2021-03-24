@@ -357,7 +357,6 @@ namespace AplicacionBlanco.Models
             vistas.Add(new VistasGEE(id: 9031, id2: 16, geeURL: "https://omarorellanahn.users.earthengine.app/view/datasoilchilefiltro?Codcom=16", comentario: "DATA: DATAAGRO|| Sistema Inteligente de Datos del Suelo || País: Chile || Variante: SI || Tipo Variante: Región || Variante Shopify: Región del Ñuble", nombre: "DATAAGRO|| Sistema Inteligente de Datos del Suelo|| Región del Ñuble, Chile", urlImagen: "No hay imagen en la tabla", urlPowerBi: ""));
 
 
-
             divisiones.Add(new DivisionAdministrativa(id: 23, id2: 0, nombreAdministrativo: "Nacional", pais: "Honduras"));
             divisiones.Add(new DivisionAdministrativa(id: 24, id2: 1, nombreAdministrativo: "Departamento: Atlántida", pais: "Honduras"));
             divisiones.Add(new DivisionAdministrativa(id: 24, id2: 2, nombreAdministrativo: "Departamento: Colón", pais: "Honduras"));

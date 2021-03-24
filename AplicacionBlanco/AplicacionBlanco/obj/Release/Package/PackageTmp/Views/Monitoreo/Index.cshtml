@@ -6,22 +6,30 @@
 <br />
 <br />
 <br />
-Hola
-<h2></h2>
+<h2>Monitoreo de Servicios</h2>
 <table class="default">
     <tr>
         <th>Nombre</th>
         <th>URL</th>
         <th>Condicion</th>
+        
     </tr>
     @foreach (var item in ViewBag.resultado)
     {
         <tr>
-            <td>@item.URL</td>
+            <td>@item.Nombre </td>
 
-            <td>@item.Nombre</td>
+            <td><a class="twitter-timeline" data-height="600" data-width="550" href=@item.URL>Verificar </a></td>
 
-            <td>@item.Disponibilidad</td>
+            <td>@if (item.Disponibilidad)
+                {
+                    <img class="img-fluid" style="max-width: 10%; height: auto; margin-left:2%;" src="~/Content/img/circulo_verde.png"/>
+                }
+                else
+                {
+                    <img class="img-fluid" style="max-width: 10%; height: auto; margin-left:2%;" src="~/Content/img/circulo_rojo.png" />
+                }
+            </td>
         </tr>
     }
 
