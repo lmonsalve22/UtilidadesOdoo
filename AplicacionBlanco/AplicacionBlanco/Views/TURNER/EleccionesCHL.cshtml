@@ -6,10 +6,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elecciones Chile - DataIntelligence</title>
+    <meta name="description"
+          content="Es un portal para visualizacion de datos de las Elecciones de Chile 2021">
+    <meta name="keywords" content="chile,constitucion,constituyentes,alcaldes,consejales,gobernadores,data,dataintelligence,dashboard,powerbi">
+    <meta name="author" content="Equipo desarrollo Data Intelligence">
+    <link rel="image_src" href="https://odooutil.azurewebsites.net/Content/img/RRSS/logoDataElecciones.png">">
+    <!-- OpenGraph tags for Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Elecciones Chile" />
+    <meta property="og:description" content="Portal para visualizacion de datos de las Elecciones de Chile 2021" />
+
+    <meta property="og:image" content="~/Content/img/RRSS/logoDataElecciones.png" />
+    <meta property="og:url" content="https://odooutil.azurewebsites.net/TURNER/EleccionesCHL" />
+
+    <!--Twitter Cards -->
+
+    <meta name="twitter:title" content="Elecciones Chile">
+    <meta name="twitter:description" content="Portal para visualizacion de datos de las Elecciones de Chile 2021">
+    <meta name="twitter:image" content="~/Content/img/RRSS/logoDataElecciones.png">
+
     <link href="~/Content/Impacto.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/Content/img/Icono_dataIntelligence_Rojo.svg">
     @Styles.Render("~/Content/css")
@@ -17,18 +37,26 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
-    <script type="text/javascript">
-        window.onload = function () { document.getElementByName('impacto').focus(); }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163367570-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-163367570-1');
     </script>
 
 </head>
 
-<body style="/*background-color:#B4DCF1;*/background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;">
-
-    <header>
+<body style="background-color:black; /*background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;*/ ">
+    <div style="display:none">
+        <h1>Elecciones</h1>
+        <h2>Chile</h2>
+        <h3>Data Intelligence</h3>
+    </div>
+    <header style="background-color:#2290b5">
         <input id="activar" name="activar" type="checkbox">
 
-        <div class="contenedor">
+        <div class="contenedor" style="background-color:#2290b5;z-index:1000;">
             <nav class="menu">
                 <!-- Nav tabs -->
                 <ul class="ml-md-3 nav nav-tabs" role="tablist" style="margin-left:15%; border-color:transparent; display:block !important;">
@@ -58,69 +86,123 @@
                         /*
                     background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;*/">
             <div class="container-fluid" style="">
+                <style>
+                    
+                </style>
                 <div class="row" style="">
 
                     <div id="tituloCandidatos" class="col d-none d-lg-block  text-center" style="margin-top:10%">
-                        <span style="font-weight:600;
-                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
-                                    color:black">
-                            Elige la lista de Candidatos
+                        <span >
+                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
+                        <br />
+                        <span>
+                            CANDIDATOS/AS
+                        </span>
+                        <br />
+                        <span>
+                            ____________________________
+                        </span>
+
                     </div>
                     <div class="col d-none d-md-block  d-lg-none text-center" style="margin-top:10%">
-                        <span style="font-weight:600;
-                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
-                                    font-size:2.6em;
-                                    color:black">
-                            Elige la lista de Candidatos
+
+
+                        <span style="font-size:2.6em;">
+                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
+                        </span>
+                        <br />
+                        <span style="font-size:2.6em;">
+                            CANDIDATOS/AS
+                        </span>
+                        <br />
+                        <span style="font-size:2.6em;">
+                            ____________________________
                         </span>
                     </div>
                     <div class="col d-block d-md-none text-center" style="margin-top:10%">
-                        <span style="font-weight:600;
-                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
-                                    font-size:1.5em;
-                                    color:black">
-                            Elige la lista de Candidatos
+
+                        <span style="font-size:1.5em;">
+                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
+                        </span>
+                        <br />
+                        <span style="font-size:1.5em;">
+                            CANDIDATOS/AS
+                        </span>
+                        <br />
+                        <span style="font-size:1.5em;">
+                            ______________
                         </span>
                     </div>
                 </div>
                 <div class="row" style="margin-top:8%">
                     <div class="col-12 col-sm-6 col-lg-2 offset-lg-1 mb-2" style="">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#alcaldes" role="tab">
-                            <img style="border:solid 2px black" class="img-fluid" src="~/Content/img/portadas/1.PNG" />
+                            <img style="border:solid 2px black" class="img-fluid" src="~/Content/img/portadas/botonAlcaldes.png" />
 
 
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#concejales" role="tab">
-                            <img class="img-fluid" src="~/Content/img/portadas/2.PNG" />
+                            <img class="img-fluid" src="~/Content/img/portadas/botonConcejales.png" />
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
-                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="##constituyentes" role="tab">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#constituyentes" role="tab">
 
-                            <img class="img-fluid" src="~/Content/img/portadas/3.PNG" />
+                            <img class="img-fluid" src="~/Content/img/portadas/botonConvencionalConstituyente.png" />
 
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#puebloi" role="tab">
-                            <img class="img-fluid" src="~/Content/img/portadas/4.PNG" />
+                            <img class="img-fluid" src="~/Content/img/portadas/botonPueblosIndigenas.png" />
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#gobernadores" role="tab">
-                            <span style="position:relative;background-color:red">
-                                <img style="margin-bottom:100px" class="img-fluid" src="~/Content/img/portadas/5.PNG" />
+                            <span style="position:relative;">
+                                <img style="margin-bottom:100px" class="img-fluid" src="~/Content/img/portadas/botonGobiernosRegionales.png" />
                             </span>
                         </a>
                     </div>
 
                 </div>
             </div>
+            <style>
+                footer {
+                    background-color: #ffffff;
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    max-height: 14vh;
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 0.5%;
+                }
+            </style>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row" style="">
+                        <div class="col-6" style="">
+                            <img class="img-fluid mt-3 " style="max-height:11vh; margin-bottom:2vh;" src="~/Content/img/RRSS/logoDataElecciones.png" />
+
+                        </div>
+                        <div class="col-6 " style="">
+                            <img class="img-fluid float-right mt-5" style="max-height:5vh;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
             @*
+                    <img class="img-fluid" style="max-height:50px;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
+
+                            </div>
+                        </div>
+
+                    @*
                 <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg" />
             *@
         </div>
@@ -153,34 +235,8 @@
 
     </div>
 
-    <style>
-        footer {
-            background-color: #25bae4;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            /*height: 100px;
-                
-            */
-            width: 100%;
-            overflow: hidden;
-            padding: 0.5%;
-        }
-    </style>
-        <footer class="footer">
-            <div class="container text-center">
 
 
-                <img class="img-fluid" src="~/Content/img/RRSS/Facebook.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/Instagram.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/LinkedIn.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/Pinterest.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/TikTok.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/Youtube.png" />
-                <img class="img-fluid" src="~/Content/img/RRSS/Twitter.png" />
-            </div>
-        </footer>
-    
 </body>
 </html>
 

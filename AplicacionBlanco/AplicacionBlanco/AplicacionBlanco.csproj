@@ -263,6 +263,11 @@
     <Content Include="Content\img\portadas\3.PNG" />
     <Content Include="Content\img\portadas\4.PNG" />
     <Content Include="Content\img\portadas\5.PNG" />
+    <Content Include="Content\img\portadas\botonAlcaldes.png" />
+    <Content Include="Content\img\portadas\botonConcejales.png" />
+    <Content Include="Content\img\portadas\botonConvencionalConstituyente.png" />
+    <Content Include="Content\img\portadas\botonGobiernosRegionales.png" />
+    <Content Include="Content\img\portadas\botonPueblosIndigenas.png" />
     <Content Include="Content\img\portadas\covihome.png" />
     <Content Include="Content\img\Porta_ISMT.jpg" />
     <Content Include="Content\img\resultados_Master_honduras.png" />
@@ -270,7 +275,10 @@
     <Content Include="Content\img\RRSS\Facebook.png" />
     <Content Include="Content\img\RRSS\Instagram.png" />
     <Content Include="Content\img\RRSS\LinkedIn.png" />
+    <Content Include="Content\img\RRSS\logoDataElecciones.png" />
+    <Content Include="Content\img\RRSS\logoDataIntelligence.png" />
     <Content Include="Content\img\RRSS\Pinterest.png" />
+    <Content Include="Content\img\RRSS\texto_titulo.png" />
     <Content Include="Content\img\RRSS\TikTok.png" />
     <Content Include="Content\img\RRSS\Twitter.png" />
     <Content Include="Content\img\RRSS\Youtube.png" />
