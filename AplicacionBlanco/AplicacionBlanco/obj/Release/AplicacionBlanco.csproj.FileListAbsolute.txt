@@ -28,6 +28,8 @@ D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\roslyn\vbc.rsp
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\roslyn\VBCSCompiler.exe
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\roslyn\VBCSCompiler.exe.config
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\Antlr3.Runtime.dll
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.dll
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\Microsoft.Web.Infrastructure.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\Newtonsoft.Json.dll
@@ -42,6 +44,8 @@ D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.WebPag
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.WebPages.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.WebPages.Razor.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\WebGrease.dll
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.xml
+D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.xml
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.Helpers.xml
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.Mvc.xml
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\System.Web.Optimization.xml
@@ -69,8 +73,3 @@ D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\Aplicacio
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csproj.CopyComplete
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.dll
 D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.pdb
-D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Release\AplicacionBlanco.csprojAssemblyReference.cache
-D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.dll
-D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.dll
-D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.xml
-D:\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.xml

@@ -15,7 +15,7 @@
           content="Es un portal para visualizacion de datos de las Elecciones de Chile 2021">
     <meta name="keywords" content="chile,constitucion,constituyentes,alcaldes,consejales,gobernadores,data,dataintelligence,dashboard,powerbi">
     <meta name="author" content="Equipo desarrollo Data Intelligence">
-    <link rel="image_src" href="https://odooutil.azurewebsites.net/Content/img/RRSS/logoDataElecciones.png">">
+    <link rel="image_src" href="https://odooutil.azurewebsites.net/Content/img/RRSS/logoDataElecciones.png">
     <!-- OpenGraph tags for Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Elecciones Chile" />
@@ -47,12 +47,13 @@
 
 </head>
 
-<body style="background-color:black; /*background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;*/ ">
+<body style="background-color:black;">
     <div style="display:none">
         <h1>Elecciones</h1>
         <h2>Chile</h2>
         <h3>Data Intelligence</h3>
     </div>
+
     <header style="background-color:#2290b5">
         <input id="activar" name="activar" type="checkbox">
 
@@ -79,7 +80,7 @@
 
     <!-- Tab panes -->
 
-    <div class="tab-content" style=" height:500px;  margin-top:2%;">
+    <div class="tab-content" style=" height:500px;  margin-top:0;">
         <div class="tab-pane active" id="inicio" role="tabpanel"
              style="/*height:100vh;*/
 
@@ -93,27 +94,29 @@
 
                     <div id="tituloCandidatos" class="col d-none d-lg-block  text-center" style="margin-top:10%">
                         <span >
-                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
+                            ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
                         <br />
                         <span>
-                            CANDIDATOS/AS
+                            CONOCE A LOS CANDIDATOS/AS
                         </span>
                         <br />
-                        <span>
-                            ____________________________
-                        </span>
+                        <div style="margin-top:-2%">
+                            <span >
+                                ____________________________
+                            </span>
+                        </div>
 
                     </div>
                     <div class="col d-none d-md-block  d-lg-none text-center" style="margin-top:10%">
 
 
                         <span style="font-size:2.6em;">
-                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
+                            ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
                         <br />
                         <span style="font-size:2.6em;">
-                            CANDIDATOS/AS
+                            CONOCE A LOS CANDIDATOS/AS
                         </span>
                         <br />
                         <span style="font-size:2.6em;">
@@ -123,11 +126,11 @@
                     <div class="col d-block d-md-none text-center" style="margin-top:10%">
 
                         <span style="font-size:1.5em;">
-                            MÁSTER ELECCIONES CHILE <strong>∙</strong> 2021
+                            ELECCIONES CHILE <strong>∙</strong> 2021
                         </span>
                         <br />
                         <span style="font-size:1.5em;">
-                            CANDIDATOS/AS
+                            CONOCE A LOS CANDIDATOS/AS
                         </span>
                         <br />
                         <span style="font-size:1.5em;">
@@ -138,32 +141,37 @@
                 <div class="row" style="margin-top:8%">
                     <div class="col-12 col-sm-6 col-lg-2 offset-lg-1 mb-2" style="">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#alcaldes" role="tab">
-                            <img style="border:solid 2px black" class="img-fluid" src="~/Content/img/portadas/botonAlcaldes.png" />
+                            <img loading="lazy"
+                            style="border:solid 2px black" class="img-fluid" src="~/Content/img/portadas/botonAlcaldes.png" />
 
 
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#concejales" role="tab">
-                            <img class="img-fluid" src="~/Content/img/portadas/botonConcejales.png" />
+                            <img loading="lazy"
+                                 class="img-fluid" src="~/Content/img/portadas/botonConcejales.png" />
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#constituyentes" role="tab">
 
-                            <img class="img-fluid" src="~/Content/img/portadas/botonConvencionalConstituyente.png" />
+                            <img loading="lazy"
+                                 class="img-fluid" src="~/Content/img/portadas/botonConvencionalConstituyente.png" />
 
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#puebloi" role="tab">
-                            <img class="img-fluid" src="~/Content/img/portadas/botonPueblosIndigenas.png" />
+                            <img loading="lazy"
+                                 class="img-fluid" src="~/Content/img/portadas/botonPueblosIndigenas.png" />
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-2">
                         <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#gobernadores" role="tab">
                             <span style="position:relative;">
-                                <img style="margin-bottom:100px" class="img-fluid" src="~/Content/img/portadas/botonGobiernosRegionales.png" />
+                                <img loading="lazy"
+                               style="margin-bottom:100px" class="img-fluid" src="~/Content/img/portadas/botonGobiernosRegionales.png" />
                             </span>
                         </a>
                     </div>
@@ -186,11 +194,13 @@
                 <div class="container-fluid">
                     <div class="row" style="">
                         <div class="col-6" style="">
-                            <img class="img-fluid mt-3 " style="max-height:11vh; margin-bottom:2vh;" src="~/Content/img/RRSS/logoDataElecciones.png" />
+                            <img loading="lazy"
+                                 class="img-fluid mt-3 " style="max-height:11vh; margin-bottom:2vh;" src="~/Content/img/RRSS/logoDataElecciones.png" />
 
                         </div>
                         <div class="col-6 " style="">
-                            <img class="img-fluid float-right mt-5" style="max-height:5vh;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
+                            <img loading="lazy"
+                                 class="img-fluid float-right mt-5" style="max-height:5vh;" src="~/Content/img/RRSS/logoDataIntelligence.png" />
 
                         </div>
                     </div>
@@ -212,23 +222,23 @@
             </div>
         *@
         <div class="tab-pane" id="alcaldes" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
         </div>
 
         <div class="tab-pane" id="concejales" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiZTVmMzFjMzUtNzc2ZC00MmFjLTgzZGYtMzJmMjA2OTUwNjdjIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiZTVmMzFjMzUtNzc2ZC00MmFjLTgzZGYtMzJmMjA2OTUwNjdjIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
         </div>
 
         <div class="tab-pane" id="constituyentes" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzI1ZWY2NDctNjFlMC00Nzc2LWI2NzAtOTkxZjE3NTI2MGU1IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzI1ZWY2NDctNjFlMC00Nzc2LWI2NzAtOTkxZjE3NTI2MGU1IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
         </div>
 
         <div class="tab-pane" id="puebloi" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection69d8522aa17783d88e04" frameborder="0"></iframe>
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection69d8522aa17783d88e04" frameborder="0"></iframe>
         </div>
 
         <div class="tab-pane" id="gobernadores" role="tabpanel">
-            <iframe class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzkzMTM5MTItOGQyNi00NjZmLTljNjEtNjIzZGRiNjQ1MjIzIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
+            <iframe loading="lazy" class=" embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNzkzMTM5MTItOGQyNi00NjZmLTljNjEtNjIzZGRiNjQ1MjIzIiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9" frameborder="0"></iframe>
         </div>
 
 
