@@ -22,6 +22,7 @@ namespace AplicacionBlanco.Controllers
 
         public ActionResult EleccionesCHL2()
         {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
             return View();
         }
     }

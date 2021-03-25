@@ -506,3 +506,7 @@ C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\Aplica
 C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.csproj.CopyComplete
 C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.dll
 C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\obj\Debug\AplicacionBlanco.pdb
+C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.dll
+C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.dll
+C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.xml
+C:\Users\gusti\OneDrive\Documentos\GitHub\UtilidadesOdoo\AplicacionBlanco\AplicacionBlanco\bin\EntityFramework.SqlServer.xml

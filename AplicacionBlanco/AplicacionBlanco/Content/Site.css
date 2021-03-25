@@ -346,6 +346,21 @@ p {
 }
 
 /* BARRA SOCIAL */
+
+.icon:first-child {
+    border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child {
+    border-radius: 0 0 0 1rem;
+}
+
+.icon:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
 .social-bar {
     position: fixed;
     right: 0;
@@ -365,6 +380,10 @@ p {
     transition: all .5s;
 }
 
+.icon-Icono_dataIntelligence_Rojo {
+    background: rgba(255,255,255,1);
+}
+
 .icon-facebook {
     background: #2E406E;
 }
@@ -380,32 +399,23 @@ p {
 .icon-instagram {
     background: #3F60A5;
 }
+
 .icon-linkedin {
     background: #2E406E;
 }
-.icon-shopify {
-    background:rgba(255,255,255,1);
-}
+
 .icon-tiktok {
     background: #000000;
 }
+
 .icon-pinterest {
     background: #1c34f3;
 }
 
-.icon:first-child {
-    border-radius: 1rem 0 0 0;
-}
 
-.icon:last-child {
-    border-radius: 0 0 0 1rem;
-}
 
-.icon:hover {
-    padding-right: 3rem;
-    border-radius: 1rem 0 0 1rem;
-    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
-}
+
+
 
 #tituloCandidatos {
     font-size: 3em !important;
@@ -416,5 +426,3 @@ p {
         font-size: 1em !important;
     }
 }
-    
-
