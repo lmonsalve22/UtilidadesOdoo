@@ -522,6 +522,7 @@
     <Content Include="Views\design\EleccionesHN.cshtml" />
     <Content Include="Views\Redes\EleccionesRedesHN.cshtml" />
     <Content Include="Views\TURNER\EleccionesCHL.cshtml" />
+    <Content Include="Views\TURNER\EleccionesCHL2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

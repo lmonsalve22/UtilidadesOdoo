@@ -18,5 +18,11 @@ namespace AplicacionBlanco.Controllers
         {
             return View();
         }
+
+
+        public ActionResult EleccionesCHL2()
+        {
+            return View();
+        }
     }
 }
