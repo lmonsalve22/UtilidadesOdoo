@@ -233,10 +233,10 @@
     <Content Include="Content\Diseño sin título.png" />
     <Content Include="Content\estilos.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\icomoon.svg" />
     <Content Include="Content\iconos_PopUp\bloggif_6050eb8030715.png" />
     <Content Include="Content\iconos_PopUp\Diseño sin título.png" />
     <Content Include="Content\iconos_PopUp\negro-rojo-y-blanco - copia.png" />
-    <Content Include="Content\fonts\icomoon.svg" />
     <Content Include="Content\Font\OFL.txt" />
     <Content Include="Content\iconos_PopUp\pdf_download.png" />
     <Content Include="Content\iconos_PopUp\png.png" />
@@ -348,9 +348,6 @@
     <Content Include="Content\Font\SourceSansPro-Regular.ttf" />
     <Content Include="Content\Font\SourceSansPro-SemiBold.ttf" />
     <Content Include="Content\Font\SourceSansPro-SemiBoldItalic.ttf" />
-    <Content Include="Content\fonts\icomoon.eot" />
-    <Content Include="Content\fonts\icomoon.ttf" />
-    <Content Include="Content\fonts\icomoon.woff" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -358,6 +355,9 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\icomoon.eot" />
+    <Content Include="Content\fonts\icomoon.ttf" />
+    <Content Include="Content\fonts\icomoon.woff" />
     <None Include="Properties\PublishProfiles\OdooUtil - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\OdooUtil - Web Deploy.pubxml" />
