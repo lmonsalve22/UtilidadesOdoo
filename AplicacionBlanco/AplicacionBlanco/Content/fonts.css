@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?bsgjna');
-    src: url('fonts/icomoon.eot?bsgjna#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?bsgjna') format('truetype'), url('fonts/icomoon.woff?bsgjna') format('woff'), url('fonts/icomoon.svg?bsgjna#icomoon') format('svg');
+    src: url('fonts/icomoon.eot?y9njme');
+    src: url('fonts/icomoon.eot?y9njme#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?y9njme') format('truetype'), url('fonts/icomoon.woff?y9njme') format('woff'), url('fonts/icomoon.svg?y9njme#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -21,11 +21,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Icono_dataIntelligence_Rojo .path1:before {
+    content: "\e902";
+    color: #e20815;
+    margin-left: 0.099609375em;
+}
+
+.icon-Icono_dataIntelligence_Rojo .path2:before {
+    content: "\e903";
+    color: #e30a16;
+    margin-left: -0.599609375em;
+    padding-right: 0.3em;
+}
+/*
 .icon-shopify:before {
     content: "\e900";
     color: #7ab55c;
 }
-
+*/
 .icon-tiktok:before {
     content: "\e901";
 }
