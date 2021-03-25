@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body style="/*background-color:#B4DCF1;*/background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;">
 
     <header>
         <input id="activar" name="activar" type="checkbox">
@@ -43,21 +43,91 @@
                     <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#constituyentes" role="tab">Elecci&oacute;n Constituyentes</a> </li>
                     <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#puebloi" role="tab">Pueblos Ind&iacute;genas</a> </li>
                     <li class="ml-md-2"> <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#gobernadores" role="tab">Elecci&oacute;n Gobernadores</a> </li>
-                   </ul>
+                </ul>
             </nav>
             <label class="label" for="activar"></label>
         </div>
     </header>
 
     <!-- Tab panes -->
-    <div class="tab-content" style=" height:500px; margin-top:2%;">
-        <div class="tab-pane active" id="inicio" role="tabpanel">
-            <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg" />
+
+    <div class="tab-content" style=" height:500px;  margin-top:2%;">
+        <div class="tab-pane active" id="inicio" role="tabpanel"
+             style="/*height:100vh;*/
+
+                        /*
+                    background-image:url(/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg);background-size: cover;*/">
+            <div class="container-fluid" style="">
+                <div class="row" style="">
+
+                    <div id="tituloCandidatos" class="col d-none d-lg-block  text-center" style="margin-top:10%">
+                        <span style="font-weight:600;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+                                    color:black">
+                            Elige la lista de Candidatos
+                        </span>
+                    </div>
+                    <div class="col d-none d-md-block  d-lg-none text-center" style="margin-top:10%">
+                        <span style="font-weight:600;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                    font-size:2.6em;
+                                    color:black">
+                            Elige la lista de Candidatos
+                        </span>
+                    </div>
+                    <div class="col d-block d-md-none text-center" style="margin-top:10%">
+                        <span style="font-weight:600;
+                                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                                    font-size:1.5em;
+                                    color:black">
+                            Elige la lista de Candidatos
+                        </span>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:8%">
+                    <div class="col-12 col-sm-6 col-lg-2 offset-lg-1 mb-2" style="">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#alcaldes" role="tab">
+                            <img style="border:solid 2px black" class="img-fluid" src="~/Content/img/portadas/1.PNG" />
+
+
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#concejales" role="tab">
+                            <img class="img-fluid" src="~/Content/img/portadas/2.PNG" />
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="##constituyentes" role="tab">
+
+                            <img class="img-fluid" src="~/Content/img/portadas/3.PNG" />
+
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2 mb-2 ">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#puebloi" role="tab">
+                            <img class="img-fluid" src="~/Content/img/portadas/4.PNG" />
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-2">
+                        <a onclick="document.getElementById('activar').checked = false;" data-toggle="tab" href="#gobernadores" role="tab">
+                            <span style="position:relative;background-color:red">
+                                <img style="margin-bottom:100px" class="img-fluid" src="~/Content/img/portadas/5.PNG" />
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            @*
+                <img class="img-fluid" style="max-width: 100%; height: auto;" src="~/Content/img/portadaPowerBi_DataELECCIONES_MasterEleccionesChile2021_Candidatos_As_CHILE.jpg" />
+            *@
         </div>
         @*
-        <div class="tab-pane" id="alcaldes" role="tabpanel">
-            <iframe class="embed-responsive embed-responsive-16by9" id="test2" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
-        </div>
+            <div class="tab-pane" id="alcaldes" role="tabpanel">
+                <iframe class="embed-responsive embed-responsive-16by9" id="test2" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
+            </div>
         *@
         <div class="tab-pane" id="alcaldes" role="tabpanel">
             <iframe class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiNjk1NTE1MzYtNzc4Zi00YjY5LTkxNjEtNzkyOTA4ZWRjMGI4IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9"></iframe>
@@ -82,6 +152,35 @@
 
 
     </div>
+
+    <style>
+        footer {
+            background-color: #25bae4;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            /*height: 100px;
+                
+            */
+            width: 100%;
+            overflow: hidden;
+            padding: 0.5%;
+        }
+    </style>
+        <footer class="footer">
+            <div class="container text-center">
+
+
+                <img class="img-fluid" src="~/Content/img/RRSS/Facebook.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/Instagram.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/LinkedIn.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/Pinterest.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/TikTok.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/Youtube.png" />
+                <img class="img-fluid" src="~/Content/img/RRSS/Twitter.png" />
+            </div>
+        </footer>
+    
 </body>
 </html>
 

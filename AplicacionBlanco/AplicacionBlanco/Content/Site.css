@@ -406,5 +406,15 @@ p {
     border-radius: 1rem 0 0 1rem;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
 }
+
+#tituloCandidatos {
+    font-size: 3em !important;
+}
+
+@media screen and (max-width: 570px){
+    #tituloCandidatos {
+        font-size: 1em !important;
+    }
+}
     
 
