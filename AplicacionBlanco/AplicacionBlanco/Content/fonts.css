@@ -27,13 +27,13 @@
 
 .icon-Icono_dataIntelligence_Rojo .path1:before {
     content: "\e900";
-    color: #e20815;
+    color: rgb(226, 8, 21);
 }
 
 .icon-Icono_dataIntelligence_Rojo .path2:before {
     content: "\e901";
-    color: #e30a16;
     margin-left: -0.599609375em;
+    color: rgb(227, 10, 22);
 }
 
 .icon-facebook:before {
