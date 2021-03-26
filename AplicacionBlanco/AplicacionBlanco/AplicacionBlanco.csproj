@@ -233,7 +233,9 @@
     <Content Include="Content\Diseño sin título.png" />
     <Content Include="Content\estilos.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\fonts\icomoon.svg" />
+    <Content Include="Content\fonts\icomoon.svg">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\iconos_PopUp\bloggif_6050eb8030715.png" />
     <Content Include="Content\iconos_PopUp\Diseño sin título.png" />
     <Content Include="Content\iconos_PopUp\negro-rojo-y-blanco - copia.png" />
@@ -287,6 +289,7 @@
     <Content Include="Content\Impacto.css" />
     <Content Include="Content\EstilosPopUp.css" />
     <Content Include="Content\fonts.css" />
+    <Content Include="Content\roboto.css" />
     <Content Include="Content\StyleBuscador.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -531,6 +534,11 @@
     <Content Include="Views\Redes\EleccionesRedesHN.cshtml" />
     <Content Include="Views\TURNER\EleccionesCHL.cshtml" />
     <Content Include="Views\TURNER\EleccionesCHL2.cshtml" />
+    <Content Include="Views\TURNER\EleccionesAlcalde.cshtml" />
+    <Content Include="Views\TURNER\EleccionesConsejal.cshtml" />
+    <Content Include="Views\TURNER\EleccionesConstituyente.cshtml" />
+    <Content Include="Views\TURNER\EleccionesConstituyentePubloI.cshtml" />
+    <Content Include="Views\TURNER\EleccionesGobernador.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

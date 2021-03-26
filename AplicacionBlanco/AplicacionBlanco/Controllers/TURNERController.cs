@@ -21,9 +21,38 @@ namespace AplicacionBlanco.Controllers
         }
 
 
-        public ActionResult EleccionesCHL2()
+        public ActionResult EleccionesAlcalde()
         {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
             return View();
         }
+
+        public ActionResult EleccionesConsejal()
+        {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
+            return View();
+        }
+
+        public ActionResult EleccionesConstituyente()
+        {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
+            return View();
+        }
+
+        public ActionResult EleccionesConstituyentePubloI()
+        {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
+            return View();
+        }
+
+        public ActionResult EleccionesGobernador()
+        {
+            ViewBag.tiktok = "https://www.tiktok.com/@dataintelligencechile?";
+            return View();
+        }
+
+
+
+
     }
 }

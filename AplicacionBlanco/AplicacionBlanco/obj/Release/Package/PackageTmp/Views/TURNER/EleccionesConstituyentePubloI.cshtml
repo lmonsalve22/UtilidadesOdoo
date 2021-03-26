@@ -1,0 +1,162 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elecciones Chile - DataIntelligence</title>
+    <meta name="description"
+          content="Es un portal para visualizacion de datos de las Elecciones de Chile 2021">
+    <meta name="keywords" content="chile,constitucion,constituyentes,alcaldes,consejales,gobernadores,data,dataintelligence,dashboard,powerbi">
+    <meta name="author" content="Equipo desarrollo Data Intelligence">
+    <link rel="image_src" href="https://odooutil.azurewebsites.net/Content/img/RRSS/logoDataElecciones.png">
+    <!-- OpenGraph tags for Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Elecciones Chile" />
+    <meta property="og:description" content="Portal para visualizacion de datos de las Elecciones de Chile 2021" />
+
+    <meta property="og:image" content="~/Content/img/RRSS/logoDataElecciones.png" />
+    <meta property="og:url" content="https://odooutil.azurewebsites.net/TURNER/EleccionesCHL" />
+
+    <!--Twitter Cards -->
+
+    <meta name="twitter:title" content="Elecciones Chile">
+    <meta name="twitter:description" content="Portal para visualizacion de datos de las Elecciones de Chile 2021">
+    <meta name="twitter:image" content="~/Content/img/RRSS/logoDataElecciones.png">
+
+    <link href="~/Content/Impacto.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Content/img/Icono_dataIntelligence_Rojo.svg">
+    <link href="~/Content/fonts.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163367570-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-163367570-1');
+    </script>
+
+
+
+</head>
+
+<body style="background-color:black;">
+    <hr style="width:100%;border:40px solid #2494b4; margin-top:-24px;" />
+    <div style="display:none">
+        <h1>Elecciones</h1>
+        <h2>Chile</h2>
+        <h3>Data Intelligence</h3>
+    </div>
+    <header>
+
+       
+
+        <div class="social-bar" id="social-bar">
+            <a href="https://www.facebook.com/dataintelligencecl" class="icon icon-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/data.intelligence/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
+            <a href="https://twitter.com/data_int" class="icon icon-twitter" target="_blank"></a>
+            @*
+                <a href="https://dataintelligence.store" class="icon icon-Icono_dataIntelligence_Rojo">
+                    <span class="path1"></span><span class="path2"></span>
+                </a>
+            *@
+            <a href="https://dataintelligence.store" class="icon icon-shopify" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/data-intelligence-5916b41a5/" class="icon icon-linkedin" target="_blank"></a>
+            <a href="https://www.youtube.com/channel/UCXo5Vhu65cOl3OcwWF9wLUA" class="icon icon-youtube" target="_blank"></a>
+            <a href="@ViewBag.tiktok" class="icon icon-tiktok" target="_blank"></a>
+            <a href="https://www.pinterest.cl/dataintelligencechile/" class="icon icon-pinterest" target="_blank"></a>
+        </div>
+    </header>
+
+
+
+    <!-- Tab panes -->
+    <div class="tab-content" style=" height:500px;  margin-top:1%;">
+        
+        <div class="tab-pane active" id="puebloi" role="tabpanel">
+            <iframe loading="lazy" class="embed-responsive embed-responsive-16by9" id="powerbi" style="margin: 0 auto; width: 100%; height: 95vh;" src="https://app.powerbi.com/view?r=eyJrIjoiODM4ZjIwOTQtY2IwZC00YzNhLWI1MzEtMzhjYmM0MDUwZjQ5IiwidCI6IjhmYmFhNWJmLTJlY2MtNGRjOC1iNTZiLThmOTJlMzA3ZjA3NiIsImMiOjR9&pageName=ReportSection69d8522aa17783d88e04" frameborder="0"></iframe>
+        </div>
+    </div>
+    @*
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script>
+            if (screen.width < 1000 && screen.orientation.type != "landscape-primary") {
+
+                Swal.fire({
+                    title: "Bienvenidos!",
+                    text: "Por favor visualizar en modo Horizontal",
+                    color: "#494949",
+                    // html:
+                    // icon:
+                    // confirmButtonText:
+                    // footer:
+                    // width:
+                    // padding:
+                    //background: "#494949",
+                    // grow:
+                    // backdrop:
+                    // timer:
+                    // timerProgressBar:
+                    // toast:
+                    // position:
+                    // allowOutsideClick:
+                    // allowEscapeKey:
+                    // allowEnterKey:
+                    // stopKeydownPropagation:
+
+                    // input:
+                    // inputPlaceholder:
+                    // inputValue:
+                    // inputOptions:
+
+                    //  customClass:
+                    // 	container:
+                    // 	popup:
+                    // 	header:
+                    // 	title:
+                    // 	closeButton:
+                    // 	icon:
+                    // 	image:
+                    // 	content:
+                    // 	input:
+                    // 	actions:
+                    // 	confirmButton:
+                    // 	cancelButton:
+                    // 	footer:
+
+                    // showConfirmButton:
+                    // confirmButtonColor:
+                    // confirmButtonAriaLabel:
+
+                    // showCancelButton:
+                    // cancelButtonText:
+                    // cancelButtonColor:
+                    // cancelButtonAriaLabel:
+
+                    // buttonsStyling:
+                    // showCloseButton:
+                    // closeButtonAriaLabel:
+
+
+                    // imageUrl:
+                    // imageWidth:
+                    // imageHeight:
+                    // imageAlt:
+                });
+            };
+        </script>
+    *@
+</body>
+</html>
+
+
