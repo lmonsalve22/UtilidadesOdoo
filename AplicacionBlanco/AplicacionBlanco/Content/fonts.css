@@ -28,11 +28,13 @@
 .icon-Icono_dataIntelligence_Rojo .path1:before {
     content: "\e900";
     color: rgb(226, 8, 21);
+    margin-left: 0.099609375em;
 }
 
 .icon-Icono_dataIntelligence_Rojo .path2:before {
     content: "\e901";
     margin-left: -0.599609375em;
+    padding-right: 0.3em;
     color: rgb(227, 10, 22);
 }
 
