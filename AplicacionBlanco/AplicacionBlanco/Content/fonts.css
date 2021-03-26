@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?y9njme');
-    src: url('fonts/icomoon.eot?y9njme#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?y9njme') format('truetype'), url('fonts/icomoon.woff?y9njme') format('woff'), url('fonts/icomoon.svg?y9njme#icomoon') format('svg');
+    src: url('fonts/icomoon.eot?bs1zvf');
+    src: url('fonts/icomoon.eot?bs1zvf#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?bs1zvf') format('truetype'), url('fonts/icomoon.woff?bs1zvf') format('woff'), url('fonts/icomoon.svg?bs1zvf#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -21,21 +21,19 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Icono_dataIntelligence_Rojo .path1:before {
+.icon-tiktok:before {
     content: "\e902";
+}
+
+.icon-Icono_dataIntelligence_Rojo .path1:before {
+    content: "\e900";
     color: #e20815;
-    margin-left: 0.099609375em;
 }
 
 .icon-Icono_dataIntelligence_Rojo .path2:before {
-    content: "\e903";
+    content: "\e901";
     color: #e30a16;
     margin-left: -0.599609375em;
-    padding-right: 0.3em;
-}
-
-.icon-tiktok:before {
-    content: "\e901";
 }
 
 .icon-facebook:before {
@@ -60,10 +58,4 @@
 
 .icon-pinterest:before {
     content: "\ead1";
-}
-
-
-.icon-shopify:before {
-    content: "\e900";
-    color: #7ab55c;
 }
